@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing | Bytex Systems</title>
+  <meta name="description" content="Transparent incorporation packages. Government fees vary by jurisdiction and are billed at cost." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>Bytex Systems</div>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="pricing.html" aria-current="page">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="btn primary">Book / Contact</a>
+
+        <div class="lang">
+          <button class="btn lang-btn" type="button" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+            <svg class="globe" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm7.93 9h-3.17a15.6 15.6 0 00-1.1-5.02A8.02 8.02 0 0119.93 11ZM12 4c.9 0 2.36 1.86 3.1 7H8.9C9.64 5.86 11.1 4 12 4ZM4.07 13h3.17c.16 1.8.56 3.53 1.1 5.02A8.02 8.02 0 014.07 13Zm3.17-2H4.07a8.02 8.02 0 014.27-5.02c-.54 1.49-.94 3.22-1.1 5.02ZM12 20c-.9 0-2.36-1.86-3.1-7h6.2c-.74 5.14-2.2 7-3.1 7Zm3.66-1.98c.54-1.49.94-3.22 1.1-5.02h3.17a8.02 8.02 0 01-4.27 5.02Z"/>
+            </svg>
+            <span class="lang-label">Language</span>
+          </button>
+
+          <div class="lang-menu" id="langMenu" role="menu" aria-label="Language">
+            <a role="menuitem" class="lang-item" href="/pricing.html" id="lang-en">English</a>
+            <a role="menuitem" class="lang-item" href="/fr/pricing.html" id="lang-fr">Français</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h1 class="h1" style="font-size:34px;">Pricing</h1>
+    <p class="sub">Use these as starting packages. We’ll confirm the right jurisdiction and requirements on a quick call.</p>
+
+    <table class="table" aria-label="Pricing table">
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>Best for</th>
+          <th>Includes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Starter</strong><br><small>(from $XXX + gov fees)</small></td>
+          <td>Simple incorporations, fast setup</td>
+          <td>
+            <div class="li">• Incorporation filing</div>
+            <div class="li">• Digital documents delivery</div>
+            <div class="li">• Basic next-step checklist</div>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Professional</strong><br><small>(from $XXX + gov fees)</small></td>
+          <td>Most founders (recommended)</td>
+          <td>
+            <div class="li">• Everything in Starter</div>
+            <div class="li">• Structured onboarding (ownership/directors)</div>
+            <div class="li">• Records guidance (what to store &amp; when)</div>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Premium</strong><br><small>(from $XXX + gov fees)</small></td>
+          <td>QC / multi-jurisdiction / complex needs</td>
+          <td>
+            <div class="li">• Everything in Professional</div>
+            <div class="li">• Priority turnaround</div>
+            <div class="li">• Additional coordination for extra-provincial needs</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-top:14px;">
+      <h2 style="margin-top:0;">Common add-ons</h2>
+      <div class="two">
+        <div>
+          <div class="li">• Extra-provincial registration</div>
+          <div class="li">• Annual filings / reminders</div>
+          <div class="li">• Amendments / director changes</div>
+        </div>
+        <div>
+          <div class="li">• Corporate records / minute book</div>
+          <div class="li">• Automation setup (optional)</div>
+          <div class="li">• Document organization package</div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <a class="btn primary" href="contact.html">Get an exact quote</a>
+      <p class="notice" style="margin-top:10px;">
+        Replace $XXX with your pricing. Government fees vary by jurisdiction and are billed at cost.
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer">
+    <div class="hr"></div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+      <div>© <span id="y"></span> Bytex Systems</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </div>
+
+  <script>
+    // If user previously chose French, keep them in French
+    (function () {
+      try {
+        const pref = localStorage.getItem("lang_pref");
+        const isFrenchPath = location.pathname.startsWith("/fr/");
+        if (pref === "fr" && !isFrenchPath) {
+          const page = location.pathname.split("/").pop() || "index.html";
+          location.replace("/fr/" + page);
+        }
+      } catch (e) {}
+    })();
+
+    // Save preference when user clicks English / French
+    (function () {
+      const fr = document.getElementById("lang-fr");
+      const en = document.getElementById("lang-en");
+      if (fr) fr.addEventListener("click", () => localStorage.setItem("lang_pref", "fr"));
+      if (en) en.addEventListener("click", () => localStorage.setItem("lang_pref", "en"));
+    })();
+  </script>
+
+  <script>
+    // Language dropdown toggle
+    (function () {
+      const toggle = document.getElementById("langToggle");
+      const menu = document.getElementById("langMenu");
+      if (!toggle || !menu) return;
+
+      function closeMenu() {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Close after choosing a language
+      menu.addEventListener("click", () => closeMenu());
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    })();
+  </script>
+
+</body>
+</html>

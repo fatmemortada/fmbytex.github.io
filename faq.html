@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ | Bytex Systems</title>
+  <meta name="description" content="Common questions about Canadian incorporations (Federal, ON, BC, QC) and next steps." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>Bytex Systems</div>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="active" href="faq.html" aria-current="page">FAQ</a>
+        <a href="contact.html" class="btn primary">Book / Contact</a>
+
+        <div class="lang">
+          <button class="btn lang-btn" type="button" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+            <svg class="globe" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm7.93 9h-3.17a15.6 15.6 0 00-1.1-5.02A8.02 8.02 0 0119.93 11ZM12 4c.9 0 2.36 1.86 3.1 7H8.9C9.64 5.86 11.1 4 12 4ZM4.07 13h3.17c.16 1.8.56 3.53 1.1 5.02A8.02 8.02 0 014.07 13Zm3.17-2H4.07a8.02 8.02 0 014.27-5.02c-.54 1.49-.94 3.22-1.1 5.02ZM12 20c-.9 0-2.36-1.86-3.1-7h6.2c-.74 5.14-2.2 7-3.1 7Zm3.66-1.98c.54-1.49.94-3.22 1.1-5.02h3.17a8.02 8.02 0 01-4.27 5.02Z"/>
+            </svg>
+            <span class="lang-label">Language</span>
+          </button>
+
+          <div class="lang-menu" id="langMenu" role="menu" aria-label="Language">
+            <a role="menuitem" class="lang-item" href="/faq.html" id="lang-en">English</a>
+            <a role="menuitem" class="lang-item" href="/fr/faq.html" id="lang-fr">Français</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section faq">
+    <h1 class="h1" style="font-size:34px;">FAQ</h1>
+    <p class="sub">Quick answers. If you’re unsure, book a 10–15 min call.</p>
+
+    <details>
+      <summary>Federal vs Provincial — which one do I need?</summary>
+      <p>It depends on where you will operate and how you want name protection handled. We’ll ask a few questions and recommend the best option for your situation.</p>
+    </details>
+
+    <details>
+      <summary>How long does incorporation take?</summary>
+      <p>Typical turnaround is 24–72 hours, depending on jurisdiction processing times, name availability, and how quickly you provide required information.</p>
+    </details>
+
+    <details>
+      <summary>What information do you need from me?</summary>
+      <p>Usually: director/officer details, registered office information, ownership basics, and your preferred company name (or numbered company).</p>
+    </details>
+
+    <details>
+      <summary>Do you provide legal or tax advice?</summary>
+      <p>We provide corporate services and filing support. If legal or tax advice is required, we can coordinate with partner professionals.</p>
+    </details>
+
+    <details>
+      <summary>Can you help if I’m not in Canada?</summary>
+      <p>Many incorporations can be handled remotely. Requirements vary; we’ll confirm during intake.</p>
+    </details>
+
+    <div style="margin-top:16px;">
+      <a class="btn primary" href="contact.html">Book / Contact</a>
+    </div>
+  </div>
+
+  <div class="container footer">
+    <div class="hr"></div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+      <div>© <span id="y"></span> Bytex Systems</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </div>
+
+  <script>
+    // If user previously chose French, keep them in French
+    (function () {
+      try {
+        const pref = localStorage.getItem("lang_pref");
+        const isFrenchPath = location.pathname.startsWith("/fr/");
+        if (pref === "fr" && !isFrenchPath) {
+          const page = location.pathname.split("/").pop() || "index.html";
+          location.replace("/fr/" + page);
+        }
+      } catch (e) {}
+    })();
+
+    // Save preference when user clicks English / French
+    (function () {
+      const fr = document.getElementById("lang-fr");
+      const en = document.getElementById("lang-en");
+      if (fr) fr.addEventListener("click", () => localStorage.setItem("lang_pref", "fr"));
+      if (en) en.addEventListener("click", () => localStorage.setItem("lang_pref", "en"));
+    })();
+  </script>
+
+  <script>
+    // Language dropdown toggle
+    (function () {
+      const toggle = document.getElementById("langToggle");
+      const menu = document.getElementById("langMenu");
+      if (!toggle || !menu) return;
+
+      function closeMenu() {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Close after choosing a language
+      menu.addEventListener("click", () => closeMenu());
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    })();
+  </script>
+
+</body>
+</html>

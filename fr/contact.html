@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Bytex Systems</title>
+  <meta name="description" content="Réservez un appel rapide ou contactez-nous pour démarrer votre constitution d’entreprise au Canada." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <div class="logo" aria-hidden="true"></div>
+        <div>Bytex Systems</div>
+      </a>
+
+      <div class="links">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Tarifs</a>
+        <a href="faq.html">FAQ</a>
+        <a class="active" href="contact.html" aria-current="page">Contact</a>
+
+        <div class="lang">
+          <button class="btn lang-btn" type="button" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+            <svg class="globe" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm7.93 9h-3.17a15.6 15.6 0 00-1.1-5.02A8.02 8.02 0 0119.93 11ZM12 4c.9 0 2.36 1.86 3.1 7H8.9C9.64 5.86 11.1 4 12 4ZM4.07 13h3.17c.16 1.8.56 3.53 1.1 5.02A8.02 8.02 0 014.07 13Zm3.17-2H4.07a8.02 8.02 0 014.27-5.02c-.54 1.49-.94 3.22-1.1 5.02ZM12 20c-.9 0-2.36-1.86-3.1-7h6.2c-.74 5.14-2.2 7-3.1 7Zm3.66-1.98c.54-1.49.94-3.22 1.1-5.02h3.17a8.02 8.02 0 01-4.27 5.02Z"/>
+            </svg>
+            <span class="lang-label">Langue</span>
+          </button>
+
+          <div class="lang-menu" id="langMenu" role="menu" aria-label="Langue">
+            <a role="menuitem" class="lang-item" href="/contact.html" id="lang-en">English</a>
+            <a role="menuitem" class="lang-item" href="/fr/contact.html" id="lang-fr" aria-current="page">Français</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h1 class="h1" style="font-size:34px;">Réserver / Contact</h1>
+    <p class="sub">
+      Option la plus rapide : réservez un appel de 10 à 15 minutes. Sinon, envoyez un message ci-dessous
+      ou écrivez-nous à <strong>info@fmbytex.com</strong>.
+    </p>
+
+    <div class="two">
+      <div class="card">
+        <h2 style="margin-top:0;">Lien de réservation</h2>
+        <p class="sub">Ajoutez votre lien Calendly / TidyCal.</p>
+        <div class="hr"></div>
+        <a class="btn primary" href="javascript:void(0)" aria-disabled="true">Ajouter le lien de réservation</a>
+        <p class="notice" style="margin-top:10px;">Conseil : définissez des créneaux de 10 à 15 minutes.</p>
+        <p class="notice" style="margin-top:10px;">
+          Ou écrivez-nous : <strong>info@fmbytex.com</strong>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0;">Envoyer un message</h2>
+
+        <!-- Netlify Forms -->
+        <form class="form" name="contact-fr" method="post" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact-fr" />
+
+          <p style="display:none;">
+            <label>Ne pas remplir :
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <label for="name">Nom</label>
+          <input id="name" name="name" autocomplete="name" required />
+
+          <div class="two">
+            <div>
+              <label for="email">Courriel</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="phone">Téléphone (optionnel)</label>
+              <input id="phone" name="phone" autocomplete="tel" />
+            </div>
+          </div>
+
+          <label for="jur">Juridiction</label>
+          <select id="jur" name="jurisdiction" required>
+            <option value="">Choisissez une option</option>
+            <option>Fédéral</option>
+            <option>Ontario</option>
+            <option>Colombie-Britannique</option>
+            <option>Québec</option>
+            <option>Je ne suis pas sûr(e)</option>
+          </select>
+
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" placeholder="Où allez-vous opérer ? Quel est votre délai ? Exigences particulières ?"></textarea>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn primary" type="submit">Envoyer</button>
+            <a class="btn" href="faq.html">Lire la FAQ</a>
+          </div>
+
+          <p class="notice" style="margin-top:10px;">
+            Votre message sera envoyé via Netlify Forms. Vous pouvez aussi écrire à <strong>info@fmbytex.com</strong>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer">
+    <div class="hr"></div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+      <div>© <span id="y"></span> Bytex Systems</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html">Conditions</a>
+      </div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </div>
+
+  <script>
+    // Keep user's language preference (if pref is EN, keep them in EN)
+    (function () {
+      try {
+        const pref = localStorage.getItem("lang_pref");
+        const isFrenchPath = location.pathname.startsWith("/fr/");
+        if (pref === "en" && isFrenchPath) {
+          const page = location.pathname.split("/").pop() || "index.html";
+          location.replace("/" + page);
+        }
+      } catch (e) {}
+    })();
+
+    // Save preference when user clicks English / French
+    (function () {
+      const fr = document.getElementById("lang-fr");
+      const en = document.getElementById("lang-en");
+      if (fr) fr.addEventListener("click", () => localStorage.setItem("lang_pref", "fr"));
+      if (en) en.addEventListener("click", () => localStorage.setItem("lang_pref", "en"));
+    })();
+  </script>
+
+  <script>
+    // Language dropdown toggle
+    (function () {
+      const toggle = document.getElementById("langToggle");
+      const menu = document.getElementById("langMenu");
+      if (!toggle || !menu) return;
+
+      function closeMenu() {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Close after choosing a language
+      menu.addEventListener("click", () => closeMenu());
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    })();
+  </script>
+
+</body>
+</html>

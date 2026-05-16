@@ -1,0 +1,6 @@
+OK: Gmail visible
+OK: no info email
+OK: LinkedIn button
+OK: Instagram button
+OK: WhatsApp button link
+OK: WhatsApp float JS

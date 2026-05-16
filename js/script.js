@@ -41,16 +41,14 @@ document.querySelectorAll("form").forEach(form => {
 
 
 
-// FMBytex WhatsApp floating button - FINAL PROFILE VERSION
+
+// FMBytex WhatsApp floating button - FINAL CONTACT BUTTONS
 (function () {
-  const fmbytexWhatsAppNumber = "14383736655";
-  const fmbytexWhatsAppMessage = encodeURIComponent(
-    "Hi FMBytex, I would like to request a website for my business."
-  );
+  const fmbytexWhatsAppUrl = "https://wa.me/14383736655?text=Hi%20FMBytex%2C%20I%20would%20like%20to%20request%20a%20website%20for%20my%20business.";
 
   if (!document.querySelector(".whatsapp-float")) {
     const whatsappButton = document.createElement("a");
-    whatsappButton.href = `https://wa.me/${fmbytexWhatsAppNumber}?text=${fmbytexWhatsAppMessage}`;
+    whatsappButton.href = fmbytexWhatsAppUrl;
     whatsappButton.className = "whatsapp-float";
     whatsappButton.target = "_blank";
     whatsappButton.rel = "noopener noreferrer";

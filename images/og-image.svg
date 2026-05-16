@@ -1,0 +1,36 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+<stop stop-color="#020617"/>
+<stop offset="0.55" stop-color="#0F172A"/>
+<stop offset="1" stop-color="#111827"/>
+</linearGradient>
+<linearGradient id="card" x1="320" y1="210" x2="1090" y2="710" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+<stop offset="1" stop-color="#E0F2FE" stop-opacity="0.9"/>
+</linearGradient>
+<filter id="shadow" x="250" y="150" width="900" height="650" filterUnits="userSpaceOnUse">
+<feDropShadow dx="0" dy="35" stdDeviation="45" flood-color="#000000" flood-opacity="0.45"/>
+</filter>
+</defs>
+<rect width="1400" height="900" fill="url(#bg)"/>
+<circle cx="1120" cy="170" r="180" fill="#38BDF8" opacity="0.12"/>
+<circle cx="250" cy="720" r="220" fill="#2563EB" opacity="0.14"/>
+<rect x="310" y="190" width="780" height="520" rx="34" fill="url(#card)" filter="url(#shadow)"/>
+<rect x="360" y="245" width="680" height="60" rx="18" fill="#0F172A"/>
+<circle cx="395" cy="275" r="9" fill="#38BDF8"/>
+<circle cx="425" cy="275" r="9" fill="#CBD5E1"/>
+<circle cx="455" cy="275" r="9" fill="#CBD5E1"/>
+<rect x="385" y="360" width="350" height="34" rx="10" fill="#0F172A"/>
+<rect x="385" y="415" width="500" height="18" rx="9" fill="#64748B"/>
+<rect x="385" y="450" width="430" height="18" rx="9" fill="#94A3B8"/>
+<rect x="385" y="505" width="160" height="52" rx="16" fill="#2563EB"/>
+<rect x="565" y="505" width="160" height="52" rx="16" fill="#E2E8F0"/>
+<rect x="780" y="350" width="220" height="250" rx="28" fill="#0F172A"/>
+<rect x="810" y="385" width="160" height="18" rx="9" fill="#38BDF8"/>
+<rect x="810" y="425" width="120" height="12" rx="6" fill="#94A3B8"/>
+<rect x="810" y="460" width="150" height="12" rx="6" fill="#CBD5E1"/>
+<rect x="810" y="515" width="120" height="40" rx="12" fill="#FFFFFF"/>
+<path d="M260 775H1140" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="2"/>
+<text x="700" y="805" text-anchor="middle" fill="#CBD5E1" font-family="Arial" font-size="30" font-weight="700">Luxury Web Design • Branding • Digital Presence</text>
+</svg>

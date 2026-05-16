@@ -1,0 +1,23 @@
+OK: index.html
+OK: services.html
+OK: portfolio.html
+OK: about.html
+OK: contact.html
+OK: fr/index.html
+OK: fr/services.html
+OK: fr/portfolio.html
+OK: fr/about.html
+OK: fr/contact.html
+OK: css/style.css
+OK: js/script.js
+OK: CNAME
+OK: favicon.svg
+OK: robots.txt
+OK: sitemap.xml
+OK: 404.html
+OK: images/logo.svg
+OK: LinkedIn included
+OK: Instagram included
+OK: request email included in JS
+OK: display email included
+OK: WhatsApp included

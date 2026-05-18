@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs>
+<linearGradient id="bg" x1="0" x2="1"><stop stop-color="#020617"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+<linearGradient id="blue" x1="0" x2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="30" stdDeviation="35" flood-color="#000" flood-opacity=".35"/></filter>
+</defs>
+<rect width="1400" height="900" fill="url(#bg)"/>
+<circle cx="1100" cy="160" r="240" fill="#2563eb" opacity=".18"/>
+<circle cx="250" cy="780" r="220" fill="#38bdf8" opacity=".12"/>
+<rect x="160" y="155" width="1080" height="590" rx="50" fill="#111827" filter="url(#shadow)"/>
+<text x="230" y="330" font-size="78" font-family="Arial" fill="#ffffff" font-weight="900">Digital presence</text>
+<text x="230" y="420" font-size="78" font-family="Arial" fill="#38bdf8" font-weight="900">that drives growth.</text>
+<text x="235" y="500" font-size="30" font-family="Arial" fill="#cbd5e1">Web design, branding, and online visibility.</text>
+<rect x="235" y="560" width="220" height="64" rx="22" fill="url(#blue)"/>
+<text x="285" y="602" font-size="24" font-family="Arial" fill="#fff" font-weight="700">Get Started</text>
+<rect x="790" y="280" width="330" height="260" rx="34" fill="#0b1220" stroke="#334155"/>
+<path d="M835 455 C880 405 915 470 960 410 C1000 360 1035 430 1080 375" stroke="#38bdf8" stroke-width="13" fill="none" stroke-linecap="round"/>
+<rect x="825" y="600" width="70" height="95" rx="10" fill="#2563eb"/>
+<rect x="920" y="560" width="70" height="135" rx="10" fill="#38bdf8"/>
+<rect x="1015" y="515" width="70" height="180" rx="10" fill="#2563eb"/>
+</svg>

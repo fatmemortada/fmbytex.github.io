@@ -882,3 +882,243 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 
     justify-content: center;
   }
 }
+
+
+/* ===== CLEAN PREMIUM PORTFOLIO FIX - NO FULL PAGE SCREENSHOTS ===== */
+
+.clean-portfolio,
+.clean-reel {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.clean-reel {
+  padding-top: 40px;
+}
+
+.clean-section-head {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 58px;
+}
+
+.clean-kicker {
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.clean-section-head h2 {
+  font-size: clamp(42px, 6vw, 74px);
+  line-height: .95;
+  letter-spacing: -.06em;
+  color: #0f172a;
+  margin: 0 0 22px;
+}
+
+.clean-section-head p {
+  font-size: 20px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.clean-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.clean-case {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(15,23,42,.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.clean-case:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 100px rgba(15,23,42,.14);
+}
+
+.clean-case-img {
+  height: 360px;
+  background: #eef2ff;
+  overflow: hidden;
+}
+
+.clean-case-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.clean-case-body {
+  padding: 34px;
+}
+
+.clean-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.clean-tag {
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 850;
+  font-size: 14px;
+}
+
+.clean-tag.warm {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.clean-case h3,
+.clean-reel-card h3 {
+  font-size: 34px;
+  letter-spacing: -.04em;
+  line-height: 1;
+  color: #0f172a;
+  margin: 0 0 16px;
+}
+
+.clean-case p,
+.clean-reel-card p {
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0 0 26px;
+}
+
+.clean-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.clean-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#2563eb,#38bdf8);
+  color: #fff !important;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 14px 35px rgba(37,99,235,.25);
+}
+
+.clean-btn.dark {
+  background: #0f172a;
+}
+
+.clean-text-link {
+  color: #2563eb;
+  font-weight: 850;
+  text-decoration: underline;
+}
+
+.clean-reel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.clean-reel-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(15,23,42,.07);
+}
+
+.clean-reel-card .clean-case-img {
+  height: 250px;
+}
+
+.clean-reel-body {
+  padding: 28px;
+}
+
+.clean-footer-socials {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.clean-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 17px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 850;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.clean-social span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+}
+
+.clean-social.email span { background:#2563eb; }
+.clean-social.whatsapp span { background:#22c55e; }
+.clean-social.linkedin span { background:#0a66c2; }
+.clean-social.instagram span { background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+
+@media (max-width: 980px) {
+  .clean-case-grid,
+  .clean-reel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clean-case-img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .clean-portfolio,
+  .clean-reel {
+    padding: 80px 0;
+  }
+  .clean-case-body,
+  .clean-reel-body {
+    padding: 24px;
+  }
+  .clean-case-img {
+    height: 230px;
+  }
+  .clean-section-head h2 {
+    font-size: 40px;
+  }
+  .clean-actions,
+  .clean-btn,
+  .clean-text-link,
+  .clean-social {
+    width: 100%;
+    justify-content: center;
+  }
+}

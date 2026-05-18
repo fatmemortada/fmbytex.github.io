@@ -638,3 +638,247 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 
 
 /* ===== Corrected user-requested visual upgrades ===== */
 .social-icon-row{align-items:center;gap:14px;flex-wrap:wrap}.social-icon-row svg{width:21px;height:21px;fill:currentColor;flex:0 0 21px}.social-icon-row a{gap:9px}.social-logo-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(15,23,42,.1);background:#fff;color:#0f172a;border-radius:999px;padding:12px 16px;font-weight:800;box-shadow:0 12px 34px rgba(15,23,42,.08);transition:.25s;text-decoration:none}.social-logo-link:hover{transform:translateY(-3px)}.social-logo-link.whatsapp{background:#22c55e;color:#fff}.social-logo-link.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff}.social-logo-link.linkedin{background:#0a66c2;color:#fff}.social-logo-link.primary{background:#fff;color:#0f172a}.featured-work-card img,.work-card img{height:310px;object-fit:cover;object-position:top;border-radius:24px}.service-card-visual{overflow:hidden}.service-card-visual>img{width:100%;height:145px;object-fit:cover;object-position:top;border-radius:22px;margin-bottom:18px;border:1px solid rgba(15,23,42,.08);box-shadow:0 18px 40px rgba(15,23,42,.08)}.premium-trust-card{position:relative;overflow:hidden}.premium-trust-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(37,99,235,.12),transparent 36%);pointer-events:none}.trust-avatar{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,#0f172a,#2563eb);color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 18px 40px rgba(37,99,235,.22);margin-bottom:16px}.result-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.result-row span{font-size:12px;font-weight:800;color:#1e40af;background:#eff6ff;border:1px solid #bfdbfe;border-radius:999px;padding:8px 10px}@media(max-width:760px){.featured-work-card img,.work-card img{height:230px}.service-card-visual>img{height:130px}.social-icon-row .contact-button,.social-logo-link{width:100%;justify-content:center}}
+
+
+/* ===== FMBytex Exact Portfolio/Footer Fix ===== */
+
+.fm-section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.fm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.fm-section-title h2 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: .95;
+  letter-spacing: -.06em;
+  margin: 0 0 18px;
+  color: #0f172a;
+}
+
+.fm-section-title p {
+  color: #64748b;
+  font-size: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.fm-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.fm-case-card {
+  border-radius: 38px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 26px 80px rgba(15, 23, 42, .08);
+  transition: .35s ease;
+}
+
+.fm-case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 100px rgba(15, 23, 42, .14);
+}
+
+.fm-case-visual {
+  aspect-ratio: 16 / 10;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.fm-case-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fm-case-body {
+  padding: 34px;
+}
+
+.fm-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.fm-pill {
+  display: inline-flex;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.fm-pill.orange {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.fm-case-body h3 {
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -.04em;
+  margin: 0 0 16px;
+  color: #0f172a;
+}
+
+.fm-case-body p {
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.65;
+  margin-bottom: 26px;
+}
+
+.fm-case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.fm-primary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #fff !important;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 16px 40px rgba(37, 99, 235, .22);
+}
+
+.fm-dark-link {
+  background: #0f172a;
+}
+
+.fm-mini-link {
+  color: #2563eb;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.fm-reel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.fm-reel-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(15, 23, 42, .07);
+  transition: .35s ease;
+}
+
+.fm-reel-card:hover {
+  transform: translateY(-7px);
+}
+
+.fm-reel-card img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+}
+
+.fm-reel-card-body {
+  padding: 28px;
+}
+
+.fm-footer-social-icons,
+.fm-footer-bottom-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.fm-social-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 850;
+  transition: .25s;
+}
+
+.fm-social-icon:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,.14);
+}
+
+.fm-social-icon .fm-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 900;
+}
+
+.fm-social-icon.whatsapp .fm-icon { background: #22c55e; }
+.fm-social-icon.instagram .fm-icon { background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+.fm-social-icon.linkedin .fm-icon { background: #0a66c2; }
+.fm-social-icon.email .fm-icon { background: #2563eb; }
+
+@media (max-width: 980px) {
+  .fm-case-grid,
+  .fm-reel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fm-case-body h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 640px) {
+  .fm-section-title h2 {
+    font-size: 42px;
+  }
+  .fm-case-body {
+    padding: 24px;
+  }
+  .fm-case-body p {
+    font-size: 16px;
+  }
+  .fm-primary-link,
+  .fm-mini-link,
+  .fm-social-icon {
+    width: 100%;
+    justify-content: center;
+  }
+}

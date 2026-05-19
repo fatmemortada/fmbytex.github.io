@@ -4,7 +4,7 @@ Expected homepage order:
 Hero
 Services
 One Featured Portfolio section
-Why FMBytex
+Why FM Systems
 Built To Convert
 Client Trust
 Start Your Project

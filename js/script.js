@@ -31,7 +31,7 @@ document.querySelectorAll("form").forEach(form => {
     const email = data.get("email") || "";
     const service = data.get("service") || "";
     const message = data.get("message") || "";
-    const subject = encodeURIComponent("New FMBytex Website Request");
+    const subject = encodeURIComponent("New FM Systems Website Request");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`
     );
@@ -42,17 +42,17 @@ document.querySelectorAll("form").forEach(form => {
 
 
 
-// FMBytex WhatsApp floating button - FINAL CONTACT BUTTONS
+// FM Systems WhatsApp floating button - FINAL CONTACT BUTTONS
 (function () {
-  const fmbytexWhatsAppUrl = "https://wa.me/14383736655?text=Hi%20FMBytex%2C%20I%20would%20like%20to%20request%20a%20website%20for%20my%20business.";
+  const fmsystemsWhatsAppUrl = "https://wa.me/14383736655?text=Hi%20FM Systems%2C%20I%20would%20like%20to%20request%20a%20website%20for%20my%20business.";
 
   if (!document.querySelector(".whatsapp-float")) {
     const whatsappButton = document.createElement("a");
-    whatsappButton.href = fmbytexWhatsAppUrl;
+    whatsappButton.href = fmsystemsWhatsAppUrl;
     whatsappButton.className = "whatsapp-float";
     whatsappButton.target = "_blank";
     whatsappButton.rel = "noopener noreferrer";
-    whatsappButton.setAttribute("aria-label", "Contact FMBytex on WhatsApp");
+    whatsappButton.setAttribute("aria-label", "Contact FM Systems on WhatsApp");
     whatsappButton.innerHTML = "✆";
     document.body.appendChild(whatsappButton);
   }

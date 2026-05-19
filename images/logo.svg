@@ -1,9 +1,15 @@
-<svg width="280" height="72" viewBox="0 0 280 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="g" x1="12" y1="8" x2="64" y2="64" gradientUnits="userSpaceOnUse"><stop stop-color="#F8D77A"/><stop offset=".45" stop-color="#C79A35"/><stop offset="1" stop-color="#7DD3FC"/></linearGradient><linearGradient id="t" x1="84" y1="12" x2="238" y2="58"><stop stop-color="#F8FAFC"/><stop offset=".6" stop-color="#D6B45B"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs>
-<rect x="4" y="4" width="64" height="64" rx="22" fill="#050816" stroke="url(#g)" stroke-width="2.5"/>
-<path d="M21 47V24h22v7H29v5h12v7H29v4h-8Z" fill="url(#g)"/>
-<path d="M42 24h8l-8 23h-7l7-23Z" fill="#F8FAFC" opacity=".92"/>
-<path d="M52 24h6v23h-6V24Z" fill="#38BDF8"/>
-<text x="84" y="34" fill="#F8FAFC" font-family="Poppins, Inter, Arial" font-size="25" font-weight="900" letter-spacing="-1.2">FMBytex</text>
-<text x="84" y="53" fill="#D6B45B" font-family="Inter, Arial" font-size="11" font-weight="800" letter-spacing="2.4">FM DIGITAL EXPERIENCES</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-label="FM Systems logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/><stop offset="0.45" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="2" y="2" width="416" height="92" rx="28" fill="#07111f" stroke="rgba(103,232,249,.45)" stroke-width="2"/>
+  <rect x="16" y="16" width="64" height="64" rx="20" fill="url(#g)" filter="url(#glow)"/>
+  <path d="M30 64V32h31v9H41v7h17v8H41v8H30Z" fill="#fff"/>
+  <circle cx="70" cy="27" r="5" fill="#fff"/><circle cx="24" cy="72" r="3" fill="#67e8f9"/>
+  <path d="M88 48h22M110 48v-18M110 48v18" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <text x="126" y="50" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" letter-spacing="-1.6">FM Systems</text>
+  <text x="128" y="72" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2">WEB • AUTOMATION • DIGITAL</text>
 </svg>

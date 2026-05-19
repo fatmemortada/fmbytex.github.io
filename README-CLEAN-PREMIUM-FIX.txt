@@ -1,5 +1,5 @@
 
-FMBytex Clean Premium Fix
+FM Systems Clean Premium Fix
 
 This version fixes the problem caused by placing full-page screenshots inside the website.
 
@@ -13,5 +13,5 @@ Updated:
 
 Push:
 git add .
-git commit -m "Clean FMBytex portfolio design and remove screenshot sections"
+git commit -m "Clean FM Systems portfolio design and remove screenshot sections"
 git push -f origin main

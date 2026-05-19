@@ -1,4 +1,4 @@
-FMBytex Final Video + Portfolio Update
+FM Systems Final Video + Portfolio Update
 
 Included:
 - Premium animated hero video: videos/hero-video.mp4
@@ -14,7 +14,7 @@ Included:
 Update steps:
 1. Extract this ZIP.
 2. Select everything inside the ZIP.
-3. Paste into your active Git folder: fmbytex-site
+3. Paste into your active Git folder: fmsystems-site
 4. Choose Replace files.
 5. Run:
    git add .
@@ -22,5 +22,5 @@ Update steps:
    git push -f origin main
 
 Then open:
-https://fmbytex.com/index.html
+https://fmsystems.com/index.html
 and press Ctrl + Shift + R.

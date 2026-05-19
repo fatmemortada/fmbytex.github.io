@@ -1,4 +1,4 @@
-FMBytex-new website package
+FM Systems-new website package
 
 Upload/save this entire folder exactly as-is.
 
@@ -14,5 +14,5 @@ Main files:
 - images/ custom SVG visuals
 
 Important:
-The contact form currently opens an email draft to hello@fmbytex.com.
-Replace hello@fmbytex.com with your real email if needed.
+The contact form currently opens an email draft to hello@fmsystems.com.
+Replace hello@fmsystems.com with your real email if needed.

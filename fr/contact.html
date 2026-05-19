@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | FMBytex Systems</title>
-  <meta name="description" content="FMBytex contact page.">
+  <title>Contact | FM Systems</title>
+  <meta name="description" content="FM Systems contact page.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=3001">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
-<div class="fmbytex-upgrade-badge">FMDIE Premium Upgrade v3</div>
 
 <header class="topbar">
   <div class="container nav">
-    <a class="logo-wrap" href="index.html" aria-label="FMBytex Systems">
-      <img src="../images/logo.svg" alt="FMBytex Systems logo">
+    <a class="logo-wrap" href="index.html" aria-label="FM Systems">
+      <img src="../images/logo.svg" alt="FM Systems logo">
     </a>
 
     <button class="menu-btn" aria-label="Open navigation">☰</button>
@@ -50,7 +49,7 @@
       <div class="contact-card reveal"
         style="max-width:850px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;border-radius:32px;padding:34px;box-shadow:0 25px 80px rgba(15,23,42,.08);">
 
-        <form id="fmbytexContactForm">
+        <form id="fmsystemsContactForm">
 
           <label style="display:block;margin-bottom:16px;font-weight:800;">
             Nom
@@ -104,7 +103,7 @@
           <button
             type="button"
             class="btn btn-primary"
-            onclick="openFMBytexGmail()">
+            onclick="openFM SystemsGmail()">
             Ouvrir Gmail et envoyer
           </button>
 
@@ -134,7 +133,7 @@
 
       <div>
         <img src="../images/logo.svg"
-          alt="FMBytex Systems logo"
+          alt="FM Systems logo"
           style="width:170px;background:#fff;border-radius:14px;padding:8px;margin-bottom:18px;">
 
         <p>
@@ -161,11 +160,11 @@
       </div>
 
       <div>
-        <h4>Suivez FMBytex</h4>
+        <h4>Suivez FM Systems</h4>
 
         <div class="fm-footer-social-icons">
           <a class="fm-social-icon linkedin"
-            href="https://www.linkedin.com/company/fmbytex/"
+            href="https://www.linkedin.com/company/fmsystems/"
             target="_blank"
             rel="noopener noreferrer">
 
@@ -189,14 +188,14 @@
     </div>
 
     <div class="footer-bottom">
-      © 2026 FMBytex Systems. Tous droits réservés.
+      © 2026 FM Systems. Tous droits réservés.
     </div>
 
   </div>
 </footer>
 
 <script>
-function openFMBytexGmail() {
+function openFM SystemsGmail() {
 
   const name = document.getElementById("contactName").value || "";
   const email = document.getElementById("contactEmail").value || "";
@@ -214,14 +213,14 @@ function openFMBytexGmail() {
   const gmailUrl =
     "https://mail.google.com/mail/?view=cm&fs=1" +
     "&to=fatmemortada88@gmail.com" +
-    "&su=" + encodeURIComponent("Nouvelle demande FMBytex") +
+    "&su=" + encodeURIComponent("Nouvelle demande FM Systems") +
     "&body=" + encodeURIComponent(body);
 
   window.open(gmailUrl, "_blank");
 }
 </script>
 
-<script src="../js/script.js?v=3001"></script>
+<script src="../js/script.js"></script>
 
 </body>
 </html>

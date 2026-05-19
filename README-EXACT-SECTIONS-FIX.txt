@@ -1,5 +1,5 @@
 
-FMBytex Exact Sections Fix
+FM Systems Exact Sections Fix
 
 This package specifically updates:
 1. The large Mortacc / Maison Malaak portfolio cards
@@ -9,5 +9,5 @@ This package specifically updates:
 
 Push command:
 git add .
-git commit -m "Fix FMBytex portfolio cards and footer social buttons"
+git commit -m "Fix FM Systems portfolio cards and footer social buttons"
 git push -f origin main

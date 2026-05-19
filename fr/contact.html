@@ -18,9 +18,16 @@
     <a class="logo-wrap" href="index.html" aria-label="FMBytex Systems">
       <img src="../images/logo.svg" alt="FMBytex Systems logo">
     </a>
+
     <button class="menu-btn" aria-label="Open navigation">☰</button>
+
     <nav class="nav-links">
-      <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">À propos</a><a href="contact.html">Contact</a>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+
       <a class="lang-pill" href="../contact.html">EN</a>
       <a class="nav-cta" href="contact.html">Demander un site</a>
     </nav>
@@ -30,58 +37,90 @@
 <main>
   <section class="section section-soft">
     <div class="container">
+
       <div class="section-head center reveal">
         <div class="kicker">Contact</div>
         <h1>Demander un site web</h1>
-        <p>Remplissez le formulaire. Le bouton ouvrira Gmail avec votre message déjà préparé.</p>
+        <p>
+          Remplissez le formulaire. Le bouton ouvrira Gmail avec votre message déjà préparé.
+        </p>
       </div>
 
-      <div class="contact-card reveal" style="max-width:850px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;border-radius:32px;padding:34px;box-shadow:0 25px 80px rgba(15,23,42,.08);">
-        <form id="fmbytexContactForm" onsubmit="openFMBytexGmail(event)">
+      <div class="contact-card reveal"
+        style="max-width:850px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;border-radius:32px;padding:34px;box-shadow:0 25px 80px rgba(15,23,42,.08);">
+
+        <form id="fmbytexContactForm">
+
           <label style="display:block;margin-bottom:16px;font-weight:800;">
             Nom
-            <input id="contactName" name="name" required style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
+            <input id="contactName"
+              type="text"
+              required
+              style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
           </label>
 
           <label style="display:block;margin-bottom:16px;font-weight:800;">
             Courriel
-            <input id="contactEmail" type="email" name="email" required style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
+            <input id="contactEmail"
+              type="email"
+              required
+              style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
           </label>
 
           <label style="display:block;margin-bottom:16px;font-weight:800;">
             Nom de l’entreprise
-            <input id="contactBusiness" name="business" style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
+            <input id="contactBusiness"
+              type="text"
+              style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;">
           </label>
 
           <label style="display:block;margin-bottom:16px;font-weight:800;">
             Service recherché
-            <select id="contactService" name="service" required style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;background:#fff;">
+
+            <select id="contactService"
+              required
+              style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;background:#fff;">
+
               <option value="Création de site web">Création de site web</option>
               <option value="Refonte de site web">Refonte de site web</option>
               <option value="Image de marque">Image de marque</option>
               <option value="Visibilité Google">Visibilité Google</option>
               <option value="Maintenance">Maintenance</option>
               <option value="Autre">Autre</option>
+
             </select>
           </label>
 
           <label style="display:block;margin-bottom:22px;font-weight:800;">
             Message
-            <textarea id="contactMessage" name="message" required rows="6" style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;"></textarea>
+
+            <textarea id="contactMessage"
+              required
+              rows="6"
+              style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;"></textarea>
           </label>
 
           <button
-  		type="button"
- 		 class="btn btn-primary"
-  			onclick="openFMBytexGmail(event)">
-  			Ouvrir Gmail et envoyer
-	  </button>
+            type="button"
+            class="btn btn-primary"
+            onclick="openFMBytexGmail()">
+            Ouvrir Gmail et envoyer
+          </button>
 
           <p style="margin-top:18px;color:#64748b;">
             Vous pouvez aussi écrire directement à
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fatmemortada88@gmail.com" target="_blank" rel="noopener" style="font-weight:800;color:#2563eb;">fatmemortada88@gmail.com</a>.
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fatmemortada88@gmail.com"
+              target="_blank"
+              rel="noopener"
+              style="font-weight:800;color:#2563eb;">
+
+              fatmemortada88@gmail.com
+            </a>.
           </p>
+
         </form>
+
       </div>
     </div>
   </section>
@@ -89,41 +128,74 @@
 
 <footer class="footer">
   <div class="container">
+
     <div class="footer-grid">
+
       <div>
-        <img src="../images/logo.svg" alt="FMBytex Systems logo" style="width:170px;background:#fff;border-radius:14px;padding:8px;margin-bottom:18px;">
-        <p>Sites web modernes, image de marque et présence numérique pour les entreprises ambitieuses.</p>
-        <a class="email-highlight" href="https://mail.google.com/mail/?view=cm&fs=1&to=fatmemortada88@gmail.com" target="_blank" rel="noopener">fatmemortada88@gmail.com</a>
+        <img src="../images/logo.svg"
+          alt="FMBytex Systems logo"
+          style="width:170px;background:#fff;border-radius:14px;padding:8px;margin-bottom:18px;">
+
+        <p>
+          Sites web modernes, image de marque et présence numérique pour les entreprises ambitieuses.
+        </p>
+
+        <a class="email-highlight"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=fatmemortada88@gmail.com"
+          target="_blank"
+          rel="noopener">
+
+          fatmemortada88@gmail.com
+        </a>
       </div>
+
       <div>
         <h4>Navigation</h4>
+
         <a href="index.html">Accueil</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">À propos</a>
         <a href="contact.html">Contact</a>
       </div>
+
       <div>
         <h4>Suivez FMBytex</h4>
+
         <div class="fm-footer-social-icons">
-          <a class="fm-social-icon linkedin" href="https://www.linkedin.com/company/fmbytex/" target="_blank" rel="noopener noreferrer"><span class="fm-icon">in</span> LinkedIn</a>
-          <a class="fm-social-icon instagram" href="https://www.instagram.com/fatmemortada" target="_blank" rel="noopener noreferrer"><span class="fm-icon">◎</span> Instagram</a>
+          <a class="fm-social-icon linkedin"
+            href="https://www.linkedin.com/company/fmbytex/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <span class="fm-icon">in</span> LinkedIn
+          </a>
+
+          <a class="fm-social-icon instagram"
+            href="https://www.instagram.com/fatmemortada"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <span class="fm-icon">◎</span> Instagram
+          </a>
         </div>
+
         <br>
+
         <a href="../index.html">English</a>
       </div>
+
     </div>
-    <div class="footer-bottom">© 2026 FMBytex Systems. Tous droits réservés.</div>
+
+    <div class="footer-bottom">
+      © 2026 FMBytex Systems. Tous droits réservés.
+    </div>
+
   </div>
 </footer>
 
 <script>
-function openFMBytexGmail(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("contactName").value || "";
-<script>
-function openFMBytexGmail(event) {
+function openFMBytexGmail() {
 
   const name = document.getElementById("contactName").value || "";
   const email = document.getElementById("contactEmail").value || "";
@@ -132,11 +204,11 @@ function openFMBytexGmail(event) {
   const message = document.getElementById("contactMessage").value || "";
 
   const body =
-    "Nom: " + name + "\n" +
-    "Courriel: " + email + "\n" +
-    "Entreprise: " + business + "\n" +
-    "Service: " + service + "\n\n" +
-    "Message:\n" + message;
+    "Nom: " + name + "\\n" +
+    "Courriel: " + email + "\\n" +
+    "Entreprise: " + business + "\\n" +
+    "Service: " + service + "\\n\\n" +
+    "Message:\\n" + message;
 
   const gmailUrl =
     "https://mail.google.com/mail/?view=cm&fs=1" +
@@ -144,9 +216,11 @@ function openFMBytexGmail(event) {
     "&su=" + encodeURIComponent("Nouvelle demande FMBytex") +
     "&body=" + encodeURIComponent(body);
 
-  window.location.href = gmailUrl;
+  window.open(gmailUrl, "_blank");
 }
 </script>
+
 <script src="../js/script.js"></script>
+
 </body>
 </html>

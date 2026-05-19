@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020617">
   <title>Contact | FMBytex Systems</title>
   <meta name="description" content="FMBytex contact page.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3001">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
+<div class="fmbytex-upgrade-badge">FMDIE Premium Upgrade v3</div>
 
 <header class="topbar">
   <div class="container nav">
@@ -136,10 +136,9 @@ function openFMBytexGmail(event) {
     "&su=" + encodeURIComponent("New FMBytex website request") +
     "&body=" + encodeURIComponent(body);
 
-  const opened = window.open(gmailUrl, "_blank", "noopener,noreferrer");
-  if (!opened) window.location.href = "mailto:fatmemortada88@gmail.com?subject=" + encodeURIComponent("New FMBytex website request") + "&body=" + encodeURIComponent(body);
+  window.open(gmailUrl, "_blank", "noopener,noreferrer");
 }
 </script>
-<script src="js/script.js"></script>
+<script src="js/script.js?v=3001"></script>
 </body>
 </html>

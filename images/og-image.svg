@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020617"/><stop offset=".55" stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8d57e"/><stop offset=".45" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="1200" height="630" fill="url(#bg)"/><circle cx="1020" cy="90" r="260" fill="#38bdf8" opacity=".16"/><circle cx="80" cy="590" r="280" fill="#f8d57e" opacity=".12"/><rect x="72" y="78" width="124" height="124" rx="32" fill="url(#g)"/><path d="M112 157V100h56v16h-38v11h31v15h-31v15h-18Zm67 0v-57h17v57h-17Z" fill="#fff"/><text x="238" y="135" font-family="Poppins, Inter, Arial" font-size="58" font-weight="900" fill="#fff">FMBytex</text><text x="238" y="180" font-family="Inter, Arial" font-size="23" font-weight="800" letter-spacing="5" fill="#93c5fd">FM DIGITAL EXPERIENCES</text><text x="72" y="326" font-family="Poppins, Inter, Arial" font-size="74" font-weight="900" letter-spacing="-3" fill="#fff">Premium websites that make businesses look trusted.</text><text x="76" y="410" font-family="Inter, Arial" font-size="30" fill="#cbd5e1">Luxury web design • Branding • Digital presence • Bilingual</text><rect x="76" y="480" width="290" height="64" rx="32" fill="url(#g)"/><text x="116" y="522" font-family="Inter, Arial" font-size="22" font-weight="900" fill="#fff">fmbytex.com</text></svg>
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+<stop stop-color="#020617"/>
+<stop offset="0.55" stop-color="#0F172A"/>
+<stop offset="1" stop-color="#111827"/>
+</linearGradient>
+<linearGradient id="card" x1="320" y1="210" x2="1090" y2="710" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+<stop offset="1" stop-color="#E0F2FE" stop-opacity="0.9"/>
+</linearGradient>
+<filter id="shadow" x="250" y="150" width="900" height="650" filterUnits="userSpaceOnUse">
+<feDropShadow dx="0" dy="35" stdDeviation="45" flood-color="#000000" flood-opacity="0.45"/>
+</filter>
+</defs>
+<rect width="1400" height="900" fill="url(#bg)"/>
+<circle cx="1120" cy="170" r="180" fill="#38BDF8" opacity="0.12"/>
+<circle cx="250" cy="720" r="220" fill="#2563EB" opacity="0.14"/>
+<rect x="310" y="190" width="780" height="520" rx="34" fill="url(#card)" filter="url(#shadow)"/>
+<rect x="360" y="245" width="680" height="60" rx="18" fill="#0F172A"/>
+<circle cx="395" cy="275" r="9" fill="#38BDF8"/>
+<circle cx="425" cy="275" r="9" fill="#CBD5E1"/>
+<circle cx="455" cy="275" r="9" fill="#CBD5E1"/>
+<rect x="385" y="360" width="350" height="34" rx="10" fill="#0F172A"/>
+<rect x="385" y="415" width="500" height="18" rx="9" fill="#64748B"/>
+<rect x="385" y="450" width="430" height="18" rx="9" fill="#94A3B8"/>
+<rect x="385" y="505" width="160" height="52" rx="16" fill="#2563EB"/>
+<rect x="565" y="505" width="160" height="52" rx="16" fill="#E2E8F0"/>
+<rect x="780" y="350" width="220" height="250" rx="28" fill="#0F172A"/>
+<rect x="810" y="385" width="160" height="18" rx="9" fill="#38BDF8"/>
+<rect x="810" y="425" width="120" height="12" rx="6" fill="#94A3B8"/>
+<rect x="810" y="460" width="150" height="12" rx="6" fill="#CBD5E1"/>
+<rect x="810" y="515" width="120" height="40" rx="12" fill="#FFFFFF"/>
+<path d="M260 775H1140" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="2"/>
+<text x="700" y="805" text-anchor="middle" fill="#CBD5E1" font-family="Arial" font-size="30" font-weight="700">Luxury Web Design • Branding • Digital Presence</text>
+</svg>

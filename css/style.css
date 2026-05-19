@@ -1278,3 +1278,23 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 
     width:100%;
   }
 }
+
+
+/* ===== REAL WEBSITE SCREENSHOT URL FIX ===== */
+.portfolio-image img,
+.final-image img,
+.clean-case-img img,
+.actual-site-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.portfolio-image,
+.final-image,
+.clean-case-img,
+.actual-site-screenshot {
+  background: #f8fafc;
+  overflow: hidden;
+}

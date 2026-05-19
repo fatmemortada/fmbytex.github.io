@@ -22,5 +22,5 @@ Update steps:
    git push -f origin main
 
 Then open:
-https://fmsystems.com/index.html
+https://fmbytex.com/index.html
 and press Ctrl + Shift + R.

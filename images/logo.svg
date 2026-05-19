@@ -1,15 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-label="FM Systems logo">
-  <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#67e8f9"/><stop offset="0.45" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/>
-    </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <rect x="2" y="2" width="416" height="92" rx="28" fill="#07111f" stroke="rgba(103,232,249,.45)" stroke-width="2"/>
-  <rect x="16" y="16" width="64" height="64" rx="20" fill="url(#g)" filter="url(#glow)"/>
-  <path d="M30 64V32h31v9H41v7h17v8H41v8H30Z" fill="#fff"/>
-  <circle cx="70" cy="27" r="5" fill="#fff"/><circle cx="24" cy="72" r="3" fill="#67e8f9"/>
-  <path d="M88 48h22M110 48v-18M110 48v18" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity=".8"/>
-  <text x="126" y="50" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" letter-spacing="-1.6">FM Systems</text>
-  <text x="128" y="72" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2">WEB • AUTOMATION • DIGITAL</text>
+<svg width="460" height="120" viewBox="0 0 460 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="460" height="120" rx="30" fill="#050B18"/>
+<rect x="18" y="18" width="84" height="84" rx="24" fill="url(#g)"/>
+<path d="M39 78V41h29v9H50v7h15v9H50v12H39Zm34 0V41h11l10 17 10-17h11v37h-10V58L96 73h-5L83 58v20H73Z" fill="white"/>
+<path d="M145 45h210" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+<text x="142" y="77" fill="white" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" letter-spacing="-1.5">FM Systems</text>
+<text x="145" y="98" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.8">WEBSITES • AUTOMATION • DIGITAL</text>
+<defs><linearGradient id="g" x1="18" y1="18" x2="102" y2="102"><stop stop-color="#2563EB"/><stop offset=".52" stop-color="#38BDF8"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs>
 </svg>

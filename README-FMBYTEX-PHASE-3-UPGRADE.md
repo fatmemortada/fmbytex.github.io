@@ -1,6 +1,6 @@
-# FMBytex Phase 3 Upgrade
+# FM Systems Phase 3 Upgrade
 
-This package includes the premium FMBytex / FMDIE visual upgrade.
+This package includes the premium FM Systems / FMDIE visual upgrade.
 
 ## Updated
 - New premium logo in `images/logo.svg`
@@ -17,7 +17,7 @@ Replace the old site files with this folder, then run:
 
 ```bash
 git add .
-git commit -m "premium FMBytex phase 3 upgrade"
+git commit -m "premium FM Systems phase 3 upgrade"
 git push origin main
 ```
 

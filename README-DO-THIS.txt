@@ -24,4 +24,4 @@ How to update:
    git push
 
 After deployment:
-Open https://fmsystems.com/index.html and press Ctrl + Shift + R.
+Open https://fmbytex.com/index.html and press Ctrl + Shift + R.

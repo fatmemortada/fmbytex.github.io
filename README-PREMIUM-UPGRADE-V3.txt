@@ -1,7 +1,7 @@
 This is the REAL visible premium upgrade package.
 
 Visible changes to confirm after upload:
-- New FMBytex / FMDIE gold-blue logo
+- New FM Systems / FMDIE gold-blue logo
 - Dark luxury website theme
 - Hero title changed to: Premium websites that make your business look unforgettable.
 - Badge appears: FMDIE Premium Upgrade v3

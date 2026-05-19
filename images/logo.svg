@@ -1,11 +1,15 @@
-<svg width="220" height="52" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="52" height="52" rx="16" fill="#0F172A"/>
-<path d="M16 34V16H38" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-<path d="M16 26H34" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
-<path d="M68 17H96V22H75V29H93V34H75V45H68V17Z" fill="#0F172A"/>
-<path d="M101 17H109L120 35L131 17H139V45H132V28L122 45H118L108 28V45H101V17Z" fill="#0F172A"/>
-<path d="M146 17H158C167 17 173 22 173 31C173 40 167 45 158 45H146V17ZM158 39C163 39 166 36 166 31C166 26 163 23 158 23H153V39H158Z" fill="#0F172A"/>
-<path d="M179 17H186V45H179V17Z" fill="#0F172A"/>
-<path d="M193 17H213V23H200V28H211V34H200V39H214V45H193V17Z" fill="#0F172A"/>
-<circle cx="203" cy="12" r="4" fill="#38BDF8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-label="FMBytex - FM Digital Experiences">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8d57e"/><stop offset=".42" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="720" height="180" rx="34" fill="#020617"/>
+  <g filter="url(#s)">
+    <rect x="34" y="35" width="110" height="110" rx="30" fill="url(#g)"/>
+    <path d="M64 117V63h49v14H80v9h28v14H80v17H64Zm55 0V63h16v54h-16Z" fill="#fff"/>
+    <circle cx="128" cy="52" r="6" fill="#fff" opacity=".9"/>
+  </g>
+  <text x="170" y="83" font-family="Poppins, Inter, Arial, sans-serif" font-size="42" font-weight="900" letter-spacing="-1.8" fill="#fff">FMBytex</text>
+  <text x="170" y="121" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="4.5" fill="#93c5fd">FM DIGITAL EXPERIENCES</text>
+  <path d="M170 139h418" stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity=".95"/>
 </svg>

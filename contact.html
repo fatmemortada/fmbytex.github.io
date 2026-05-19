@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020617">
   <title>Contact | FMBytex Systems</title>
   <meta name="description" content="FMBytex contact page.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -135,7 +136,8 @@ function openFMBytexGmail(event) {
     "&su=" + encodeURIComponent("New FMBytex website request") +
     "&body=" + encodeURIComponent(body);
 
-  window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  const opened = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  if (!opened) window.location.href = "mailto:fatmemortada88@gmail.com?subject=" + encodeURIComponent("New FMBytex website request") + "&body=" + encodeURIComponent(body);
 }
 </script>
 <script src="js/script.js"></script>

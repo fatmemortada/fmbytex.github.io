@@ -70,7 +70,12 @@
             <textarea id="contactMessage" name="message" required rows="6" style="width:100%;margin-top:8px;padding:16px;border:1px solid #cbd5e1;border-radius:16px;font-size:16px;"></textarea>
           </label>
 
-          <button type="submit" class="btn btn-primary">Ouvrir Gmail et envoyer</button>
+          <button
+  		type="button"
+ 		 class="btn btn-primary"
+  			onclick="openFMBytexGmail(event)">
+  			Ouvrir Gmail et envoyer
+	  </button>
 
           <p style="margin-top:18px;color:#64748b;">
             Vous pouvez aussi écrire directement à
@@ -117,25 +122,29 @@ function openFMBytexGmail(event) {
   event.preventDefault();
 
   const name = document.getElementById("contactName").value || "";
+<script>
+function openFMBytexGmail(event) {
+
+  const name = document.getElementById("contactName").value || "";
   const email = document.getElementById("contactEmail").value || "";
   const business = document.getElementById("contactBusiness").value || "";
   const service = document.getElementById("contactService").value || "";
   const message = document.getElementById("contactMessage").value || "";
 
   const body =
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Business: " + business + "\n" +
+    "Nom: " + name + "\n" +
+    "Courriel: " + email + "\n" +
+    "Entreprise: " + business + "\n" +
     "Service: " + service + "\n\n" +
     "Message:\n" + message;
 
   const gmailUrl =
     "https://mail.google.com/mail/?view=cm&fs=1" +
-    "&to=" + encodeURIComponent("fatmemortada88@gmail.com") +
-    "&su=" + encodeURIComponent("Nouvelle demande de site web FMBytex") +
+    "&to=fatmemortada88@gmail.com" +
+    "&su=" + encodeURIComponent("Nouvelle demande FMBytex") +
     "&body=" + encodeURIComponent(body);
 
-  window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  window.location.href = gmailUrl;
 }
 </script>
 <script src="../js/script.js"></script>

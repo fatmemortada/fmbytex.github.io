@@ -1356,3 +1356,31 @@ body{background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 45%,#ffffff 100%);}
     border-radius: 18px;
   }
 }
+
+
+
+/* ===== CLEAN PREMIUM HERO REDESIGN ===== */
+.premium-hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(56,189,248,.18),transparent 34%),radial-gradient(circle at 18% 20%,rgba(59,130,246,.16),transparent 30%),linear-gradient(135deg,#020617 0%,#07111f 48%,#0f172a 100%);padding:150px 0 96px}
+.premium-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 86%);pointer-events:none}
+.premium-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.premium-hero-copy{max-width:690px}
+.premium-hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:10px 15px;border-radius:999px;margin-bottom:24px;color:#c7d2fe;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.premium-hero h1{font-family:Poppins,Inter,sans-serif;font-size:clamp(38px,5.2vw,66px);line-height:1.02;letter-spacing:-.055em;margin-bottom:24px;color:#fff}
+.premium-hero p{max-width:620px;color:#cbd5e1;font-size:clamp(17px,1.6vw,20px);line-height:1.75;margin-bottom:32px}
+.premium-hero .btn{border-radius:999px!important;padding:15px 22px!important}
+.premium-hero .btn-secondary{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.18)!important;color:#fff!important}
+.premium-hero-trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.premium-hero-trust span{display:inline-flex;align-items:center;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#e0f2fe;font-size:13px;font-weight:750}
+.premium-hero-visual{position:relative;min-height:430px}
+.mock-browser{position:relative;overflow:hidden;border-radius:34px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 110px rgba(0,0,0,.36);backdrop-filter:blur(18px);transform:rotate(-1deg)}
+.mock-browser-top{height:58px;display:flex;align-items:center;gap:9px;padding:0 22px;background:rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.12)}
+.mock-browser-top span{width:11px;height:11px;border-radius:50%;background:#64748b}.mock-browser-top span:nth-child(1){background:#fb7185}.mock-browser-top span:nth-child(2){background:#fbbf24}.mock-browser-top span:nth-child(3){background:#34d399}
+.mock-content{padding:42px;min-height:330px;background:radial-gradient(circle at 76% 22%,rgba(56,189,248,.25),transparent 34%),linear-gradient(135deg,rgba(15,23,42,.98),rgba(30,41,59,.96))}
+.mock-kicker{width:120px;height:14px;border-radius:999px;background:linear-gradient(90deg,#38bdf8,#818cf8);margin-bottom:24px}
+.mock-title{width:78%;height:42px;border-radius:14px;background:rgba(255,255,255,.9);margin-bottom:18px}
+.mock-line{width:68%;height:14px;border-radius:999px;background:rgba(226,232,240,.55);margin-bottom:12px}.mock-line.short{width:46%}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}.mock-cards div{height:88px;border-radius:20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.11)}.mock-cards div:nth-child(2){background:linear-gradient(135deg,rgba(56,189,248,.35),rgba(59,130,246,.18))}
+.mock-floating-card{position:absolute;right:-18px;bottom:32px;max-width:280px;padding:20px;border-radius:24px;background:rgba(255,255,255,.92);color:#0f172a;box-shadow:0 24px 70px rgba(0,0,0,.24)}
+.mock-floating-card strong{display:block;font-size:15px;margin-bottom:6px}.mock-floating-card span{color:#64748b;font-size:13px}
+@media(max-width:940px){.premium-hero{min-height:auto;padding:130px 0 76px}.premium-hero-grid{grid-template-columns:1fr;gap:42px}.premium-hero h1{font-size:clamp(38px,9vw,56px)}.premium-hero-visual{min-height:360px}}
+@media(max-width:620px){.premium-hero{padding:118px 0 66px}.premium-hero h1{font-size:38px}.premium-hero p{font-size:16px}.premium-hero .cta-row .btn{width:100%}.mock-content{padding:28px;min-height:280px}.mock-floating-card{position:relative;right:auto;bottom:auto;margin-top:16px;max-width:100%}}

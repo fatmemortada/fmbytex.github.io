@@ -57,3 +57,43 @@ document.querySelectorAll("form").forEach(form => {
     document.body.appendChild(whatsappButton);
   }
 })();
+
+
+
+// ===== FM Systems final premium motion =====
+(function(){
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    reveals.forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
+      observer.observe(el);
+    });
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+
+  const parallaxItems = document.querySelectorAll('[data-fm-parallax]');
+  let ticking = false;
+  function updateParallax(){
+    const y = window.scrollY || 0;
+    parallaxItems.forEach((el) => {
+      const speed = Number(el.getAttribute('data-fm-parallax')) || 0.05;
+      el.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if(!ticking){
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive:true });
+})();

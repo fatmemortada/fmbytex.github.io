@@ -1,1 +1,0 @@
-FM Systems premium tech rebrand applied: new logo, favicon, dark tech UI, stronger hero section, mobile polish, SEO text, and visual upgrades. Replace all old files with this folder, then push to GitHub.

@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-<symbol id="fm-icon-web" viewBox="0 0 24 24"><path d="M4 5.5h16v13H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 9h16M8 15h5M8 12.5h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-<symbol id="fm-icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="5.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.2 15.2 20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-<symbol id="fm-icon-brand" viewBox="0 0 24 24"><path d="M12 3 20 8v8l-8 5-8-5V8l8-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 8v8M8.5 10l7 4M15.5 10l-7 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-</svg>

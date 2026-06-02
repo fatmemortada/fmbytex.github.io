@@ -1,9 +1,27 @@
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-document.querySelectorAll('.menu-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>document.querySelector('.nav-links')?.classList.toggle('open'));
-});
-const els=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
- const ob=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.12});
- els.forEach((el,i)=>{el.style.transitionDelay=(i%5)*70+'ms';ob.observe(el)});
-}else{els.forEach(el=>el.classList.add('visible'))}
+// Mobile nav
+const btn = document.querySelector('.menu-btn');
+const links = document.querySelector('.nav-links');
+if(btn && links){
+  btn.addEventListener('click', () => {
+    const open = links.classList.contains('mobile-open');
+    if(open){
+      links.classList.remove('mobile-open');
+      links.removeAttribute('style');
+    } else {
+      links.classList.add('mobile-open');
+      Object.assign(links.style, {
+        display:'flex', flexDirection:'column', alignItems:'flex-start',
+        position:'fixed', top:'72px', left:'0', right:'0',
+        background:'rgba(9,9,10,.96)', padding:'20px 5%',
+        borderBottom:'1px solid rgba(255,255,255,.07)',
+        gap:'4px', backdropFilter:'blur(20px)'
+      });
+    }
+  });
+}

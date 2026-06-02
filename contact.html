@@ -1,1 +1,154 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FM Systems | Premium Websites</title><meta name="description" content="FM Systems creates premium bilingual websites, branding, and digital presence."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><link rel="icon" type="image/svg+xml" href="images/logo.svg"></head><body><header class="topbar"><div class="container nav"><a class="logo-wrap" href="index.html"><img src="images/logo.svg" alt="FM Systems logo"></a><button class="menu-btn">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="lang-pill" href="fr/index.html">FR</a><a class="nav-cta" href="contact.html">Start a Project</a></nav></div></header><main><section class="page-hero"><div class="container reveal"><div class="kicker">Contact</div><h1>Start your project.</h1></div></section><section class="section"><div class="container"><div class="form-box reveal"><div class="section-head"><div class="kicker">Contact</div><h2>Tell me about your project.</h2><p>Email me directly or use the form.</p><a class="email-highlight" href="mailto:fatmemortada88@gmail.com">fatmemortada88@gmail.com</a></div><form class="form-grid" action="mailto:fatmemortada88@gmail.com" method="post" enctype="text/plain"><input name="name" placeholder="Name"><input name="email" placeholder="Email"><select name="service"><option>Choose a service</option><option>Website</option><option>Branding</option><option>SEO</option></select><textarea name="message" placeholder="Your message"></textarea><button class="btn btn-primary" type="submit">Send Request</button></form></div></div></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><img src="images/logo.svg" alt="FM Systems logo"><p>Modern websites, branding, and digital presence for ambitious brands.</p><a class="email-highlight" href="contact.html">fatmemortada88@gmail.com</a></div><div><h4>Navigation</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><h4>Follow FM Systems</h4><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom">© 2026 FM Systems. All rights reserved.</div></div></footer><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | FM Systems</title>
+<meta name="description" content="Start a project with FM Systems — premium bilingual websites and digital presence, Montreal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<style>
+.contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;margin-top:80px}
+.contact-info{position:sticky;top:100px}
+.info-block{margin-bottom:40px}
+.info-block h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text);margin-bottom:14px;letter-spacing:-.02em}
+.info-block p{font-size:14px;color:var(--muted);line-height:1.75}
+.contact-channels{display:flex;flex-direction:column;gap:10px}
+.ch-link{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--border);font-size:14px;font-weight:500;transition:background .2s,border-color .2s}
+.ch-link:hover{background:var(--lift);border-color:rgba(255,255,255,.12)}
+.ch-icon{width:36px;height:36px;border-radius:10px;background:rgba(196,160,106,.1);border:1px solid rgba(196,160,106,.18);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+.ch-label{font-weight:600;color:var(--text);font-size:14px}
+.ch-sub{font-size:12px;color:var(--muted)}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px;box-shadow:0 40px 100px rgba(0,0,0,.3)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border-radius:var(--r-md);border:1px solid var(--border);background:#111110;color:var(--text);font-family:inherit;font-size:14px;transition:border-color .2s,box-shadow .2s;outline:none;appearance:none}
+.field input:focus,.field select,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(196,160,106,.1)}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23645d56' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;cursor:pointer}
+.field textarea{min-height:130px;resize:vertical}
+.field-span{grid-column:1/-1}
+.form-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px}
+.form-note{font-size:13px;color:var(--faint)}
+@media(max-width:980px){.contact-layout{grid-template-columns:1fr;gap:48px}.contact-info{position:static}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav-bar">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo-mark">
+      <div class="logo-box">FM</div>
+      <div><span class="logo-text">FM Systems</span><span class="logo-sub">Digital Studio</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="lang-pill" href="fr/index.html">FR</a>
+      <a class="nav-cta" href="contact.html">Start a Project</a>
+      <button class="menu-btn">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="reveal"><div class="label">Contact</div></div>
+    <h1 class="reveal d1">Let's start<br><em>your project.</em></h1>
+    <p class="lead reveal d2">Tell us about your business and what you need. We'll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<!-- CONTACT LAYOUT -->
+<section class="section bg-deep">
+  <div class="wrap">
+    <div class="contact-layout">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info reveal">
+        <div class="info-block">
+          <div class="label">Direct Contact</div>
+          <div class="contact-channels">
+            <a class="ch-link" href="mailto:fatmemortada88@gmail.com">
+              <div class="ch-icon">✉</div>
+              <div><div class="ch-label">Email</div><div class="ch-sub">fatmemortada88@gmail.com</div></div>
+            </a>
+            <a class="ch-link" href="https://wa.me/14383736655">
+              <div class="ch-icon">💬</div>
+              <div><div class="ch-label">WhatsApp</div><div class="ch-sub">+1 (438) 373-6655</div></div>
+            </a>
+            <a class="ch-link" href="https://instagram.com/fatmemortada">
+              <div class="ch-icon">📸</div>
+              <div><div class="ch-label">Instagram</div><div class="ch-sub">@fatmemortada</div></div>
+            </a>
+            <a class="ch-link" href="https://linkedin.com/company/fmbytex">
+              <div class="ch-icon">💼</div>
+              <div><div class="ch-label">LinkedIn</div><div class="ch-sub">FM Systems</div></div>
+            </a>
+          </div>
+        </div>
+        <div class="info-block">
+          <h3>Based in Montreal</h3>
+          <p>FM Systems is a boutique digital studio based in Montreal, Quebec. We work with clients across Canada and respond in English or French.</p>
+        </div>
+        <div class="info-block">
+          <h3>Response time</h3>
+          <p>We typically respond within 24 hours. For urgent requests, WhatsApp is the fastest way to reach us.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="form-card reveal d1">
+        <div class="label" style="margin-bottom:8px">Project Inquiry</div>
+        <h2 style="font-size:clamp(26px,3vw,40px);margin-bottom:28px">Tell us about your <em>project.</em></h2>
+        <form action="mailto:fatmemortada88@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Jane Smith" required></div>
+            <div class="field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="jane@company.com" required></div>
+          </div>
+          <div class="field"><label for="business">Business Name</label><input id="business" name="business" type="text" placeholder="Your business or brand name"></div>
+          <div class="field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option>Website Design</option>
+              <option>Digital Redesign</option>
+              <option>Branding</option>
+              <option>Google Visibility</option>
+              <option>SEO Basics</option>
+              <option>Maintenance</option>
+              <option>Full Package</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field field-span"><label for="message">Project Details</label><textarea id="message" name="message" placeholder="Tell us about your business, what you're looking for, and any details that might help us understand your project..."></textarea></div>
+          <div class="form-footer">
+            <span class="form-note">We'll respond within 24 hours.</span>
+            <button class="btn btn-primary" type="submit">Send Message →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><div class="logo-box">FM</div><span>FM Systems</span></div><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><a class="email-card" href="mailto:fatmemortada88@gmail.com" style="margin-top:16px">fatmemortada88@gmail.com</a></div>
+      <div class="footer-col"><h5>Navigation</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="fr/index.html">Français</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

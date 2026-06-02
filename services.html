@@ -1,1 +1,166 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FM Systems | Premium Websites</title><meta name="description" content="FM Systems creates premium bilingual websites, branding, and digital presence."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><link rel="icon" type="image/svg+xml" href="images/logo.svg"></head><body><header class="topbar"><div class="container nav"><a class="logo-wrap" href="index.html"><img src="images/logo.svg" alt="FM Systems logo"></a><button class="menu-btn">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="lang-pill" href="fr/index.html">FR</a><a class="nav-cta" href="contact.html">Start a Project</a></nav></div></header><main><section class="page-hero"><div class="container reveal"><div class="kicker">Services</div><h1>Everything for a more premium online presence.</h1></div></section><section class="section"><div class="container"><div class="services-grid"><div class="card reveal"><img src="images/website-system-mockup.svg" alt="Website Systems"><div class="icon">✦</div><h3>Website Systems</h3><p>Custom websites designed to make your business look premium and trustworthy.</p></div><div class="card reveal"><img src="images/redesign-system-mockup.svg" alt="Digital Redesign"><div class="icon">◇</div><h3>Digital Redesign</h3><p>Transform an outdated website into a modern experience.</p></div><div class="card reveal"><img src="images/google-visibility-mockup.svg" alt="Google Visibility"><div class="icon">⌁</div><h3>Google Visibility</h3><p>Google Business, maps presence, and search-friendly structure.</p></div><div class="card reveal"><img src="images/branding-system-mockup.svg" alt="Branding"><div class="icon">◆</div><h3>Branding</h3><p>Elegant visual direction, colors, typography, and brand presentation.</p></div><div class="card reveal"><img src="images/seo-dashboard-mockup.svg" alt="SEO Basics"><div class="icon">↗</div><h3>SEO Basics</h3><p>Page structure, keywords, meta tags, and content direction.</p></div><div class="card reveal"><img src="images/maintenance-dashboard-mockup.svg" alt="Maintenance"><div class="icon">✓</div><h3>Maintenance</h3><p>Ongoing updates, support, and improvements after launch.</p></div></div></div></section></main><footer class="footer"><div class="container"><div class="footer-grid"><div><img src="images/logo.svg" alt="FM Systems logo"><p>Modern websites, branding, and digital presence for ambitious brands.</p><a class="email-highlight" href="contact.html">fatmemortada88@gmail.com</a></div><div><h4>Navigation</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><h4>Follow FM Systems</h4><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom">© 2026 FM Systems. All rights reserved.</div></div></footer><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | FM Systems</title>
+<meta name="description" content="Premium web design, branding, SEO, and digital presence services by FM Systems — Montreal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<style>
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:36px;position:relative;transition:transform .3s var(--ease),box-shadow .3s}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 32px 80px rgba(0,0,0,.4)}
+.price-card.featured{border-color:rgba(196,160,106,.3);background:var(--lift)}
+.feat-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold-hi));color:#0d0b09;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.price-label{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.price-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--text);margin-bottom:6px}
+.price-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.price-items{display:grid;gap:10px;margin-bottom:32px}
+.price-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)}
+.price-item::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:64px;border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden}
+.step{background:var(--surface);padding:36px 30px;border-right:1px solid var(--border);position:relative}
+.step:last-child{border-right:none}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:rgba(196,160,106,.15);line-height:1;margin-bottom:16px}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text);margin-bottom:10px}
+.step-desc{font-size:13.5px;color:var(--muted);line-height:1.7}
+@media(max-width:980px){.pricing-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:none}.step:nth-child(1),.step:nth-child(2){border-bottom:1px solid var(--border)}}
+@media(max-width:640px){.process-steps{grid-template-columns:1fr}.step{border-right:none!important;border-bottom:1px solid var(--border)!important}.step:last-child{border-bottom:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav-bar">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo-mark">
+      <div class="logo-box">FM</div>
+      <div><span class="logo-text">FM Systems</span><span class="logo-sub">Digital Studio</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="lang-pill" href="fr/index.html">FR</a>
+      <a class="nav-cta" href="contact.html">Start a Project</a>
+      <button class="menu-btn">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="reveal"><div class="label">Services</div></div>
+    <h1 class="reveal d1">Everything for a more<br><em>premium</em> presence.</h1>
+    <p class="lead reveal d2">A focused suite of digital services built to make your business look established, trustworthy, and credible online.</p>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="section bg-deep">
+  <div class="wrap">
+    <div class="centered reveal"><div class="label">What We Offer</div><h2>Six services.<br><em>One clear goal.</em></h2></div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><div class="svc-icon">✦</div><span class="svc-arrow">↗</span><div class="svc-title">Website Systems</div><p class="svc-desc">Custom, hand-crafted websites designed to make your business look premium and trustworthy from the very first click. Built with performance and clarity in mind.</p></div>
+      <div class="svc-card reveal d1"><div class="svc-icon">◇</div><span class="svc-arrow">↗</span><div class="svc-title">Digital Redesign</div><p class="svc-desc">Transform an outdated website into a modern, conversion-focused digital experience. Same brand, elevated presence.</p></div>
+      <div class="svc-card reveal d2"><div class="svc-icon">⌖</div><span class="svc-arrow">↗</span><div class="svc-title">Google Visibility</div><p class="svc-desc">Google Business setup, maps presence, and a search-friendly structure so local clients can find and trust you online.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">◆</div><span class="svc-arrow">↗</span><div class="svc-title">Branding</div><p class="svc-desc">Elegant visual direction — logo, colors, typography, and brand presentation that resonates with your ideal clients.</p></div>
+      <div class="svc-card reveal d1"><div class="svc-icon">↗</div><span class="svc-arrow">↗</span><div class="svc-title">SEO Basics</div><p class="svc-desc">Page structure, keywords, meta tags, and content direction that improves your ranking and helps Google understand your offer.</p></div>
+      <div class="svc-card reveal d2"><div class="svc-icon">✓</div><span class="svc-arrow">↗</span><div class="svc-title">Maintenance</div><p class="svc-desc">Ongoing updates, content changes, support, and improvements to keep your site performing long after launch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="wrap">
+    <div class="centered reveal"><div class="label">How It Works</div><h2>A simple, <em>clear</em> process.</h2><p class="lead">Four steps from first conversation to a live, polished website.</p></div>
+    <div class="process-steps">
+      <div class="step reveal"><div class="step-num">01</div><div class="step-title">Discovery</div><p class="step-desc">We learn about your business, goals, clients, and what you want your digital presence to communicate.</p></div>
+      <div class="step reveal d1"><div class="step-num">02</div><div class="step-title">Design</div><p class="step-desc">A tailored design direction built around your brand — clean, premium, and intentional.</p></div>
+      <div class="step reveal d2"><div class="step-num">03</div><div class="step-title">Build</div><p class="step-desc">We develop the site with performance, mobile-first layout, and bilingual support built in from the start.</p></div>
+      <div class="step reveal d3"><div class="step-num">04</div><div class="step-title">Launch</div><p class="step-desc">Your site goes live, polished and ready. We stay available for support and ongoing updates.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section bg-deep">
+  <div class="wrap">
+    <div class="centered reveal"><div class="label">Packages</div><h2>Simple, <em>transparent</em> pricing.</h2><p class="lead">Every project is scoped to your needs. These are starting points.</p></div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-label">Starter</div>
+        <div class="price-name">Presence</div>
+        <p class="price-desc">For businesses that need a clean, professional presence up quickly.</p>
+        <div class="price-items">
+          <div class="price-item">1–3 page website</div>
+          <div class="price-item">Mobile-first design</div>
+          <div class="price-item">Google Business setup</div>
+          <div class="price-item">Basic SEO structure</div>
+          <div class="price-item">Contact form</div>
+        </div>
+        <a class="btn btn-ghost" href="contact.html" style="width:100%;justify-content:center">Get a Quote</a>
+      </div>
+      <div class="price-card featured reveal d1">
+        <div class="feat-badge">Most Popular</div>
+        <div class="price-label">Standard</div>
+        <div class="price-name">Premium Site</div>
+        <p class="price-desc">The complete digital presence package for serious businesses.</p>
+        <div class="price-items">
+          <div class="price-item">5–8 page bilingual website</div>
+          <div class="price-item">Custom design system</div>
+          <div class="price-item">Branding direction</div>
+          <div class="price-item">Google Visibility setup</div>
+          <div class="price-item">SEO-optimized structure</div>
+          <div class="price-item">1 month post-launch support</div>
+        </div>
+        <a class="btn btn-primary" href="contact.html" style="width:100%;justify-content:center">Start a Project →</a>
+      </div>
+      <div class="price-card reveal d2">
+        <div class="price-label">Advanced</div>
+        <div class="price-name">Full System</div>
+        <p class="price-desc">For businesses ready for a full digital overhaul and ongoing partnership.</p>
+        <div class="price-items">
+          <div class="price-item">Full website system</div>
+          <div class="price-item">Complete brand identity</div>
+          <div class="price-item">SEO &amp; content strategy</div>
+          <div class="price-item">Google Visibility</div>
+          <div class="price-item">Ongoing maintenance</div>
+          <div class="price-item">Priority support</div>
+        </div>
+        <a class="btn btn-ghost" href="contact.html" style="width:100%;justify-content:center">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="wrap reveal">
+    <div class="label">Next Step</div>
+    <h2>Not sure where to <em>start?</em></h2>
+    <p class="lead centered">Send a message and we'll figure out what your business needs. No pressure, no jargon.</p>
+    <a class="btn btn-primary" href="contact.html" style="margin-top:36px;margin-inline:auto">Start the Conversation →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><div class="logo-box">FM</div><span>FM Systems</span></div><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><a class="email-card" href="contact.html" style="margin-top:16px">fatmemortada88@gmail.com</a></div>
+      <div class="footer-col"><h5>Navigation</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="fr/index.html">Français</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,142 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | FM Systems</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — FM Systems</title>
 <meta name="description" content="FM Systems — a boutique Montreal digital studio creating premium bilingual websites and branding.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-<style>
-.about-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:80px}
-.big-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,48px);font-weight:500;font-style:italic;line-height:1.35;color:var(--text);border-left:3px solid var(--gold);padding-left:28px;margin:40px 0}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
-.val-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:36px;transition:transform .25s var(--ease)}
-.val-card:hover{transform:translateY(-4px)}
-.val-icon{font-size:28px;margin-bottom:18px}
-.val-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text);margin-bottom:10px}
-.val-desc{font-size:14px;color:var(--muted);line-height:1.75}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;margin-top:64px}
-.stat-box{background:var(--surface);padding:36px 28px;text-align:center;border-right:1px solid var(--border)}
-.stat-box:last-child{border-right:none}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:var(--gold-hi);line-height:1;display:block}
-.stat-lbl{font-size:13px;color:var(--muted);margin-top:6px;font-weight:500}
-@media(max-width:980px){.about-intro{grid-template-columns:1fr;gap:40px}.values-grid{grid-template-columns:1fr 1fr}.stats-row{grid-template-columns:1fr 1fr}.stat-box:nth-child(2){border-right:none}.stat-box:nth-child(1),.stat-box:nth-child(2){border-bottom:1px solid var(--border)}}
-@media(max-width:640px){.values-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}}
-</style>
 </head>
 <body>
-<nav class="nav-bar">
+<nav class="nav scrolled">
   <div class="wrap nav-inner">
-    <a href="index.html" class="logo-mark">
-      <div class="logo-box">FM</div>
-      <div><span class="logo-text">FM Systems</span><span class="logo-sub">Digital Studio</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a class="lang-pill" href="fr/index.html">FR</a>
-      <a class="nav-cta" href="contact.html">Start a Project</a>
-      <button class="menu-btn">☰</button>
-    </div>
+    <a href="index.html" class="logo"><div class="logo-badge">F</div><div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div></a>
+    <ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html" class="active">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-right"><a href="fr/index.html" class="lang-btn">FR</a><a href="contact.html" class="btn btn-primary btn-sm">Start a Project <span class="arrow">→</span></a><button class="hamburger">☰</button></div>
   </div>
 </nav>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
+  <div class="page-hero-word">Studio</div>
   <div class="wrap page-hero-inner">
-    <div class="reveal"><div class="label">About</div></div>
-    <h1 class="reveal d1">A calm, clear,<br><em>professional</em> studio.</h1>
-    <p class="lead reveal d2">FM Systems is a Montreal-based digital studio focused on making businesses look established and credible online.</p>
+    <div class="eyebrow reveal">About FM Systems</div>
+    <h1 class="display reveal d1">A calm, clear,<br><span style="color:var(--gold);font-style:italic">professional</span> studio.</h1>
+    <p class="lead reveal d2" style="margin-top:16px">FM Systems is a Montreal-based digital studio focused on making businesses look established and credible online.</p>
   </div>
 </section>
 
-<!-- ABOUT INTRO -->
-<section class="section bg-deep">
-  <div class="wrap">
-    <div class="about-intro">
-      <div class="reveal">
-        <div class="label">The Studio</div>
-        <h2>Built on the belief that <em>design builds trust.</em></h2>
-        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-top:16px">FM Systems was created with a clear purpose: to help businesses communicate their value online through calm, intentional design. Too many great businesses are invisible because their digital presence doesn't reflect the quality of what they offer.</p>
-        <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-top:16px">We focus on clarity, refinement, and strategic structure — not decoration for its own sake. Every decision is made with your clients in mind.</p>
-        <a class="btn btn-primary" href="contact.html" style="margin-top:32px">Work With Us →</a>
-      </div>
-      <div class="reveal d1">
-        <blockquote class="big-quote">"Your website should feel like the best version of your business — before they even call."</blockquote>
-        <div class="feat-list">
-          <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Based in Montreal, Quebec</strong><p>Serving businesses across Canada, bilingual by default.</p></div></div>
-          <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Premium without the agency overhead</strong><p>Boutique quality, direct communication, clear timelines.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
+<!-- STORY -->
 <section class="section">
-  <div class="wrap">
-    <div class="centered reveal"><div class="label">In Numbers</div><h2>Small studio. <em>Serious results.</em></h2></div>
-    <div class="stats-row">
-      <div class="stat-box reveal"><span class="stat-num">100%</span><div class="stat-lbl">Bilingual Delivery</div></div>
-      <div class="stat-box reveal d1"><span class="stat-num">2wks</span><div class="stat-lbl">Average Timeline</div></div>
-      <div class="stat-box reveal d2"><span class="stat-num">5★</span><div class="stat-lbl">Client Rating</div></div>
-      <div class="stat-box reveal d3"><span class="stat-num">CA</span><div class="stat-lbl">Canada-wide Clients</div></div>
+  <div class="wrap about-split">
+    <div class="reveal from-left">
+      <div class="eyebrow">The Studio</div>
+      <h2 class="display">Design that<br>builds trust.</h2>
+      <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-top:20px">FM Systems was built with one clear purpose: to help businesses communicate their value online through calm, intentional design. Too many great businesses are invisible because their digital presence doesn't reflect what they actually deliver.</p>
+      <p style="font-size:16px;color:var(--muted);line-height:1.85;margin-top:16px">We focus on clarity, refinement, and strategic structure. Based in Montreal, we work bilingual from day one — because that's what serving Canadian businesses means.</p>
+      <blockquote style="border-left:3px solid var(--gold);padding-left:24px;margin-top:36px;font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:var(--cream2);line-height:1.5">"Your website should feel like the best version of your business — before a client even calls."</blockquote>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:36px">Work With Us <span class="arrow">→</span></a>
+    </div>
+    <div class="reveal from-right d1">
+      <div class="big-stat">
+        <div class="bstat"><div class="bstat-n">5+</div><div class="bstat-l">Years of experience</div></div>
+        <div class="bstat"><div class="bstat-n">98%</div><div class="bstat-l">Client satisfaction</div></div>
+        <div class="bstat"><div class="bstat-n">2wk</div><div class="bstat-l">Average turnaround</div></div>
+        <div class="bstat"><div class="bstat-n">EN/FR</div><div class="bstat-l">Bilingual by default</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- VALUES -->
-<section class="section bg-deep">
+<section class="section" style="background:var(--navy2)">
   <div class="wrap">
-    <div class="centered reveal"><div class="label">How We Work</div><h2>Three things we <em>never compromise on.</em></h2></div>
-    <div class="values-grid">
-      <div class="val-card reveal"><div class="val-icon">✦</div><div class="val-title">Clarity over complexity</div><p class="val-desc">Every element on a page should have a reason to exist. We strip away the noise so your offer reads clearly and fast.</p></div>
-      <div class="val-card reveal d1"><div class="val-icon">◆</div><div class="val-title">Premium without pretense</div><p class="val-desc">We design for your clients, not for design awards. Elevated aesthetics that feel approachable and trustworthy.</p></div>
-      <div class="val-card reveal d2"><div class="val-icon">↗</div><div class="val-title">Bilingual by default</div><p class="val-desc">Montreal is bilingual. Canada is bilingual. Every project we deliver is ready for both English and French audiences.</p></div>
+    <div class="sh centered reveal">
+      <div class="eyebrow" style="justify-content:center">How We Work</div>
+      <h2 class="display">Three things we<br>never compromise on.</h2>
+    </div>
+    <div class="values">
+      <div class="val reveal"><div class="val-glyph">✦</div><h3>Clarity over complexity</h3><p>Every element on a page should have a reason to exist. We strip away noise so your offer reads clearly and fast.</p></div>
+      <div class="val reveal d1"><div class="val-glyph">◆</div><h3>Premium without pretense</h3><p>We design for your clients, not for awards. Elevated aesthetics that feel approachable and deeply trustworthy.</p></div>
+      <div class="val reveal d2"><div class="val-glyph">↗</div><h3>Bilingual by default</h3><p>Montreal is bilingual. Canada is bilingual. Every project ships ready for both English and French audiences.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="section-sm">
+  <div class="wrap">
+    <div class="nums reveal">
+      <div class="num-box"><span class="num-big">100<em>+</em></span><span class="num-label">Projects delivered</span></div>
+      <div class="num-box"><span class="num-big">5<em>★</em></span><span class="num-label">Client rating</span></div>
+      <div class="num-box"><span class="num-big">2<em>wk</em></span><span class="num-label">Average turnaround</span></div>
+      <div class="num-box"><span class="num-big">EN<em>/FR</em></span><span class="num-label">Bilingual delivery</span></div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section">
+<section class="section" style="background:var(--navy2)">
   <div class="wrap">
-    <div class="centered reveal"><div class="label">What Clients Say</div><h2>Trust, <em>earned.</em></h2></div>
-    <div class="test-grid">
-      <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-quote">"The website finally matches the luxury experience clients receive in person."</p><div class="test-author"><div class="test-avatar">MM</div><div><div class="test-name">Maison Malaak</div><div class="test-role">Beauty &amp; Wellness</div></div></div></div>
-      <div class="test-card reveal d1"><div class="test-stars">★★★★★</div><p class="test-quote">"A polished digital presence makes the business look established from the first click."</p><div class="test-author"><div class="test-avatar">M</div><div><div class="test-name">Professional Client</div><div class="test-role">Professional Services</div></div></div></div>
-      <div class="test-card reveal d2"><div class="test-stars">★★★★★</div><p class="test-quote">"Clear messaging and bilingual structure help visitors understand the offer quickly."</p><div class="test-author"><div class="test-avatar">DS</div><div><div class="test-name">Digital Partner</div><div class="test-role">Digital Strategy</div></div></div></div>
+    <div class="sh centered reveal">
+      <div class="eyebrow" style="justify-content:center">What Clients Say</div>
+      <h2 class="display">Trust, earned.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal"><span class="testi-quote">"</span><div class="stars">★★★★★</div><p>"The website finally matches the luxury experience clients receive in person. Exactly what we needed."</p><div class="testi-author"><div class="testi-av">MM</div><div><div class="testi-name">Maison Malaak</div><div class="testi-role">Beauty &amp; Wellness</div></div></div></div>
+      <div class="testi reveal d1"><span class="testi-quote">"</span><div class="stars">★★★★★</div><p>"A polished digital presence makes the business look established from the very first click."</p><div class="testi-author"><div class="testi-av">M</div><div><div class="testi-name">Business Client</div><div class="testi-role">Professional Services</div></div></div></div>
+      <div class="testi reveal d2"><span class="testi-quote">"</span><div class="stars">★★★★★</div><p>"Clear messaging and bilingual structure — our visitors immediately understand what we offer."</p><div class="testi-author"><div class="testi-av">DS</div><div><div class="testi-name">Digital Partner</div><div class="testi-role">Digital Strategy</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
+<section class="cta-band">
   <div class="wrap reveal">
-    <div class="label">Let's Work Together</div>
-    <h2>Your business deserves a<br><em>presence that reflects it.</em></h2>
-    <p class="lead centered">Get in touch and let's build something you're proud of.</p>
-    <a class="btn btn-primary" href="contact.html" style="margin-top:36px;margin-inline:auto">Start a Project →</a>
+    <div class="eyebrow" style="justify-content:center">Work Together</div>
+    <h2 class="display">Your business deserves<br>a presence that reflects it.</h2>
+    <p class="lead">Get in touch and let's build something you're proud of.</p>
+    <a href="contact.html" class="btn btn-primary" style="font-size:16px;padding:17px 36px">Start a Project <span class="arrow">→</span></a>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo"><div class="logo-box">FM</div><span>FM Systems</span></div><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><a class="email-card" href="contact.html" style="margin-top:16px">fatmemortada88@gmail.com</a></div>
-      <div class="footer-col"><h5>Navigation</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h5>Connect</h5><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="fr/index.html">Français</a></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div>
-  </div>
-</footer>
+<footer class="footer"><div class="wrap"><div class="footer-top"><div class="footer-brand"><a href="index.html" class="logo"><div class="logo-badge">F</div><div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div></a><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="footer-soc" href="https://linkedin.com/company/fmbytex">in</a><a class="footer-soc" href="https://instagram.com/fatmemortada">ig</a><a class="footer-soc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">SEO Basics</a></div><div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec · <a href="fr/index.html">Français</a></span></div></div></footer>
 <script src="js/script.js"></script>
-</body>
-</html>
+</body></html>

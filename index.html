@@ -1,237 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FM Systems | Premium Websites & Digital Presence</title>
-<meta name="description" content="FM Systems creates premium bilingual websites, branding, and digital presence for businesses across Canada.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FM Systems — Premium Websites & Digital Presence</title>
+<meta name="description" content="FM Systems crafts premium bilingual websites, branding, and digital presence for ambitious businesses across Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-<style>
-/* ── Hero ────────────────────────────────────────── */
-.hero{position:relative;overflow:hidden;min-height:100svh;display:flex;align-items:center;padding:140px 0 100px}
-.hero::after{content:'';position:absolute;top:-10%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(196,160,106,.12),transparent 68%);pointer-events:none}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 70%,transparent);pointer-events:none}
-.hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding:7px 14px 7px 10px;border-radius:999px;background:rgba(196,160,106,.08);border:1px solid rgba(196,160,106,.18);margin-bottom:28px}
-.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
-.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6.5vw,96px);font-weight:600;line-height:1.0;letter-spacing:-.03em;color:var(--text);margin-bottom:28px}
-.hero-headline em{font-style:italic;background:linear-gradient(135deg,var(--gold),var(--gold-hi));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-body{font-size:17px;color:var(--muted);max-width:480px;line-height:1.8;margin-bottom:40px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
-.trust-row{display:flex;gap:8px;flex-wrap:wrap}
-.trust-chip{font-size:12px;font-weight:500;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)}
-/* ── Hero visual ─────────────────────────────────── */
-.hero-visual{position:relative}
-.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.5)}
-.card-header{background:rgba(255,255,255,.03);border-bottom:1px solid var(--border);padding:18px 22px;display:flex;align-items:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%}
-.dot-r{background:#9f6d65}.dot-y{background:var(--gold)}.dot-g{background:#8a9b73}
-.card-url{margin-left:12px;flex:1;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-family:'DM Mono',monospace;font-size:11.5px;color:var(--faint)}
-.card-body{padding:28px}
-.mock-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.mock-logo-box{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--gold-hi));opacity:.8}
-.mock-logo-line{height:8px;width:80px;border-radius:4px;background:rgba(255,255,255,.14)}
-.mock-h{height:32px;width:85%;border-radius:8px;background:rgba(255,255,255,.1);margin-bottom:12px}
-.mock-p{height:9px;border-radius:4px;background:rgba(255,255,255,.06);margin-bottom:8px}
-.mock-p.w70{width:70%}.mock-p.w55{width:55%}
-.mock-cta{display:inline-block;margin-top:18px;padding:10px 22px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-hi));height:38px;width:120px}
-.mock-img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
-.mock-img{height:70px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--border)}
-.float-badge{position:absolute;bottom:-16px;right:-20px;background:var(--gold-hi);color:#0d0b09;border-radius:var(--r-md);padding:14px 18px;box-shadow:0 20px 60px rgba(0,0,0,.35);animation:floatY 6s ease-in-out infinite;max-width:210px}
-.float-badge strong{display:block;font-size:13px;font-weight:700;margin-bottom:3px}
-.float-badge span{font-size:11.5px;color:rgba(13,11,9,.6);line-height:1.4}
-.side-stat{position:absolute;top:28px;left:-24px;background:var(--lift);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 18px;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:floatY2 7s ease-in-out infinite;text-align:center}
-.side-stat .big{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--gold-hi);line-height:1}
-.side-stat .lbl{font-size:10.5px;font-weight:500;letter-spacing:.08em;color:var(--muted);margin-top:4px}
-@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes floatY2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-/* ── Portfolio asymmetric ─────────────────────────── */
-.port-asym{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-top:64px}
-.port-asym .work-card-img{height:280px}
-.port-stack{display:flex;flex-direction:column;gap:24px}
-.port-stack .work-card-img{height:170px}
-/* ── Connect card ─────────────────────────────────── */
-.connect-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;overflow:hidden}
-.connect-card::before{content:'';position:absolute;top:-60%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(196,160,106,.08),transparent 60%);pointer-events:none}
-.social-links{display:flex;flex-direction:column;gap:10px}
-@media(max-width:980px){.hero-layout{grid-template-columns:1fr;gap:48px}.port-asym{grid-template-columns:1fr}.port-stack .work-card-img,.port-asym .work-card-img{height:220px}.connect-card{grid-template-columns:1fr;padding:36px;gap:32px}.side-stat{display:none}.float-badge{right:10px;bottom:-10px}}
-@media(max-width:640px){.hero{padding:110px 0 80px}.hero-headline{font-size:46px}.hero-actions .btn{width:auto}}
-</style>
 </head>
 <body>
-<nav class="nav-bar">
+
+<nav class="nav scrolled">
   <div class="wrap nav-inner">
-    <a href="index.html" class="logo-mark">
-      <div class="logo-box">FM</div>
-      <div><span class="logo-text">FM Systems</span><span class="logo-sub">Digital Studio</span></div>
+    <a href="index.html" class="logo">
+      <div class="logo-badge">F</div>
+      <div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <a class="lang-pill" href="fr/index.html">FR</a>
-      <a class="nav-cta" href="contact.html">Start a Project</a>
-      <button class="menu-btn">☰</button>
+    <div class="nav-right">
+      <a href="fr/index.html" class="lang-btn">FR</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Start a Project <span class="arrow">→</span></a>
+      <button class="hamburger" aria-label="Menu">☰</button>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ══ HERO ═══════════════════════════════════════ -->
 <section class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="wrap hero-layout">
+  <div class="hero-bg-num">01</div>
+  <div class="wrap hero-inner">
     <div>
-      <div class="hero-tag reveal">Montreal Digital Studio</div>
-      <h1 class="hero-headline reveal d1">Websites that<br><em>command</em> attention.</h1>
-      <p class="hero-body reveal d2">FM Systems crafts premium bilingual websites, branding, and digital experiences for ambitious businesses across Canada.</p>
-      <div class="hero-actions reveal d2">
-        <a class="btn btn-primary" href="contact.html">Start a Project →</a>
-        <a class="btn btn-ghost" href="portfolio.html">View Work</a>
+      <div class="hero-pill reveal"><span></span>Montreal Digital Studio</div>
+      <h1 class="display reveal d1">
+        We build websites<br><span class="line2">that win clients.</span>
+      </h1>
+      <p class="hero-sub reveal d2">Premium bilingual websites, branding, and digital experiences crafted for ambitious businesses across Canada.</p>
+      <div class="hero-btns reveal d2">
+        <a href="contact.html" class="btn btn-primary">Start a Project <span class="arrow">→</span></a>
+        <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
       </div>
-      <div class="trust-row reveal d3">
-        <span class="trust-chip">🇨🇦 Montreal</span>
-        <span class="trust-chip">EN / FR</span>
-        <span class="trust-chip">Mobile-first</span>
-        <span class="trust-chip">Premium</span>
+      <div class="hero-stats reveal d3">
+        <div class="hstat"><span class="hstat-num">100+</span><span class="hstat-label">Projects Delivered</span></div>
+        <div class="hstat"><span class="hstat-num">5★</span><span class="hstat-label">Client Rating</span></div>
+        <div class="hstat"><span class="hstat-num">EN/FR</span><span class="hstat-label">Bilingual</span></div>
       </div>
     </div>
-    <div class="hero-visual reveal d2">
-      <div class="side-stat"><div class="big">98%</div><div class="lbl">Client<br>Satisfaction</div></div>
-      <div class="hero-card">
-        <div class="card-header">
-          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
-          <div class="card-url">fmbytex.com</div>
+    <div class="hero-panel reveal d2">
+      <div class="float-b"><strong>✦ Premium Design</strong><span>Calm · Clear · Strategic</span></div>
+      <div class="screen-wrap">
+        <div class="screen-bar">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          <div class="screen-url">fmbytex.com</div>
         </div>
-        <div class="card-body">
-          <div class="mock-logo-row"><div class="mock-logo-box"></div><div class="mock-logo-line"></div></div>
-          <div class="mock-h"></div>
-          <div class="mock-p"></div><div class="mock-p w70"></div><div class="mock-p w55"></div>
-          <div class="mock-cta"></div>
-          <div class="mock-img-row"><div class="mock-img"></div><div class="mock-img"></div><div class="mock-img"></div></div>
+        <div class="screen-body">
+          <div class="sb-nav"><div class="sb-logo"></div><div class="sb-links"><div class="sb-link"></div><div class="sb-link"></div><div class="sb-link"></div></div></div>
+          <div class="sb-hero-tag"></div>
+          <div class="sb-h1"></div><div class="sb-h2"></div>
+          <div class="sb-p"></div><div class="sb-p w80"></div><div class="sb-p w65"></div>
+          <div class="sb-btns"><div class="sb-btn1"></div><div class="sb-btn2"></div></div>
+          <div class="sb-cards"><div class="sb-card"></div><div class="sb-card"></div><div class="sb-card"></div></div>
         </div>
       </div>
-      <div class="float-badge"><strong>Premium Digital Presence</strong><span>Calm design · Clear messaging · Strong image</span></div>
+      <div class="float-a">
+        <div class="float-a-icon">🚀</div>
+        <div class="float-a-val">+40%</div>
+        <div class="float-a-lbl">Avg. leads increase</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-strip">
+<!-- ══ MARQUEE ════════════════════════════════════ -->
+<div class="marquee">
   <div class="marquee-track">
-    <span class="marquee-item">Premium Websites</span><span class="marquee-item">Bilingual Design</span><span class="marquee-item">Brand Identity</span><span class="marquee-item">Google Visibility</span><span class="marquee-item">SEO Strategy</span><span class="marquee-item">Mobile-first</span><span class="marquee-item">Montreal Studio</span><span class="marquee-item">Digital Presence</span>
-    <span class="marquee-item">Premium Websites</span><span class="marquee-item">Bilingual Design</span><span class="marquee-item">Brand Identity</span><span class="marquee-item">Google Visibility</span><span class="marquee-item">SEO Strategy</span><span class="marquee-item">Mobile-first</span><span class="marquee-item">Montreal Studio</span><span class="marquee-item">Digital Presence</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Premium Web Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bilingual EN/FR</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Google Visibility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Strategy</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Mobile-First</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Montreal Studio</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Digital Presence</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Premium Web Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bilingual EN/FR</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Google Visibility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Strategy</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Mobile-First</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Montreal Studio</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Digital Presence</span>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section class="section bg-deep">
+<!-- ══ NUMBERS ════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--navy2)">
   <div class="wrap">
-    <div class="centered reveal"><div class="label">What We Do</div><h2>Everything your brand<br>needs <em>online.</em></h2><p class="lead">A focused suite of services built around making businesses look established, trustworthy, and premium.</p></div>
-    <div class="svc-grid">
-      <div class="svc-card reveal"><div class="svc-icon">✦</div><span class="svc-arrow">↗</span><div class="svc-title">Website Systems</div><p class="svc-desc">Custom websites designed to make your business look premium and trustworthy from the first click.</p></div>
-      <div class="svc-card reveal d1"><div class="svc-icon">◇</div><span class="svc-arrow">↗</span><div class="svc-title">Digital Redesign</div><p class="svc-desc">Transform an outdated website into a modern, conversion-focused digital experience.</p></div>
-      <div class="svc-card reveal d2"><div class="svc-icon">⌖</div><span class="svc-arrow">↗</span><div class="svc-title">Google Visibility</div><p class="svc-desc">Google Business, maps presence, and search-friendly structure to get discovered locally.</p></div>
-      <div class="svc-card reveal"><div class="svc-icon">◆</div><span class="svc-arrow">↗</span><div class="svc-title">Branding</div><p class="svc-desc">Elegant visual direction — colors, typography, and brand presentation that resonates.</p></div>
-      <div class="svc-card reveal d1"><div class="svc-icon">↗</div><span class="svc-arrow">↗</span><div class="svc-title">SEO Basics</div><p class="svc-desc">Page structure, keywords, meta tags, and content direction that improves ranking.</p></div>
-      <div class="svc-card reveal d2"><div class="svc-icon">✓</div><span class="svc-arrow">↗</span><div class="svc-title">Maintenance</div><p class="svc-desc">Ongoing updates, support, and improvements to keep your site performing post-launch.</p></div>
+    <div class="nums reveal">
+      <div class="num-box"><span class="num-big">5<em>+</em></span><span class="num-label">Years of experience</span></div>
+      <div class="num-box"><span class="num-big">98<em>%</em></span><span class="num-label">Client satisfaction</span></div>
+      <div class="num-box"><span class="num-big">2<em>wk</em></span><span class="num-label">Average turnaround</span></div>
+      <div class="num-box"><span class="num-big">CA<em>/FR</em></span><span class="num-label">Bilingual delivery</span></div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- ══ SERVICES ═══════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
-    <div class="reveal"><div class="label">Selected Work</div><h2>Projects built with <em>intention.</em></h2><p class="lead">A view of digital projects shaped around real business goals.</p></div>
-    <div class="port-asym">
-      <a class="work-card reveal" href="portfolio.html">
-        <div class="work-card-img-wrap"><img class="work-card-img" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmaisonmalaak.com?w=1400" alt="Maison Malaak"></div>
-        <div class="work-meta"><span class="work-badge">Beauty Brand</span><div class="work-title">Maison Malaak</div><p class="work-desc">Elegant digital presence for a beauty and wellness business that matches the luxury of its in-person experience.</p></div>
+    <div class="sh centered reveal">
+      <div class="eyebrow" style="justify-content:center">What We Do</div>
+      <h2 class="display">Six services.<br>One clear goal.</h2>
+      <p class="lead" style="margin-top:16px">Everything your business needs to look established, trusted, and premium online.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc reveal"><span class="svc-num">01</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">✦</div><h3>Website Systems</h3><p>Custom websites built to make your business look premium and trustworthy from the first click.</p></div>
+      <div class="svc reveal d1"><span class="svc-num">02</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">◇</div><h3>Digital Redesign</h3><p>Transform your outdated website into a modern, conversion-focused digital experience.</p></div>
+      <div class="svc reveal d2"><span class="svc-num">03</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">⌖</div><h3>Google Visibility</h3><p>Google Business setup, maps presence, and search-friendly structure so clients find you first.</p></div>
+      <div class="svc reveal"><span class="svc-num">04</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">◆</div><h3>Brand Identity</h3><p>Elegant visual direction — logo, colors, typography, and brand presentation that resonates.</p></div>
+      <div class="svc reveal d1"><span class="svc-num">05</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">↗</div><h3>SEO Basics</h3><p>Page structure, keywords, meta tags, and content direction to improve your Google ranking.</p></div>
+      <div class="svc reveal d2"><span class="svc-num">06</span><span class="svc-arrow">↗</span><div class="svc-icon-wrap">✓</div><h3>Maintenance</h3><p>Ongoing updates, support, and improvements to keep your site sharp long after launch.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal"><a href="services.html" class="btn btn-outline">See All Services <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- ══ PORTFOLIO ══════════════════════════════════ -->
+<section class="section" style="background:var(--navy2)">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div class="eyebrow">Selected Work</div>
+      <h2 class="display">Projects built<br>with intention.</h2>
+      <p class="lead" style="margin-top:16px">Digital projects shaped around real business goals and measured results.</p>
+    </div>
+    <div class="port-grid">
+      <a class="port-hero port-card reveal" href="portfolio.html" style="display:grid">
+        <div class="port-hero-img"><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmaisonmalaak.com?w=1400" alt="Maison Malaak" style="min-height:380px;height:380px"></div>
+        <div class="port-hero-body" style="padding:44px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top, rgba(8,12,20,.95) 60%, transparent)">
+          <span class="badge">Beauty Brand</span>
+          <h3 style="font-size:28px;margin-bottom:10px">Maison Malaak</h3>
+          <p style="font-size:15px">Elegant digital presence for a beauty and wellness business. A website that matches the luxury of its in-person experience.</p>
+        </div>
       </a>
-      <div class="port-stack">
-        <a class="work-card reveal d1" href="portfolio.html">
-          <div class="work-card-img-wrap"><img class="work-card-img" src="images/mortacc-dark-premium-preview.svg" alt="Mortacc"></div>
-          <div class="work-meta"><span class="work-badge">Business Platform</span><div class="work-title">Mortacc</div><p class="work-desc">Professional direction for business and compliance services.</p></div>
-        </a>
-        <a class="work-card reveal d2" href="portfolio.html">
-          <div class="work-card-img-wrap"><img class="work-card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop" alt="Digital Presence"></div>
-          <div class="work-meta"><span class="work-badge">Strategy</span><div class="work-title">Digital Presence</div><p class="work-desc">Systems, branding, and visibility built to attract clients.</p></div>
-        </a>
-      </div>
+      <a class="port-card reveal d1" href="portfolio.html">
+        <div class="port-card-img"><img src="images/mortacc-dark-premium-preview.svg" alt="Mortacc"></div>
+        <div class="port-card-body"><span class="badge badge-gold">Business Platform</span><h3>Mortacc</h3><p style="font-size:14px">Professional direction for business and compliance services. Authority and trust on every page.</p></div>
+      </a>
+      <a class="port-card reveal d2" href="portfolio.html">
+        <div class="port-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop" alt="Digital Strategy"></div>
+        <div class="port-card-body"><span class="badge">Strategy</span><h3>Digital Presence</h3><p style="font-size:14px">Systems, branding, and visibility built to attract and convert clients at every touchpoint.</p></div>
+      </a>
     </div>
+    <div style="text-align:center;margin-top:44px" class="reveal"><a href="portfolio.html" class="btn btn-outline">View All Work <span class="arrow">→</span></a></div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="section bg-deep">
-  <div class="wrap split">
-    <div class="reveal">
-      <div class="label">Why FM Systems</div>
-      <h2>Built for businesses that want to look <em>established.</em></h2>
-      <p class="lead">A digital presence should build trust, explain your value, and help clients take action from the very first visit.</p>
-      <a class="btn btn-primary" href="contact.html" style="margin-top:32px">Work With Us →</a>
-    </div>
-    <div class="feat-list reveal d1">
-      <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Bilingual English / French</strong><p>Ideal for Montreal, Quebec, and the Canadian market.</p></div></div>
-      <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Mobile-first design</strong><p>Polished and refined on phone, tablet, and desktop.</p></div></div>
-      <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Strategic marketing structure</strong><p>Every section serves a clear purpose toward conversion.</p></div></div>
-      <div class="feat"><div class="feat-check">✓</div><div class="feat-text"><strong>Premium aesthetic standard</strong><p>Design that reflects the quality of your business.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
+<!-- ══ WHY FM ══════════════════════════════════════ -->
 <section class="section">
-  <div class="wrap">
-    <div class="centered reveal"><div class="label">Client Trust</div><h2>Designed to make your business feel <em>credible.</em></h2></div>
-    <div class="test-grid">
-      <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-quote">"The website finally matches the luxury experience clients receive in person."</p><div class="test-author"><div class="test-avatar">MM</div><div><div class="test-name">Maison Malaak</div><div class="test-role">Beauty &amp; Wellness</div></div></div></div>
-      <div class="test-card reveal d1"><div class="test-stars">★★★★★</div><p class="test-quote">"A polished digital presence makes the business look established from the first click."</p><div class="test-author"><div class="test-avatar">M</div><div><div class="test-name">Professional Client</div><div class="test-role">Professional Services</div></div></div></div>
-      <div class="test-card reveal d2"><div class="test-stars">★★★★★</div><p class="test-quote">"Clear messaging and bilingual structure help visitors understand the offer quickly."</p><div class="test-author"><div class="test-avatar">DS</div><div><div class="test-name">Digital Partner</div><div class="test-role">Digital Strategy</div></div></div></div>
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+    <div class="reveal from-left">
+      <div class="eyebrow">Why FM Systems</div>
+      <h2 class="display">Look established.<br>Be remembered.</h2>
+      <p class="lead" style="margin-top:20px;margin-bottom:36px">Your digital presence is the first impression. We make it count — through clarity, elegance, and strategic design built around your clients.</p>
+      <a href="about.html" class="btn btn-teal">About the Studio <span class="arrow">→</span></a>
+    </div>
+    <div class="feat-list reveal from-right d1">
+      <div class="feat"><div class="feat-check">✓</div><div><strong>Bilingual English / French</strong><p>Perfect for Montreal, Quebec, and the Canadian market.</p></div></div>
+      <div class="feat"><div class="feat-check">✓</div><div><strong>Mobile-first, always</strong><p>Polished and pixel-perfect on every device.</p></div></div>
+      <div class="feat"><div class="feat-check">✓</div><div><strong>Strategic structure</strong><p>Every page, section, and word has a purpose.</p></div></div>
+      <div class="feat"><div class="feat-check">✓</div><div><strong>Premium aesthetic standard</strong><p>Design that earns trust before you say a word.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONNECT -->
-<section class="section bg-deep">
+<!-- ══ TESTIMONIALS ════════════════════════════════ -->
+<section class="section" style="background:var(--navy2)">
   <div class="wrap">
-    <div class="connect-card reveal">
-      <div><div class="label">Get in Touch</div><h2 style="font-size:clamp(30px,3.5vw,50px)">A studio with a calm,<br><em>professional</em> touch.</h2><p class="lead" style="font-size:15px;margin-top:12px">FM Systems helps businesses look more premium, clear, and credible online.</p></div>
-      <div class="social-links">
-        <a class="soc-link" href="https://wa.me/14383736655"><span>💬</span> WhatsApp</a>
-        <a class="soc-link" href="https://instagram.com/fatmemortada"><span>📸</span> Instagram</a>
-        <a class="soc-link" href="https://linkedin.com/company/fmbytex"><span>💼</span> LinkedIn</a>
-        <a class="email-card" href="contact.html"><span>✉</span> fatmemortada88@gmail.com</a>
+    <div class="sh centered reveal">
+      <div class="eyebrow" style="justify-content:center">What Clients Say</div>
+      <h2 class="display">Trust, earned.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <span class="testi-quote">"</span>
+        <div class="stars">★★★★★</div>
+        <p>"The website finally matches the luxury experience clients receive in person. Exactly what we needed."</p>
+        <div class="testi-author"><div class="testi-av">MM</div><div><div class="testi-name">Maison Malaak</div><div class="testi-role">Beauty &amp; Wellness</div></div></div>
+      </div>
+      <div class="testi reveal d1">
+        <span class="testi-quote">"</span>
+        <div class="stars">★★★★★</div>
+        <p>"A polished digital presence makes the business look established from the very first click."</p>
+        <div class="testi-author"><div class="testi-av">M</div><div><div class="testi-name">Business Client</div><div class="testi-role">Professional Services</div></div></div>
+      </div>
+      <div class="testi reveal d2">
+        <span class="testi-quote">"</span>
+        <div class="stars">★★★★★</div>
+        <p>"Clear messaging and bilingual structure — visitors immediately understand what we offer."</p>
+        <div class="testi-author"><div class="testi-av">DS</div><div><div class="testi-name">Digital Partner</div><div class="testi-role">Digital Strategy</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
+<!-- ══ CTA BAND ════════════════════════════════════ -->
+<section class="cta-band">
   <div class="wrap reveal">
-    <div class="label">Next Step</div>
-    <h2>Ready to elevate your<br><em>digital presence?</em></h2>
-    <p class="lead centered">Let's create an online experience that feels clearer, more premium, and aligned with your business.</p>
-    <a class="btn btn-primary" href="contact.html" style="margin-top:36px;margin-inline:auto">Start a Project →</a>
+    <div class="eyebrow" style="justify-content:center">Next Step</div>
+    <h2 class="display">Ready to elevate<br>your digital presence?</h2>
+    <p class="lead">Let's build something you're proud to share with every client.</p>
+    <a href="contact.html" class="btn btn-primary" style="font-size:16px;padding:17px 36px">Start a Project <span class="arrow">→</span></a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ══ FOOTER ══════════════════════════════════════ -->
 <footer class="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo"><div class="logo-box">FM</div><span>FM Systems</span></div><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><a class="email-card" href="contact.html" style="margin-top:16px">fatmemortada88@gmail.com</a></div>
-      <div class="footer-col"><h5>Navigation</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h5>Connect</h5><a href="https://www.linkedin.com/company/fmsystems/">LinkedIn</a><a href="https://www.instagram.com/fatmemortada">Instagram</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="fr/index.html">Français</a></div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-badge">F</div><div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div></a>
+        <p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p>
+        <div class="footer-socials">
+          <a class="footer-soc" href="https://linkedin.com/company/fmbytex" title="LinkedIn">in</a>
+          <a class="footer-soc" href="https://instagram.com/fatmemortada" title="Instagram">ig</a>
+          <a class="footer-soc" href="https://wa.me/14383736655" title="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">SEO Basics</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 FM Systems. All rights reserved.</span>
+      <span>Montreal, Quebec · <a href="fr/index.html">Français</a></span>
+    </div>
   </div>
 </footer>
 <script src="js/script.js"></script>

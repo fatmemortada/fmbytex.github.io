@@ -5,105 +5,94 @@
 <title>Portfolio — FM Systems</title>
 <meta name="description" content="Selected digital work by FM Systems — premium websites and branding for businesses across Canada.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <style>
-.featured-work{display:grid;grid-template-columns:1.5fr 1fr;gap:0;border-radius:20px;overflow:hidden;border:1px solid var(--border);margin-top:64px;transition:transform .4s var(--ease),box-shadow .4s}
-.featured-work:hover{transform:translateY(-6px);box-shadow:0 48px 120px rgba(0,0,0,.55)}
-.fw-img{overflow:hidden}
-.fw-img img{width:100%;height:100%;object-fit:cover;object-position:top;min-height:500px;transition:transform .7s var(--ease)}
-.featured-work:hover .fw-img img{transform:scale(1.04)}
-.fw-body{background:var(--card);padding:60px 52px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border)}
-.fw-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
-.fw-body h2{font-size:clamp(32px,4vw,52px);margin-bottom:16px;color:var(--cream)}
-.fw-body p{font-size:15px;line-height:1.8;color:var(--muted);margin-bottom:32px}
-.fw-detail{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
-.fw-d{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
-.fw-d span{font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:4px}
-.fw-d strong{font-size:14px;color:var(--cream)}
-.more-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:64px}
-@media(max-width:1024px){.featured-work{grid-template-columns:1fr}.fw-img img{min-height:300px;height:300px}.fw-body{padding:40px 36px}.more-grid{grid-template-columns:1fr}}
+.port-all{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:72px}
+.port-all .port-card:first-child{grid-column:1/-1}
+.port-all .port-card:first-child .port-card-img img{height:420px}
+.port-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.port-tag-pill{font-size:10px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);font-family:'Syne',sans-serif;font-weight:600;letter-spacing:.08em}
+@media(max-width:768px){.port-all{grid-template-columns:1fr}.port-all .port-card:first-child{grid-column:auto}.port-all .port-card:first-child .port-card-img img{height:250px}}
 </style>
 </head>
 <body>
-<nav class="nav scrolled">
+<div class="cursor"></div><div class="cursor-ring"></div>
+<nav class="nav">
   <div class="wrap nav-inner">
-    <a href="index.html" class="logo"><div class="logo-badge">F</div><div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div></a>
-    <ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <div class="nav-right"><a href="fr/index.html" class="lang-btn">FR</a><a href="contact.html" class="btn btn-primary btn-sm">Start a Project <span class="arrow">→</span></a><button class="hamburger">☰</button></div>
+    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">F</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-right"><a href="fr/index.html" class="nav-lang">FR</a><a href="contact.html" class="nav-cta">Start a Project</a><button class="nav-ham">☰</button></div>
   </div>
 </nav>
 
 <section class="page-hero">
-  <div class="page-hero-word">Work</div>
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-label">Work</div>
   <div class="wrap page-hero-inner">
-    <div class="eyebrow reveal">Portfolio</div>
-    <h1 class="display reveal d1">Selected work,<br><span style="color:var(--gold);font-style:italic">built with intention.</span></h1>
-    <p class="lead reveal d2" style="margin-top:16px">Digital projects shaped around real business goals — beauty brands, professional services, and strategic presence.</p>
+    <div class="tag reveal">Portfolio</div>
+    <h1 class="f-display reveal d1">Selected work,<br><em style="color:var(--accent2)">built with intention.</em></h1>
+    <p class="lead reveal d2" style="margin-top:20px">Digital projects shaped around real business goals — beauty brands, professional services, and strategic digital presence.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <!-- FEATURED -->
-    <a class="featured-work reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener">
-      <div class="fw-img"><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmaisonmalaak.com?w=1400" alt="Maison Malaak"></div>
-      <div class="fw-body">
-        <div class="fw-tag">Featured Project</div>
-        <h2>Maison Malaak</h2>
-        <p>Elegant digital presence for a Montreal beauty and wellness brand. The brief: create a website that matches the luxury clients experience in person — refined, warm, and immediately trustworthy.</p>
-        <div class="fw-detail">
-          <div class="fw-d"><span>Category</span><strong>Beauty Brand</strong></div>
-          <div class="fw-d"><span>Services</span><strong>Website + Brand</strong></div>
-          <div class="fw-d"><span>Language</span><strong>EN / FR</strong></div>
-          <div class="fw-d"><span>Result</span><strong>+60% inquiries</strong></div>
+    <a class="port-feat reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener">
+      <div class="port-feat-img"><img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmaisonmalaak.com?w=1400" alt="Maison Malaak"></div>
+      <div class="port-feat-body">
+        <span class="port-badge">Featured Project</span>
+        <h3>Maison Malaak</h3>
+        <p>Elegant digital presence for a Montreal beauty and wellness brand. The brief: create something that matches the luxury clients experience in person — refined, warm, and immediately trustworthy.</p>
+        <div class="port-meta">
+          <div class="port-meta-item"><span>Category</span><strong>Beauty Brand</strong></div>
+          <div class="port-meta-item"><span>Services</span><strong>Website + Brand</strong></div>
+          <div class="port-meta-item"><span>Language</span><strong>EN / FR</strong></div>
+          <div class="port-meta-item"><span>Result</span><strong>+60% inquiries</strong></div>
         </div>
-        <a href="https://maisonmalaak.com" class="btn btn-primary" target="_blank">View Live Site <span class="arrow">→</span></a>
+        <span class="btn-main" style="display:inline-flex">View Live Site <span class="arrow-icon">↗</span></span>
       </div>
     </a>
 
-    <!-- SECONDARY -->
-    <div class="more-grid">
+    <div class="port-all">
       <a class="port-card reveal" href="portfolio.html">
         <div class="port-card-img"><img src="images/mortacc-dark-premium-preview.svg" alt="Mortacc"></div>
         <div class="port-card-body">
-          <span class="badge badge-gold">Business Platform</span>
+          <div class="port-tags"><span class="port-badge">Business Platform</span><span class="port-tag-pill">Website</span><span class="port-tag-pill">Branding</span></div>
           <h3>Mortacc</h3>
-          <p style="font-size:14px;margin-top:8px">Professional direction for business and compliance services. A dark, premium aesthetic built for authority and trust.</p>
-          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">Website</span>
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">Branding</span>
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">SEO</span>
-          </div>
+          <p>Dark, premium aesthetic for business and compliance services. A design that communicates authority and trust before a single word is read.</p>
         </div>
       </a>
       <a class="port-card reveal d1" href="portfolio.html">
-        <div class="port-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop" alt="Digital Presence"></div>
+        <div class="port-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop" alt="Digital Strategy" style="height:250px;object-fit:cover"></div>
         <div class="port-card-body">
-          <span class="badge">Digital Strategy</span>
+          <div class="port-tags"><span class="port-badge">Digital Strategy</span><span class="port-tag-pill">SEO</span><span class="port-tag-pill">Google</span></div>
           <h3>Digital Presence</h3>
-          <p style="font-size:14px;margin-top:8px">Systems, branding, and visibility built to attract and convert clients at every digital touchpoint.</p>
-          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">Strategy</span>
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">SEO</span>
-            <span style="font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted)">Google</span>
-          </div>
+          <p>Systems, branding, and visibility built to attract and convert clients at every digital touchpoint.</p>
+        </div>
+      </a>
+      <a class="port-card reveal d2" href="portfolio.html">
+        <div class="port-card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop" alt="SEO" style="height:250px;object-fit:cover"></div>
+        <div class="port-card-body">
+          <div class="port-tags"><span class="port-badge">SEO + Google</span><span class="port-tag-pill">Local SEO</span></div>
+          <h3>Visibility Campaign</h3>
+          <p>Google Business, local SEO, and search strategy that places a business directly in front of the right clients.</p>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="cta-band">
+<section class="cta-section">
   <div class="wrap reveal">
-    <div class="eyebrow" style="justify-content:center">Your Project</div>
-    <h2 class="display">Ready to be<br>the next case study?</h2>
-    <p class="lead">Let's build something together that you're proud to show every client.</p>
-    <a href="contact.html" class="btn btn-primary" style="font-size:16px;padding:17px 36px">Start a Project <span class="arrow">→</span></a>
+    <div class="tag" style="justify-content:center">Your Project</div>
+    <h2 class="f-display">Ready to be<br>the next case study?</h2>
+    <p class="lead" style="margin-top:20px">Let's build something together you're proud to show every client.</p>
+    <a href="contact.html" class="btn-main" style="font-size:16px;padding:17px 34px;margin-top:44px;display:inline-flex">Start a Project <span class="arrow-icon">↗</span></a>
   </div>
 </section>
 
-<footer class="footer"><div class="wrap"><div class="footer-top"><div class="footer-brand"><a href="index.html" class="logo"><div class="logo-badge">F</div><div><span class="logo-name">FM Systems</span><span class="logo-tag">Digital Studio</span></div></a><p>Modern websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="footer-soc" href="https://linkedin.com/company/fmbytex">in</a><a class="footer-soc" href="https://instagram.com/fatmemortada">ig</a><a class="footer-soc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">SEO Basics</a></div><div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec · <a href="fr/index.html">Français</a></span></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-about"><a href="index.html" class="nav-logo"><div class="nav-logo-mark">F</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a><p>Premium websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">Maintenance</a></div><div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div></div></footer>
 <script src="js/script.js"></script>
 </body></html>

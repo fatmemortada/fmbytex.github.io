@@ -1,0 +1,29 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf7ef"/><stop offset=".55" stop-color="#f1e4d3"/><stop offset="1" stop-color="#fffdf8"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b98e4f"/><stop offset="1" stop-color="#e1c17e"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#6b4c26" flood-opacity=".22"/></filter>
+</defs>
+<rect width="1400" height="900" rx="42" fill="#f7f1e8"/>
+<rect x="80" y="84" width="1240" height="690" rx="34" fill="url(#bg)" filter="url(#shadow)"/>
+<rect x="80" y="84" width="1240" height="72" rx="34" fill="rgba(255,255,255,.55)"/>
+<text x="150" y="129" fill="#2a241d" font-family="Georgia, serif" font-size="30" font-weight="700">Maison Malaak</text>
+<text x="740" y="126" fill="#766957" font-family="Arial" font-size="14" font-weight="700">ACCUEIL</text>
+<text x="830" y="126" fill="#766957" font-family="Arial" font-size="14">SERVICES</text>
+<text x="935" y="126" fill="#766957" font-family="Arial" font-size="14">À PROPOS</text>
+<text x="1055" y="126" fill="#766957" font-family="Arial" font-size="14">CONTACT</text>
+<text x="170" y="350" fill="#2a241d" font-family="Georgia, serif" font-size="76" font-weight="600">RÉVÉLEZ VOTRE</text>
+<text x="170" y="438" fill="#2a241d" font-family="Georgia, serif" font-size="76" font-weight="600">ÉCLAT NATUREL.</text>
+<text x="172" y="500" fill="#6d6253" font-family="Arial" font-size="22">Soins experts, formations personnalisées,</text>
+<text x="172" y="532" fill="#6d6253" font-family="Arial" font-size="22">et résultats d’exception.</text>
+<rect x="170" y="585" width="210" height="50" rx="7" fill="url(#gold)"/>
+<text x="275" y="617" text-anchor="middle" fill="#fff" font-family="Arial" font-size="14" font-weight="700">PRENDRE RENDEZ-VOUS →</text>
+<circle cx="980" cy="425" r="220" fill="#ead7c3"/>
+<ellipse cx="980" cy="370" rx="88" ry="108" fill="#c99a79"/>
+<path d="M855 742 C885 565 1075 565 1105 742 Z" fill="#d7ac8b"/>
+<path d="M892 332 C900 220 1060 215 1075 332 C1045 275 930 275 892 332 Z" fill="#2f2019"/>
+<circle cx="943" cy="385" r="8" fill="#231914"/><circle cx="1018" cy="385" r="8" fill="#231914"/>
+<path d="M950 452 C980 472 1010 452 1025 440" fill="none" stroke="#7a4434" stroke-width="6" stroke-linecap="round"/>
+<path d="M782 170 C755 220 760 290 805 330" fill="none" stroke="#d8bc83" stroke-width="3" opacity=".6"/>
+<path d="M1180 190 C1135 250 1140 315 1190 368" fill="none" stroke="#d8bc83" stroke-width="3" opacity=".45"/>
+</svg>

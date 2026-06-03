@@ -38,7 +38,7 @@ const navLinks = document.querySelector('.nav-links');
 if(ham && navLinks){
   ham.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
-    if(open){ Object.assign(navLinks.style,{display:'flex',flexDirection:'column',alignItems:'flex-start',position:'fixed',top:'72px',left:'0',right:'0',background:'rgba(5,5,10,.97)',padding:'20px 6%',borderBottom:'1px solid rgba(255,255,255,.06)',backdropFilter:'blur(30px)',zIndex:'700',gap:'4px'});
+    if(open){ Object.assign(navLinks.style,{display:'flex',flexDirection:'column',alignItems:'flex-start',position:'fixed',top:'72px',left:'0',right:'0',background:'rgba(251,247,239,.97)',padding:'20px 6%',borderBottom:'1px solid rgba(185,142,79,.24)',backdropFilter:'blur(30px)',zIndex:'700',gap:'4px'});
     } else { navLinks.removeAttribute('style'); }
   });
 }

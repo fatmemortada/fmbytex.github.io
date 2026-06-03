@@ -1,0 +1,19 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf8"/><stop offset="1" stop-color="#f0e4d1"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#6b4c26" flood-opacity=".18"/></filter></defs>
+    <rect width="1400" height="900" rx="42" fill="#f7f1e8"/>
+        <rect x="88" y="82" width="1224" height="696" rx="34" fill="url(#bg)" filter="url(#shadow)"/>
+        <rect x="88" y="82" width="1224" height="76" rx="34" fill="rgba(255,255,255,.70)"/>
+        <text x="152" y="130" fill="#2a241d" font-family="Inter,Arial" font-size="34" font-weight="850">FM Systems</text>
+        <text x="760" y="126" fill="#766957" font-family="Inter,Arial" font-size="14" font-weight="700">HOME</text>
+        <text x="850" y="126" fill="#766957" font-family="Inter,Arial" font-size="14">SERVICES</text>
+        <text x="965" y="126" fill="#766957" font-family="Inter,Arial" font-size="14">WORK</text>
+        <rect x="1082" y="101" width="160" height="36" rx="18" fill="#b98e4f"/>
+        <text x="1162" y="124" text-anchor="middle" fill="#fff" font-family="Inter,Arial" font-size="12" font-weight="800">BOOK CALL</text>
+        <text x="170" y="350" fill="#2a241d" font-family="Georgia,serif" font-size="80" font-weight="700">Digital experiences</text>
+        <text x="170" y="442" fill="#b98e4f" font-family="Georgia,serif" font-size="82" font-weight="700" font-style="italic">that elevate brands.</text>
+        <text x="174" y="510" fill="#766957" font-family="Inter,Arial" font-size="22">Luxury websites, branding, SEO structure,</text>
+        <text x="174" y="543" fill="#766957" font-family="Inter,Arial" font-size="22">and bilingual digital systems.</text>
+        <rect x="860" y="250" width="360" height="420" rx="26" fill="#fff" stroke="#d8b982" stroke-width="2"/>
+        <rect x="895" y="298" width="120" height="18" rx="9" fill="#e4d2b5"/><rect x="895" y="343" width="270" height="25" rx="13" fill="#b98e4f" opacity=".85"/>
+        <rect x="895" y="405" width="270" height="42" rx="13" fill="#f5ebdc"/><rect x="895" y="470" width="270" height="42" rx="13" fill="#f5ebdc"/><rect x="895" y="535" width="270" height="42" rx="13" fill="#f5ebdc"/>
+        </svg>

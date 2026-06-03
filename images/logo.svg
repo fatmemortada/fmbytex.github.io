@@ -1,8 +1,8 @@
 <svg width="420" height="92" viewBox="0 0 420 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="g" x1="0" y1="0" x2="420" y2="92"><stop stop-color="#E8D7BD"/><stop offset="1" stop-color="#B89D7A"/></linearGradient></defs>
-<rect x="8" y="10" width="72" height="72" rx="24" fill="#111" stroke="url(#g)" stroke-width="2"/>
-<path d="M28 61V30h27v8H38v6h14v8H38v9H28Z" fill="#F6F1EA"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="420" y2="92"><stop stop-color="#E8D0A0"/><stop offset="0.52" stop-color="#C8A76E"/><stop offset="1" stop-color="#A77F44"/></linearGradient><filter id="s" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#8A6A3B" flood-opacity="0.18"/></filter></defs>
+<rect x="8" y="10" width="72" height="72" rx="24" fill="#FFFDF8" stroke="url(#g)" stroke-width="2" filter="url(#s)"/>
+<path d="M28 61V30h27v8H38v6h14v8H38v9H28Z" fill="#332A20"/>
 <path d="M58 61V30h8l10 15 10-15h8v31h-9V47l-7 10h-4l-7-10v14h-9Z" fill="url(#g)"/>
-<text x="102" y="48" fill="#F6F1EA" font-family="Inter,Arial,sans-serif" font-size="33" font-weight="850" letter-spacing="-1.2">FM Systems</text>
-<text x="104" y="70" fill="#B9AFA3" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3.2">DIGITAL STUDIO</text>
+<text x="102" y="48" fill="#332A20" font-family="Inter,Arial,sans-serif" font-size="33" font-weight="850" letter-spacing="-1.2">FM Systems</text>
+<text x="104" y="70" fill="#A48352" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3.2">DIGITAL STUDIO</text>
 </svg>

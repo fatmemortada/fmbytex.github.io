@@ -305,6 +305,29 @@
   .hero-v2-btns{flex-direction:column;align-items:flex-start}
 }
 </style>
+
+<style id="fm-luxury-light-override">
+.hero-v2{background:linear-gradient(135deg,#FBF8F1 0%,#F2E7D7 52%,#FFFDF8 100%) !important;}
+.hero-bg{background:#F8F4EC !important;}
+.hero-bg img{opacity:.28 !important;filter:saturate(.72) brightness(1.08) contrast(.92) !important;mix-blend-mode:multiply !important;}
+.hero-bg::after{background:linear-gradient(to top,#FBF8F1 0%,rgba(251,248,241,.82) 38%,rgba(251,248,241,.44) 72%,rgba(251,248,241,.72) 100%),linear-gradient(to right,rgba(251,248,241,.92),rgba(251,248,241,.42) 60%,rgba(251,248,241,.85)) !important;}
+.hero-v2::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 78% 20%,rgba(226,199,137,.32),transparent 25%),radial-gradient(circle at 12% 82%,rgba(184,145,87,.16),transparent 30%);}
+.hero-v2-pretitle-line,.scroll-line{background:#B89157 !important;}
+.hero-v2-pretitle span{color:#A48352 !important;}
+.hero-v2-h1{color:#332A20 !important;text-shadow:0 12px 45px rgba(89,67,38,.08) !important;}
+.hero-v2-h1 .em{-webkit-text-stroke:1.3px rgba(184,145,87,.55) !important;color:transparent !important;}
+.hero-v2-h1 .gold{background:linear-gradient(90deg,#A77F44,#D7B977,#E9D69C) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
+.hero-v2-desc{color:#6F6252 !important;}
+.hero-counter{background:rgba(255,253,248,.68) !important;border-color:rgba(184,145,87,.25) !important;box-shadow:0 24px 80px rgba(89,67,38,.10) !important;}
+.hc{border-right-color:rgba(184,145,87,.20) !important;}.hc-n{color:#332A20 !important}.hc-n em{color:#B89157 !important}.hc-l,.scroll-hint{color:#9B8A72 !important;}
+.about-split-v2{border-color:rgba(184,145,87,.25) !important;box-shadow:0 34px 100px rgba(89,67,38,.10) !important;}
+.about-img-wrap img,.work-hero-img,.wcard img,.pb img{filter:saturate(.82) brightness(1.02) contrast(.96) !important;}
+.about-img-overlay{background:linear-gradient(135deg,rgba(251,248,241,.16),rgba(226,199,137,.15)) !important;}
+.about-img-badge{background:rgba(255,253,248,.84) !important;border-color:rgba(184,145,87,.28) !important;box-shadow:0 20px 50px rgba(89,67,38,.10) !important;}.about-img-badge strong{color:#B89157 !important}.about-img-badge span{color:#7B6E5E !important;}
+.about-body-v2{background:linear-gradient(135deg,#FFFFFF,#FAF4EA) !important;}.big-quote-v2{color:#332A20 !important;border-left-color:#B89157 !important;}
+.work-hero{box-shadow:0 32px 100px rgba(89,67,38,.12) !important;border:1px solid rgba(184,145,87,.23) !important;}.work-hero:hover{box-shadow:0 48px 130px rgba(89,67,38,.18) !important;}.work-hero-overlay,.wcard-overlay{background:linear-gradient(to top,rgba(51,42,32,.78) 0%,rgba(51,42,32,.30) 50%,rgba(51,42,32,.02) 82%) !important;}.work-hero-info h3,.wcard-title{color:#FFFDF8 !important}.work-hero-info p,.wcard-desc{color:rgba(255,253,248,.78) !important}.wcard-tag{color:#E2C789 !important}.work-meta-pill{background:rgba(255,253,248,.18) !important;border-color:rgba(255,253,248,.26) !important;color:#FFFDF8 !important;}.wcard{box-shadow:0 18px 55px rgba(89,67,38,.10) !important}.wcard:hover{box-shadow:0 34px 90px rgba(89,67,38,.18) !important}.pb-label{color:#FFFDF8 !important;text-shadow:0 4px 20px rgba(0,0,0,.35) !important;}
+</style>
+
 </head>
 <body>
 <div class="cursor"></div>
@@ -344,12 +367,12 @@
     </div>
     <h1 class="hero-v2-h1 reveal d1">
       We craft<br>
-      <span class="em">websites</span>
-      <span class="gold">that win.</span>
+      <span class="em">elegant</span>
+      <span class="gold">digital presence.</span>
     </h1>
     <div class="hero-v2-row reveal d2">
       <div class="hero-v2-left">
-        <p class="hero-v2-desc">Premium bilingual websites, branding, and digital experiences crafted for ambitious businesses across Canada.</p>
+        <p class="hero-v2-desc">Cream-toned, premium bilingual websites, brand identity, and digital experiences crafted for ambitious businesses across Canada.</p>
         <div class="hero-v2-btns">
           <a href="contact.html" class="btn-main">Start a Project <span class="arrow-icon">↗</span></a>
           <a href="portfolio.html" class="btn-ghost">View Our Work</a>
@@ -397,7 +420,7 @@
   <div class="wrap">
     <div class="sh center reveal">
       <div class="tag" style="justify-content:center">What We Do</div>
-      <h2 class="f-display" style="margin:18px 0 20px">Everything your brand<br>needs <em style="font-style:italic;color:var(--accent2)">online.</em></h2>
+      <h2 class="f-display" style="margin:18px 0 20px">A refined digital<br>presence <em style="font-style:italic;color:var(--accent2)">online.</em></h2>
       <p class="lead">A focused suite of services built around making businesses look established, trusted, and genuinely premium.</p>
     </div>
     <div class="svc-wrap">
@@ -419,7 +442,7 @@
   <div class="wrap">
     <div class="sh reveal">
       <div class="tag">Selected Work</div>
-      <h2 class="f-display" style="margin:18px 0 20px">Projects built<br>with <em style="font-style:italic;color:var(--accent2)">intention.</em></h2>
+      <h2 class="f-display" style="margin:18px 0 20px">Selected work<br>with <em style="font-style:italic;color:var(--accent2)">luxury detail.</em></h2>
       <p class="lead">Digital work shaped around real business goals — beauty brands, professional services, strategic presence.</p>
     </div>
 

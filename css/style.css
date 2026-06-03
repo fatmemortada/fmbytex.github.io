@@ -723,7 +723,7 @@ a:hover .arrow-icon{transform:translate(3px,-3px)}
 }
 
 /* ── REVEAL ───────────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
 .reveal.fl{transform:translateX(-36px)}
 .reveal.fr{transform:translateX(36px)}

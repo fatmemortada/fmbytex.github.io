@@ -3,98 +3,92 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — FM Systems</title>
-<meta name="description" content="Start a project with FM Systems — premium bilingual websites and digital presence, Montreal.">
+<meta name="description" content="Démarrez un projet avec FM Systems — sites web bilingues premium et présence numérique, Montréal.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
-
-
+<style>
+:root{--bg:#fbf7ef;--bg2:#f4eadc;--cream:#fffdf8;--text:#2c261f;--muted:#706455;--soft:#a4937c;--gold:#b98e4f;--gold2:#dfc17f;--border:rgba(185,142,79,.22);--border2:rgba(185,142,79,.38);--ease:cubic-bezier(.19,1,.22,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.cursor,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}.cursor{width:10px;height:10px;background:var(--gold);mix-blend-mode:multiply;transition:width .3s,height .3s}.cursor-ring{width:38px;height:38px;border:1px solid rgba(185,142,79,.4);transition:all .12s}
+body::before{content:'';position:fixed;inset:0;z-index:9000;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none}
+.nav{position:fixed;inset:0 0 auto 0;z-index:800;height:76px;background:rgba(251,247,239,.82);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:box-shadow .3s}.nav.solid{box-shadow:0 8px 30px rgba(94,65,29,.08)}
+.wrap{width:min(1240px,88%);margin:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.in{opacity:1;transform:none}
+.reveal.from-left{transform:translateX(-24px)}.reveal.from-left.in{transform:none}
+.reveal.from-right{transform:translateX(24px)}.reveal.from-right.in{transform:none}
+.d1{transition-delay:.1s}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:0;border-top:1px solid var(--border)}
+.contact-left{padding:80px min(72px,6%);border-right:1px solid var(--border)}
+.contact-right{padding:80px min(72px,6%)}
+.ch-items{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);margin-top:32px}
+.ch{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:padding-left .25s var(--ease)}.ch:hover{padding-left:6px}
+.ch-icon{width:40px;height:40px;background:var(--bg2);border:1px solid var(--border);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+.field{margin-bottom:20px}.field label{display:block;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a4937c' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-color:var(--bg2);padding-right:40px}
+.field textarea{min-height:120px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr}.contact-left{border-right:none;border-bottom:1px solid var(--border)}.form-row{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="cursor"></div><div class="cursor-ring"></div>
-<nav class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a>
-    <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
-    <div class="nav-right"><a href="../index.html" class="nav-lang">EN</a><a href="contact.html" class="nav-cta">Réserver une consultation →</a><button class="nav-ham">☰</button></div>
-  </div>
-</nav>
+<nav class="nav"><div class="wrap" style="height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px"><a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none"><div style="font-family:'Cormorant Garamond',serif;font-size:40px;line-height:.8;font-weight:700;color:var(--gold);letter-spacing:-.08em">FM</div><div><span style="display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text)">FM Systems</span><span style="display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-top:1px">Digital Studio</span></div></a><ul style="display:flex;gap:4px;list-style:none"><li><a href="index.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Accueil</a></li><li><a href="about.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">À propos</a></li><li><a href="services.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Services</a></li><li><a href="portfolio.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Portfolio</a></li><li><a href="contact.html" style="font-size:13px;font-weight:600;color:var(--text);padding:9px 14px;border-radius:999px;background:rgba(185,142,79,.1);text-decoration:none">Contact</a></li></ul><div style="display:flex;align-items:center;gap:12px"><a href="../contact.html" style="font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--gold);border:1px solid var(--border);padding:7px 14px;border-radius:999px;text-decoration:none">EN</a><a href="contact.html" style="background:var(--gold);color:#fff;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none">Réserver →</a></div></div></nav>
 
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-label">Contact</div>
-  <div class="wrap page-hero-inner">
-    <div class="tag reveal">Contactez-nous</div>
-    <h1 class="f-display reveal d1">Let's start your<br><em style="color:var(--accent2)">project.</em></h1>
-    <p class="lead reveal d2" style="margin-top:20px">Parlez-nous de votre entreprise. Nous répondrons dans les 24 heures — en français ou en anglais.</p>
+<section style="padding:160px 0 100px;border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="reveal"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)">Nous contacter</span></div>
+    <h1 class="reveal d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(64px,8vw,120px);font-weight:700;line-height:.93;letter-spacing:-.04em;color:var(--text);margin:18px 0 24px">Démarrons<br><em style="font-style:italic;color:var(--gold)">votre projet.</em></h1>
+    <p class="reveal" style="font-size:18px;color:var(--muted);line-height:1.8;max-width:560px;transition-delay:.2s">Parlez-nous de votre entreprise. Nous vous répondons dans les 24 heures — en français ou en anglais.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap contact-grid">
-    <div class="reveal fl">
-      <div class="tag" style="margin-bottom:32px">Nous joindre directement</div>
+<section style="padding:0">
+  <div class="contact-grid">
+    <div class="contact-left reveal from-left">
+      <span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:block">Nous joindre directement</span>
       <div class="ch-items">
-        <a class="ch-item" href="mailto:fatmemortada88@gmail.com"><div class="ch-icon">✉</div><div><div class="ch-title">Courriel</div><div class="ch-val">fatmemortada88@gmail.com</div></div></a>
-        <a class="ch-item" href="https://wa.me/14383736655"><div class="ch-icon">💬</div><div><div class="ch-title">WhatsApp</div><div class="ch-val">+1 (438) 373-6655</div></div></a>
-        <a class="ch-item" href="https://instagram.com/fatmemortada"><div class="ch-icon">📸</div><div><div class="ch-title">Instagram</div><div class="ch-val">@fatmemortada</div></div></a>
-        <a class="ch-item" href="https://linkedin.com/company/fmbytex"><div class="ch-icon">💼</div><div><div class="ch-title">LinkedIn</div><div class="ch-val">FM Systems</div></div></a>
+        <a class="ch" href="mailto:fatmemortada88@gmail.com"><div class="ch-icon">✉</div><div><div style="font-size:13px;font-weight:700;color:var(--text)">Courriel</div><div style="font-size:12px;color:var(--muted);margin-top:2px">fatmemortada88@gmail.com</div></div></a>
+        <a class="ch" href="https://wa.me/14383736655"><div class="ch-icon">💬</div><div><div style="font-size:13px;font-weight:700;color:var(--text)">WhatsApp</div><div style="font-size:12px;color:var(--muted);margin-top:2px">+1 (438) 373-6655</div></div></a>
+        <a class="ch" href="https://instagram.com/fatmemortada"><div class="ch-icon">📸</div><div><div style="font-size:13px;font-weight:700;color:var(--text)">Instagram</div><div style="font-size:12px;color:var(--muted);margin-top:2px">@fatmemortada</div></div></a>
+        <a class="ch" href="https://linkedin.com/company/fmbytex"><div class="ch-icon">💼</div><div><div style="font-size:13px;font-weight:700;color:var(--text)">LinkedIn</div><div style="font-size:12px;color:var(--muted);margin-top:2px">FM Systems</div></div></a>
       </div>
-      <div style="margin-top:28px;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:14px">
-        <div class="tag" style="margin-bottom:10px;font-size:9px">Délai de réponse</div>
-        <p style="font-size:14px;color:var(--muted);line-height:1.75">We typically respond within <strong style="color:var(--offwhite)">24 hours</strong>. For urgent requests, WhatsApp is fastest.</p>
+      <div style="margin-top:28px;padding:24px;background:var(--cream);border:1px solid var(--border)">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px">Délai de réponse</span>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">Nous répondons généralement dans les <strong style="color:var(--text)">24 heures</strong>. Pour les demandes urgentes, WhatsApp est le plus rapide.</p>
       </div>
-      <div style="margin-top:14px;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:14px">
-        <div class="tag" style="margin-bottom:10px;font-size:9px">Emplacement</div>
-        <p style="font-size:14px;color:var(--muted);line-height:1.75">Based in <strong style="color:var(--offwhite)">Montreal, Quebec</strong>. Serving businesses across Canada in English and French.</p>
+      <div style="margin-top:14px;padding:24px;background:var(--cream);border:1px solid var(--border)">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px">Localisation</span>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">Basés à <strong style="color:var(--text)">Montréal, Québec</strong>. Nous servons les entreprises à travers le Canada en français et en anglais.</p>
       </div>
     </div>
-
-    <div class="form-box reveal fr d1">
-      <div style="margin-bottom:36px">
-        <div class="tag" style="margin-bottom:12px">Demande de projet</div>
-        <h2 class="f-display" style="font-size:clamp(30px,3.5vw,48px)">Tell us about<br>your project.</h2>
-      </div>
+    <div class="contact-right reveal d1 from-right">
+      <div style="margin-bottom:36px"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px">Demande de projet</span><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,60px);font-weight:700;color:var(--text);line-height:1.0;letter-spacing:-.04em">Parlez-nous de<br><em style="font-style:italic;color:var(--gold)">votre projet.</em></h2></div>
       <form action="mailto:fatmemortada88@gmail.com" method="post" enctype="text/plain">
         <div class="form-row">
-          <div class="field"><label for="fn">Votre nom</label><input id="fn" name="name" type="text" placeholder="Jane Smith" required></div>
-          <div class="field"><label for="fe">Adresse courriel</label><input id="fe" name="email" type="email" placeholder="jane@company.com" required></div>
+          <div class="field"><label for="fn">Votre nom</label><input id="fn" name="nom" type="text" placeholder="Marie Tremblay" required></div>
+          <div class="field"><label for="fe">Adresse courriel</label><input id="fe" name="courriel" type="email" placeholder="marie@entreprise.com" required></div>
         </div>
-        <div class="field"><label for="fb">Nom de l’entreprise</label><input id="fb" name="business" type="text" placeholder="Your business or brand name"></div>
+        <div class="field"><label for="fb">Nom de l'entreprise</label><input id="fb" name="entreprise" type="text" placeholder="Votre entreprise ou marque"></div>
         <div class="field">
-          <label for="fs">Service demandé</label>
+          <label for="fs">Service souhaité</label>
           <select id="fs" name="service">
             <option value="">Sélectionnez un service...</option>
-            <option>Design de site web</option><option>Refonte numérique</option><option>Image de marque</option><option>Visibilité Google</option><option>Bases SEO</option><option>Maintenance</option><option>Full Package</option><option>Pas encore sûre</option>
+            <option>Conception de site web</option><option>Refonte numérique</option><option>Image de marque</option><option>Visibilité Google</option><option>SEO de base</option><option>Maintenance</option><option>Forfait complet</option><option>Pas encore sûr(e)</option>
           </select>
         </div>
-        <div class="field"><label for="fm">Détails du projet</label><textarea id="fm" name="message" placeholder="Tell us about your business, what you're looking for, and any details that help us understand your project..."></textarea></div>
-        <div class="form-foot">
-          <span class="form-note">We respond within 24h · EN &amp; FR</span>
-          <button type="submit" class="btn-main">Send Message <span class="arrow-icon">↗</span></button>
+        <div class="field"><label for="fm">Détails du projet</label><textarea id="fm" name="message" placeholder="Parlez-nous de votre entreprise, de ce que vous recherchez et de tout détail qui pourrait nous aider à comprendre votre projet..."></textarea></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px">
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--soft)">Réponse en 24h · EN &amp; FR</span>
+          <button type="submit" style="display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.05em;padding:14px 26px;border-radius:8px;background:var(--gold);color:#fff;transition:all .28s;cursor:pointer;border:none">Envoyer le message ↗</button>
         </div>
       </form>
     </div>
   </div>
 </section>
 
-
-<section class="section real-work-section">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <div class="kicker">Visuels de projets réels</div>
-      <h2>Des projets qui rendent le studio crédible.</h2>
-      <p>Au lieu d’images génériques, FM Systems présente maintenant des aperçus soignés de directions web concrètes : Mortacc, Maison Malaak et FM Systems.</p>
-    </div>
-    <div class="real-work-grid">
-      <img class="reveal" src="../images/project-mortacc-showcase.svg" alt="Aperçu du site Mortacc">
-      <img class="reveal d1" src="../images/project-maison-showcase.svg" alt="Aperçu du site Maison Malaak">
-      <img class="reveal d2" src="../images/project-fm-showcase.svg" alt="Aperçu du site FM Systems">
-    </div>
-  </div>
-</section>
-
-<footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-about"><a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a><p>Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">À propos</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Systèmes web</a><a href="services.html">Refonte numérique</a><a href="services.html">Visibilité Google</a><a href="services.html">Image de marque</a><a href="services.html">Maintenance</a></div><div class="footer-col"><h5>Contact</h5><a href="mailto:fatmemortada88@gmail.com">Nous écrire</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">English</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div></div></footer>
+<footer style="background:#2c261f;border-top:1px solid rgba(185,142,79,.15);padding:80px 0 36px"><div class="wrap"><div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(185,142,79,.12);margin-bottom:28px"><div><div style="display:flex;align-items:center;gap:12px"><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--gold);letter-spacing:-.08em;line-height:.8">FM</div><div><span style="display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fffdf8;margin-top:6px">FM Systems</span><span style="display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,253,248,.3);margin-top:2px">Digital Studio</span></div></div><p style="font-size:14px;color:rgba(255,253,248,.38);line-height:1.75;margin-top:18px;max-width:260px">Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Pages</h5><a href="index.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Accueil</a><a href="about.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">À propos</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Services</a><a href="portfolio.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Portfolio</a><a href="contact.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Contact</a></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Services</h5><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Systèmes web</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Refonte numérique</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Visibilité Google</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Image de marque</a></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Contact</h5><a href="mailto:fatmemortada88@gmail.com" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Nous écrire</a><a href="https://wa.me/14383736655" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">WhatsApp</a><a href="https://linkedin.com/company/fmbytex" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">LinkedIn</a><a href="../contact.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">English</a></div></div><div style="display:flex;justify-content:space-between;align-items:center;font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,253,248,.2);flex-wrap:wrap;gap:10px;letter-spacing:.06em"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div></div></footer>
 <script src="../js/script.js"></script>
 </body></html>

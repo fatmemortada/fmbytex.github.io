@@ -3,121 +3,99 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — FM Systems</title>
-<meta name="description" content="Premium web design, branding, SEO, and Visibilité Google by FM Systems — Montreal.">
+<meta name="description" content="Design web premium, image de marque, SEO et visibilité Google par FM Systems — Montréal.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
-
-
+<style>
+:root{--bg:#fbf7ef;--bg2:#f4eadc;--cream:#fffdf8;--text:#2c261f;--muted:#706455;--soft:#a4937c;--gold:#b98e4f;--gold2:#dfc17f;--border:rgba(185,142,79,.22);--border2:rgba(185,142,79,.38);--ease:cubic-bezier(.19,1,.22,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.cursor,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}.cursor{width:10px;height:10px;background:var(--gold);mix-blend-mode:multiply;transition:width .3s,height .3s}.cursor-ring{width:38px;height:38px;border:1px solid rgba(185,142,79,.4);transition:all .12s}
+body::before{content:'';position:fixed;inset:0;z-index:9000;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none}
+.nav{position:fixed;inset:0 0 auto 0;z-index:800;height:76px;background:rgba(251,247,239,.82);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:box-shadow .3s}.nav.solid{box-shadow:0 8px 30px rgba(94,65,29,.08)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1240px,88%);margin:auto}
+.wrap{width:min(1240px,88%);margin:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.svc-list{border-top:1px solid var(--border)}.svc{display:grid;grid-template-columns:72px 1fr 1fr 52px;align-items:center;gap:32px;padding:32px 0;border-bottom:1px solid var(--border);transition:background .25s,padding-left .3s var(--ease);cursor:default}.svc:hover{background:rgba(185,142,79,.04);padding-left:16px}
+.svc-num{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--soft)}.svc-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--text);letter-spacing:-.02em}.svc-desc{font-size:14px;color:var(--muted);line-height:1.7}.svc-arr{font-size:22px;color:var(--soft);text-align:right;transition:color .25s,transform .3s var(--ease)}.svc:hover .svc-arr{color:var(--gold);transform:translate(3px,-3px)}
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}.proc{padding:52px 40px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .25s}.proc:last-child{border-right:none}.proc:hover{background:var(--cream)}
+.price-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border)}.price-card{padding:60px 52px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .25s;position:relative;overflow:hidden}.price-card:last-child{border-right:none}.price-card.featured{background:var(--text)}.price-card.featured .price-name{color:#fffdf8}.price-card.featured p{color:rgba(255,253,248,.45)}.price-card.featured li{color:rgba(255,253,248,.55)}.price-card.featured li::before{color:var(--gold2)}.price-card.featured .price-tier{color:rgba(255,253,248,.35)}
+@media(max-width:980px){.svc{grid-template-columns:60px 1fr 40px;gap:20px}.svc-desc{display:none}.proc-row{grid-template-columns:1fr 1fr}.proc:nth-child(2){border-right:none}.price-row{grid-template-columns:1fr}.price-card{border-right:none}}
+@media(max-width:640px){.svc{grid-template-columns:52px 1fr 36px;gap:14px}.proc-row{grid-template-columns:1fr}.proc{border-right:none}}
+</style>
 </head>
 <body>
 <div class="cursor"></div><div class="cursor-ring"></div>
-<nav class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a>
-    <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <div class="nav-right"><a href="../index.html" class="nav-lang">EN</a><a href="contact.html" class="nav-cta">Réserver une consultation →</a><button class="nav-ham">☰</button></div>
-  </div>
-</nav>
+<nav class="nav"><div class="nav-inner"><a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none"><div style="font-family:'Cormorant Garamond',serif;font-size:40px;line-height:.8;font-weight:700;color:var(--gold);letter-spacing:-.08em">FM</div><div><span style="display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text)">FM Systems</span><span style="display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-top:1px">Digital Studio</span></div></a><ul style="display:flex;gap:4px;list-style:none"><li><a href="index.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Accueil</a></li><li><a href="about.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">À propos</a></li><li><a href="services.html" style="font-size:13px;font-weight:600;color:var(--text);padding:9px 14px;border-radius:999px;background:rgba(185,142,79,.1);text-decoration:none">Services</a></li><li><a href="portfolio.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Portfolio</a></li><li><a href="contact.html" style="font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;text-decoration:none">Contact</a></li></ul><div style="display:flex;align-items:center;gap:12px"><a href="../services.html" style="font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--gold);border:1px solid var(--border);padding:7px 14px;border-radius:999px;text-decoration:none">EN</a><a href="contact.html" style="background:var(--gold);color:#fff;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none">Réserver →</a></div></div></nav>
 
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-label">Services</div>
-  <div class="wrap page-hero-inner">
-    <div class="tag reveal">Services</div>
-    <h1 class="f-display reveal d1">Everything for a<br><em style="color:var(--accent2)">premium</em> presence.</h1>
-    <p class="lead reveal d2" style="margin-top:20px">Une suite de services numériques conçue pour donner à votre entreprise une image établie, fiable et crédible en ligne — en français et en anglais.</p>
-  </div>
-</section>
-
-<section class="section">
+<section style="padding:160px 0 100px;border-bottom:1px solid var(--border);background:var(--bg)">
   <div class="wrap">
-    <div class="svc-wrap">
-      <div class="svc-item reveal"><span class="svc-n">01</span><span class="svc-arrow">↗</span><div class="svc-icon">✦</div><div class="svc-title">Systèmes web</div><p class="svc-desc">Des sites web personnalisés, conçus à la main pour paraître premium dès le premier clic. Pensés pour la performance, le mobile et vos clients.</p></div>
-      <div class="svc-item reveal d1"><span class="svc-n">02</span><span class="svc-arrow">↗</span><div class="svc-icon">◇</div><div class="svc-title">Refonte numérique</div><p class="svc-desc">Transformez un site dépassé en une expérience moderne axée sur la conversion. Même marque — présence entièrement élevée.</p></div>
-      <div class="svc-item reveal d2"><span class="svc-n">03</span><span class="svc-arrow">↗</span><div class="svc-icon">⌖</div><div class="svc-title">Visibilité Google</div><p class="svc-desc">Configuration Google Business, présence sur Maps et structure optimisée pour que les clients locaux vous trouvent et vous fassent confiance.</p></div>
-      <div class="svc-item reveal"><span class="svc-n">04</span><span class="svc-arrow">↗</span><div class="svc-icon">◆</div><div class="svc-title">Identité de marque</div><p class="svc-desc">Direction visuelle élégante — logo, palette de couleurs, typographie et lignes directrices pour positionner votre entreprise avec confiance.</p></div>
-      <div class="svc-item reveal d1"><span class="svc-n">05</span><span class="svc-arrow">↗</span><div class="svc-icon">↗</div><div class="svc-title">Bases SEO</div><p class="svc-desc">Structure de pages, mots-clés, balises meta et orientation de contenu pour aider Google à comprendre votre entreprise.</p></div>
-      <div class="svc-item reveal d2"><span class="svc-n">06</span><span class="svc-arrow">↗</span><div class="svc-icon">✓</div><div class="svc-title">Maintenance</div><p class="svc-desc">Mises à jour, changements de contenu, support technique et améliorations pour garder votre site performant après le lancement.</p></div>
-    </div>
+    <div class="reveal"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)">Services</span></div>
+    <h1 class="reveal d1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(64px,8vw,120px);font-weight:700;line-height:.93;letter-spacing:-.04em;color:var(--text);margin:18px 0 24px">Tout pour une présence<br><em style="font-style:italic;color:var(--gold)">premium.</em></h1>
+    <p class="reveal d2" style="font-size:18px;color:var(--muted);line-height:1.8;max-width:560px">Une suite de services numériques conçue pour que votre entreprise paraisse établie, fiable et crédible en ligne — en français et en anglais.</p>
   </div>
 </section>
 
-<section class="section" style="background:var(--bg2)">
+<section style="padding:120px 0">
   <div class="wrap">
-    <div class="sh center reveal">
-      <div class="tag" style="justify-content:center">Processus</div>
-      <h2 class="f-display">A clear, simple<br><em style="color:var(--accent2);font-style:italic">process.</em></h2>
-      <p class="lead" style="margin-top:20px">Quatre étapes, de la première conversation à un site en ligne et soigné.</p>
-    </div>
-    <div class="process-steps">
-      <div class="proc-item reveal"><div class="proc-accent"></div><div class="proc-n">01</div><h3>Découverte</h3><p>Nous découvrons votre entreprise, vos objectifs, votre public et le message que votre présence numérique doit transmettre.</p></div>
-      <div class="proc-item reveal d1"><div class="proc-accent"></div><div class="proc-n">02</div><h3>Design</h3><p>Une direction sur mesure autour de votre marque — propre, premium et intentionnelle. Chaque élément mérite sa place.</p></div>
-      <div class="proc-item reveal d2"><div class="proc-accent"></div><div class="proc-n">03</div><h3>Développement</h3><p>Nous développons le site avec performance, approche mobile-first et support bilingue intégrés dès le départ.</p></div>
-      <div class="proc-item reveal d3"><div class="proc-accent"></div><div class="proc-n">04</div><h3>Lancement</h3><p>Votre site est mis en ligne, soigné et prêt. Nous restons disponibles pour le support et les améliorations.</p></div>
+    <div class="svc-list">
+      <div class="svc reveal"><span class="svc-num">01</span><span class="svc-name">Systèmes Web</span><span class="svc-desc">Sites sur-mesure qui donnent à votre entreprise une image premium dès le premier clic. Performants, mobiles et pensés pour vos clients.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">02</span><span class="svc-name">Refonte Numérique</span><span class="svc-desc">Transformer un site dépassé en une expérience moderne axée sur la conversion. Même marque — présence entièrement rehaussée.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">03</span><span class="svc-name">Visibilité Google</span><span class="svc-desc">Fiche Google Business, présence sur les cartes et structure SEO pour être trouvé et choisi en premier.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">04</span><span class="svc-name">Image de Marque</span><span class="svc-desc">Logo, palette de couleurs, typographie et charte graphique qui positionnent votre entreprise avec assurance.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">05</span><span class="svc-name">SEO de Base</span><span class="svc-desc">Structure de page, mots-clés, balises meta et conseils de contenu pour améliorer votre classement Google.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">06</span><span class="svc-name">Maintenance</span><span class="svc-desc">Mises à jour, changements de contenu, support technique et améliorations continues longtemps après le lancement.</span><span class="svc-arr">↗</span></div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="sh center reveal">
-      <div class="tag" style="justify-content:center">Forfaits</div>
-      <h2 class="f-display">Simple, transparent<br>starting points.</h2>
-      <p class="lead" style="margin-top:20px">Chaque projet est évalué sur mesure. Ces options donnent une idée claire de ce qui est possible.</p>
+<section style="padding:0 0 120px;background:var(--bg2)">
+  <div class="wrap" style="padding-top:80px;padding-bottom:60px">
+    <div class="reveal" style="text-align:center;margin-bottom:60px"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)">Processus</span><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,88px);font-weight:700;line-height:.93;letter-spacing:-.04em;color:var(--text);margin:14px 0 0">Notre façon de travailler.</h2></div>
+  </div>
+  <div class="proc-row">
+    <div class="proc reveal"><span style="font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--soft);margin-bottom:28px;display:block">01</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:14px">Découverte</h3><p style="font-size:14px;color:var(--muted);line-height:1.75">Nous apprenons à connaître votre entreprise, vos objectifs, votre clientèle et l'image que vous souhaitez projeter.</p></div>
+    <div class="proc reveal d1"><span style="font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--soft);margin-bottom:28px;display:block">02</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:14px">Design</h3><p style="font-size:14px;color:var(--muted);line-height:1.75">Une direction sur-mesure autour de votre marque — claire, premium et intentionnelle. Chaque élément a sa raison d'être.</p></div>
+    <div class="proc reveal d2"><span style="font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--soft);margin-bottom:28px;display:block">03</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:14px">Développement</h3><p style="font-size:14px;color:var(--muted);line-height:1.75">Nous développons le site avec performance, mise en page mobile-first et support bilingue intégrés dès le départ.</p></div>
+    <div class="proc reveal d3"><span style="font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;color:var(--soft);margin-bottom:28px;display:block">04</span><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:14px">Lancement</h3><p style="font-size:14px;color:var(--muted);line-height:1.75">Votre site est mis en ligne, peaufiné et prêt. Nous restons disponibles pour le support et les améliorations continues.</p></div>
+  </div>
+</section>
+
+<section style="padding:0 0 120px">
+  <div class="wrap" style="padding-top:80px;padding-bottom:60px">
+    <div class="reveal" style="text-align:center;margin-bottom:60px"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)">Forfaits</span><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,88px);font-weight:700;line-height:.93;letter-spacing:-.04em;color:var(--text);margin:14px 0 0">Des tarifs simples<br>et transparents.</h2><p style="font-size:18px;color:var(--muted);line-height:1.8;max-width:520px;margin:16px auto 0">Chaque projet est évalué sur mesure. Ces forfaits donnent une idée claire de ce qui est possible.</p></div>
+  </div>
+  <div class="price-row">
+    <div class="price-card reveal">
+      <span class="price-tier" style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:12px">Démarrage</span>
+      <div class="price-name" style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--text);margin-bottom:12px;letter-spacing:-.03em">Présence</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;padding-bottom:24px;border-bottom:1px solid var(--border);margin-bottom:24px">Pour les entreprises qui ont besoin d'une présence numérique propre et professionnelle, rapidement.</p>
+      <ul style="list-style:none;display:grid;gap:10px;margin-bottom:36px"><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Site web 1–3 pages</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Design responsive mobile-first</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Configuration Google Business</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Structure SEO de base</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Formulaire de contact</li></ul>
+      <a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;width:100%;font-size:13px;font-weight:700;letter-spacing:.05em;padding:14px 26px;border-radius:8px;border:1px solid var(--border2);color:var(--text);text-decoration:none;transition:.28s">Demander un devis</a>
     </div>
-    <div class="price-cards">
-      <div class="price-card reveal">
-        <span class="price-tier">Essentiel</span>
-        <div class="price-name">Présence</div>
-        <p class="price-desc">Pour les entreprises qui ont besoin rapidement d’une présence propre et professionnelle.</p>
-        <ul class="price-list"><li>1–3 page website</li><li>Mobile-first responsive design</li><li>Google Business setup</li><li>Basic SEO structure</li><li>Contact form</li></ul>
-        <a href="contact.html" class="btn-ghost" style="width:100%;justify-content:center">Demander un devis</a>
-      </div>
-      <div class="price-card featured reveal d1">
-        <span class="price-tier">Standard</span>
-        <div class="price-name">Site premium</div>
-        <p class="price-desc">Le forfait complet pour les entreprises prêtes à se démarquer et convertir.</p>
-        <ul class="price-list"><li>5–8 page bilingual website</li><li>Custom design system</li><li>Image de marque direction</li><li>Visibilité Google setup</li><li>Full SEO-optimized structure</li><li>1 month post-launch support</li></ul>
-        <a href="contact.html" class="btn-main" style="width:100%;justify-content:center">Démarrer un projet ↗</a>
-      </div>
-      <div class="price-card reveal d2">
-        <span class="price-tier">Avancé</span>
-        <div class="price-name">Système complet</div>
-        <p class="price-desc">Pour les entreprises prêtes pour une transformation numérique complète et un accompagnement continu.</p>
-        <ul class="price-list"><li>Full website system</li><li>Complete brand identity</li><li>SEO &amp; content strategy</li><li>Visibilité Google</li><li>Ongoing maintenance plan</li><li>Priority support</li></ul>
-        <a href="contact.html" class="btn-ghost" style="width:100%;justify-content:center">Demander un devis</a>
-      </div>
+    <div class="price-card featured reveal d1">
+      <span class="price-tier">Standard</span>
+      <div class="price-name">Site Premium</div>
+      <p>Le forfait complet pour les entreprises prêtes à se démarquer et à convertir leurs visiteurs.</p>
+      <ul style="list-style:none;display:grid;gap:10px;margin-bottom:36px"><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>Site bilingue 5–8 pages</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>Système de design sur-mesure</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>Direction d'image de marque</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>Configuration Visibilité Google</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>Structure SEO complète</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px"><span style="color:var(--gold2);font-weight:700;flex-shrink:0">→</span>1 mois de support post-lancement</li></ul>
+      <a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;width:100%;font-size:13px;font-weight:700;letter-spacing:.05em;padding:14px 26px;border-radius:8px;background:#fff;color:var(--text);text-decoration:none;transition:.28s">Démarrer un projet ↗</a>
+    </div>
+    <div class="price-card reveal d2">
+      <span class="price-tier" style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:12px">Avancé</span>
+      <div class="price-name" style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--text);margin-bottom:12px;letter-spacing:-.03em">Système Complet</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;padding-bottom:24px;border-bottom:1px solid var(--border);margin-bottom:24px">Pour les entreprises prêtes pour une refonte numérique complète et un partenariat continu.</p>
+      <ul style="list-style:none;display:grid;gap:10px;margin-bottom:36px"><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Système web complet</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Identité de marque complète</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Stratégie SEO et contenu</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Visibilité Google</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Plan de maintenance continu</li><li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span>Support prioritaire</li></ul>
+      <a href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;width:100%;font-size:13px;font-weight:700;letter-spacing:.05em;padding:14px 26px;border-radius:8px;border:1px solid var(--border2);color:var(--text);text-decoration:none;transition:.28s">Demander un devis</a>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="wrap reveal">
-    <div class="tag" style="justify-content:center">Parlons-en</div>
-    <h2 class="f-display">Not sure where<br>to start?</h2>
-    <p class="lead" style="margin-top:20px">Envoyez un message et nous déterminerons exactement ce dont votre entreprise a besoin. Sans pression, sans jargon.</p>
-    <a href="contact.html" class="btn-main" style="font-size:16px;padding:17px 34px;margin-top:44px;display:inline-flex">Start the Conversation <span class="arrow-icon">↗</span></a>
-  </div>
+<section style="padding:140px 0;text-align:center;background:var(--text);position:relative;overflow:hidden">
+  <div class="wrap reveal"><span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)">Parlons-en</span><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,96px);font-weight:700;color:#fffdf8;line-height:.93;letter-spacing:-.04em;margin:16px 0 20px">Vous ne savez pas<br>par où commencer?</h2><p style="font-size:17px;color:rgba(255,253,248,.45);line-height:1.8;max-width:480px;margin:0 auto 44px">Envoyez un message et nous déterminerons exactement ce dont votre entreprise a besoin. Sans pression, sans jargon.</p><a href="contact.html" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;letter-spacing:.05em;padding:17px 36px;border-radius:8px;background:var(--gold);color:#fff;text-decoration:none;box-shadow:0 18px 48px rgba(185,142,79,.25)">Démarrer la conversation ↗</a></div>
 </section>
 
-
-<section class="section real-work-section">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <div class="kicker">Visuels de projets réels</div>
-      <h2>Des projets qui rendent le studio crédible.</h2>
-      <p>Au lieu d’images génériques, FM Systems présente maintenant des aperçus soignés de directions web concrètes : Mortacc, Maison Malaak et FM Systems.</p>
-    </div>
-    <div class="real-work-grid">
-      <img class="reveal" src="../images/project-mortacc-showcase.svg" alt="Aperçu du site Mortacc">
-      <img class="reveal d1" src="../images/project-maison-showcase.svg" alt="Aperçu du site Maison Malaak">
-      <img class="reveal d2" src="../images/project-fm-showcase.svg" alt="Aperçu du site FM Systems">
-    </div>
-  </div>
-</section>
-
-<footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-about"><a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a><p>Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">À propos</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Systèmes web</a><a href="services.html">Refonte numérique</a><a href="services.html">Visibilité Google</a><a href="services.html">Image de marque</a><a href="services.html">Maintenance</a></div><div class="footer-col"><h5>Contact</h5><a href="mailto:fatmemortada88@gmail.com">Nous écrire</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">English</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div></div></footer>
+<footer style="background:#2c261f;border-top:1px solid rgba(185,142,79,.15);padding:80px 0 36px"><div class="wrap"><div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(185,142,79,.12);margin-bottom:28px"><div><div style="display:flex;align-items:center;gap:12px"><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--gold);letter-spacing:-.08em;line-height:.8">FM</div><div><span style="display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fffdf8;margin-top:6px">FM Systems</span><span style="display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,253,248,.3);margin-top:2px">Digital Studio</span></div></div><p style="font-size:14px;color:rgba(255,253,248,.38);line-height:1.75;margin-top:18px;max-width:260px">Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Pages</h5><a href="index.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Accueil</a><a href="about.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">À propos</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Services</a><a href="portfolio.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Portfolio</a><a href="contact.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Contact</a></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Services</h5><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Systèmes web</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Refonte numérique</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Visibilité Google</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Image de marque</a><a href="services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Maintenance</a></div><div><h5 style="font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px">Contact</h5><a href="mailto:fatmemortada88@gmail.com" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">Nous écrire</a><a href="https://wa.me/14383736655" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">WhatsApp</a><a href="https://linkedin.com/company/fmbytex" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">LinkedIn</a><a href="../services.html" style="display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;text-decoration:none">English</a></div></div><div style="display:flex;justify-content:space-between;align-items:center;font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,253,248,.2);flex-wrap:wrap;gap:10px;letter-spacing:.06em"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div></div></footer>
 <script src="../js/script.js"></script>
 </body></html>

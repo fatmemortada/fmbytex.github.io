@@ -1,106 +1,332 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FM Systems — Sites Web Premium & Présence Numérique</title>
 <meta name="description" content="FM Systems crée des sites web bilingues premium, une image de marque et des expériences numériques pour les entreprises ambitieuses au Canada.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
 <style>
-:root{
-  --bg:#fbf7ef; --bg2:#f4eadc; --surface:#fffdf8; --cream:#f8f1e6;
-  --text:#2c261f; --muted:#706455; --soft:#a4937c;
-  --gold:#b98e4f; --gold2:#dfc17f; --border:rgba(185,142,79,.24);
-  --shadow:0 28px 80px rgba(94,65,29,.13); --ease:cubic-bezier(.19,1,.22,1);
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased} a{text-decoration:none;color:inherit} img{max-width:100%;display:block}.wrap{width:min(1240px,88%);margin:auto}.section{padding:110px 0}.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}.reveal.in{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}
-.cursor,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}.cursor{width:10px;height:10px;background:var(--gold);mix-blend-mode:multiply}.cursor-ring{width:38px;height:38px;border:1px solid rgba(185,142,79,.35)}
-.nav{position:fixed;inset:0 0 auto 0;z-index:1000;transition:.35s var(--ease);background:rgba(251,247,239,.72);backdrop-filter:blur(20px);border-bottom:1px solid rgba(185,142,79,.14)}.nav.solid{background:rgba(251,247,239,.92);box-shadow:0 10px 35px rgba(94,65,29,.08)}.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.nav-logo{display:flex;align-items:center;gap:12px}.nav-logo-mark{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:.75;font-weight:700;color:var(--gold);letter-spacing:-.08em}.nav-logo-text{display:block;font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text)}.nav-logo-sub{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:1px}.nav-links{display:flex;align-items:center;gap:10px;list-style:none;margin:0;padding:0}.nav-links a{font-size:13px;font-weight:700;color:#5e5347;padding:10px 15px;border-radius:999px;transition:.25s}.nav-links a:hover,.nav-links a.active{background:#f2e6d5;color:var(--text)}.nav-right{display:flex;align-items:center;gap:12px}.nav-lang{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--gold);border:1px solid var(--border);padding:8px 14px;border-radius:999px}.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:12px 22px;border-radius:9px;font-size:13px;font-weight:800;letter-spacing:.04em;box-shadow:0 14px 35px rgba(185,142,79,.20)}.nav-ham{display:none;color:var(--text);font-size:24px}
-.hero{position:relative;padding:145px 0 70px;min-height:760px;background:radial-gradient(circle at 76% 24%,rgba(223,193,127,.20),transparent 32%),linear-gradient(135deg,#fffdf8 0%,#f7efe3 54%,#fbf7ef 100%);overflow:hidden}.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:.86fr 1.14fr;gap:58px;align-items:center}.kicker{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}.hero h1,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:.95;letter-spacing:-.035em}.hero h1{font-size:clamp(52px,6.5vw,95px);margin:0 0 26px}.gold-line{display:flex;align-items:center;gap:12px;margin:22px 0 28px}.gold-line span:first-child{width:78px;height:1px;background:var(--gold)}.gold-line span:last-child{color:var(--gold);font-size:20px}.lead{font-size:17px;line-height:1.85;color:var(--muted);max-width:560px}.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:9px;padding:14px 25px;font-size:13px;font-weight:800;letter-spacing:.04em;transition:.3s var(--ease)}.btn-main{background:linear-gradient(135deg,var(--gold),var(--gold2));color:white;box-shadow:0 18px 40px rgba(185,142,79,.22)}.btn-main:hover,.btn-ghost:hover{transform:translateY(-2px)}.btn-ghost{border:1px solid var(--border);background:rgba(255,253,248,.68);color:var(--text)}.hero-feature{margin-top:34px}.hero-feature .label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:10px}.hero-feature h3{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1;margin:0 0 8px}.hero-visual{position:relative;min-height:510px}.vase{position:absolute;left:3%;top:6%;width:175px;height:280px;opacity:.7}.vase:before{content:"";position:absolute;left:60px;bottom:0;width:82px;height:118px;border-radius:42px 42px 34px 34px;background:linear-gradient(#fff,#eadcca);box-shadow:0 28px 60px rgba(94,65,29,.12)}.vase:after{content:"";position:absolute;left:100px;top:0;width:1px;height:175px;background:#d8b66e;box-shadow:-35px 28px 0 #d8b66e,38px 20px 0 #d8b66e,-18px 55px 0 #d8b66e;transform:rotate(-8deg)}.laptop{position:absolute;right:0;bottom:26px;width:min(760px,100%);filter:drop-shadow(0 34px 42px rgba(69,47,22,.22));transform:perspective(1200px) rotateY(-7deg) rotateX(2deg)}.screen{background:#15120f;border:14px solid #161616;border-bottom-width:24px;border-radius:24px 24px 14px 14px;overflow:hidden}.screen img{width:100%;height:auto}.base{height:32px;background:linear-gradient(#d5d0c9,#8f8a84);border-radius:0 0 55px 55px;margin:0 7%;position:relative}.base:after{content:"";position:absolute;left:40%;right:40%;top:4px;height:5px;background:rgba(255,255,255,.5);border-radius:999px}
-.featured{position:relative;z-index:5;margin-top:-20px}.work-shell{background:rgba(255,253,248,.82);border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow);padding:42px}.section-head{text-align:center;margin-bottom:34px}.section-head .kicker{margin-bottom:12px}.section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.4vw,62px);line-height:.95;margin:0}.work-row{display:grid;grid-template-columns:1fr 1.08fr;align-items:stretch;border:1px solid rgba(185,142,79,.20);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.55);transition:.35s var(--ease);margin-bottom:14px}.work-row:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(94,65,29,.12)}.work-img{height:270px;background:#efe4d3;overflow:hidden}.work-img img{width:100%;height:100%;object-fit:cover;transition:.6s var(--ease)}.work-row:hover .work-img img{transform:scale(1.035)}.work-info{position:relative;padding:44px 54px;display:flex;flex-direction:column;justify-content:center}.work-num{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:12px}.work-info h3{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1;margin:0 0 14px}.work-info p{max-width:470px;color:var(--muted);line-height:1.75}.work-link{font-weight:800;font-size:13px;letter-spacing:.04em;margin-top:20px}.arrow-circle{position:absolute;right:32px;top:32px;width:56px;height:56px;border:1px solid rgba(185,142,79,.50);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:28px}.center{text-align:center}.trust{display:grid;grid-template-columns:1.15fr repeat(4,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:80px}.trust-title{padding:34px 36px 34px 0}.trust-title h2{font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;margin:0 0 14px}.trust-item{border-left:1px solid var(--border);padding:34px 25px;text-align:center}.trust-icon{font-size:28px;color:var(--gold);margin-bottom:12px}.trust-item h4{margin:0 0 8px;font-size:14px}.trust-item p{color:var(--muted);font-size:13px;line-height:1.65;margin:0}.cta{margin:80px auto 0;border:1px solid var(--border);background:linear-gradient(135deg,#fffdf8,#f4e8d8);border-radius:22px;padding:42px 50px;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:var(--shadow)}.cta h2{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1;margin:8px 0 0}.footer{background:#2c261f;color:#fffdf8;padding:58px 0 26px;margin-top:100px}.footer-main{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px}.footer p,.footer a{color:rgba(255,253,248,.68);font-size:14px}.footer h5{color:#dfc17f;letter-spacing:.14em;text-transform:uppercase;font-size:12px}.footer-col a{display:block;margin:10px 0}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:22px;display:flex;justify-content:space-between;color:rgba(255,255,255,.5);font-size:13px}
-.approach-section{padding-top:90px}.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}.approach-card{background:rgba(255,253,248,.82);border:1px solid var(--border);border-radius:18px;padding:32px 24px;min-height:230px;box-shadow:0 18px 48px rgba(94,65,29,.07);transition:.35s var(--ease)}.approach-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(94,65,29,.11)}.approach-card h4{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1;margin:10px 0 12px}.approach-card p{color:var(--muted);font-size:14px;line-height:1.75;margin:0}.testimonial-card{margin:42px auto 0;max-width:900px;text-align:center;background:linear-gradient(135deg,#fffdf8,#f4e8d8);border:1px solid var(--border);border-radius:22px;padding:42px 50px;box-shadow:var(--shadow)}.testimonial-card blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.2vw,44px);line-height:1.12;margin:10px 0 18px;color:var(--text)}.testimonial-card p{margin:0;color:var(--muted);font-weight:700}
-@media(max-width:980px){.approach-grid{grid-template-columns:1fr 1fr}.testimonial-card{padding:34px 26px}.nav-links,.nav-lang,.nav-cta{display:none}.nav-ham{display:block}.hero{padding-top:120px}.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:410px}.laptop{position:relative;margin-top:25px}.vase{display:none}.work-row{grid-template-columns:1fr}.work-img{height:240px}.trust{grid-template-columns:1fr 1fr}.trust-title{grid-column:1/-1;padding:30px 0}.cta{flex-direction:column;text-align:center}.footer-main{grid-template-columns:1fr 1fr}.nav-links.open{display:flex!important;flex-direction:column!important;align-items:flex-start!important;position:fixed!important;top:78px!important;left:0!important;right:0!important;background:rgba(251,247,239,.97)!important;padding:20px 6%!important;border-bottom:1px solid var(--border)!important;gap:6px!important}}
-@media(max-width:620px){.approach-grid{grid-template-columns:1fr}.approach-card{min-height:auto}.wrap{width:min(100% - 34px,1240px)}.hero h1{font-size:48px}.hero-feature h3{font-size:30px}.work-shell{padding:22px;border-radius:22px}.work-info{padding:30px 24px}.work-info h3{font-size:36px}.arrow-circle{right:18px;top:18px;width:44px;height:44px}.trust{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:8px}.cta{padding:34px 24px}.nav-logo-text{font-size:11px}}
+:root{--bg:#fbf7ef;--bg2:#f4eadc;--cream:#fffdf8;--text:#2c261f;--muted:#706455;--soft:#a4937c;--gold:#b98e4f;--gold2:#dfc17f;--border:rgba(185,142,79,.22);--border2:rgba(185,142,79,.38);--shadow:0 28px 80px rgba(94,65,29,.13);--ease:cubic-bezier(.19,1,.22,1);--ease2:cubic-bezier(.4,0,.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button{font-family:inherit;cursor:pointer;border:none;background:none}
+.cursor,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}.cursor{width:10px;height:10px;background:var(--gold);mix-blend-mode:multiply;transition:width .3s var(--ease),height .3s}.cursor-ring{width:38px;height:38px;border:1px solid rgba(185,142,79,.4);transition:all .12s var(--ease2)}
+body::before{content:'';position:fixed;inset:0;z-index:9000;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none}
+.nav{position:fixed;inset:0 0 auto 0;z-index:800;height:76px;background:rgba(251,247,239,.82);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+.nav.solid{box-shadow:0 8px 30px rgba(94,65,29,.08)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1240px,88%);margin:auto}
+.nav-logo{display:flex;align-items:center;gap:12px}.nav-logo-mark{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:.8;font-weight:700;color:var(--gold);letter-spacing:-.08em}
+.nav-logo-text{display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text)}.nav-logo-sub{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-top:1px}
+.nav-links{display:flex;gap:4px;list-style:none}.nav-links a{font-size:13px;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:999px;transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(185,142,79,.1)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-lang{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--gold);border:1px solid var(--border);padding:7px 14px;border-radius:999px;transition:.2s}.nav-lang:hover{background:rgba(185,142,79,.08)}
+.nav-cta{background:var(--gold);color:#fff;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;letter-spacing:.04em;transition:.25s var(--ease)}.nav-cta:hover{background:var(--text);transform:translateY(-1px)}
+.nav-ham{display:none;color:var(--text);font-size:22px;padding:8px}
+.wrap{width:min(1240px,88%);margin:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.in{opacity:1;transform:none}
+.reveal.from-left{transform:translateX(-24px)}.reveal.from-left.in{transform:none}
+.reveal.from-right{transform:translateX(24px)}.reveal.from-right.in{transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+/* HERO */
+.hero{padding-top:76px;min-height:100svh;display:grid;grid-template-rows:1fr auto;background:var(--bg)}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100svh - 76px - 100px)}
+.hero-left{padding:80px 72px 80px min(72px,6%);display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--border)}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:40px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(64px,8.5vw,136px);font-weight:700;line-height:.9;letter-spacing:-.04em;color:var(--text);flex:1;display:flex;flex-direction:column;justify-content:center}
+.hero-h1 .italic{font-style:italic;font-weight:400;color:var(--gold)}
+.hero-bottom-row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-top:48px;flex-wrap:wrap}
+.hero-desc{font-size:16px;line-height:1.8;color:var(--muted);max-width:380px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.05em;padding:14px 26px;border-radius:8px;transition:all .28s var(--ease);cursor:pointer}
+.btn-main{background:var(--gold);color:#fff;box-shadow:0 12px 32px rgba(185,142,79,.22)}.btn-main:hover{background:var(--text);box-shadow:0 18px 48px rgba(44,38,31,.18);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--border2);background:rgba(255,253,248,.7);color:var(--text)}.btn-ghost:hover{background:var(--cream);border-color:var(--gold);transform:translateY(-1px)}
+.btn .arr{transition:transform .28s var(--ease)}.btn:hover .arr{transform:translate(3px,-3px)}
+.hero-right{position:relative;overflow:hidden;background:var(--bg2)}
+.hero-right img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) sepia(.15);transition:transform 8s var(--ease),filter 1s}
+.hero:hover .hero-right img{transform:scale(1.04);filter:saturate(.8) sepia(.1)}
+.hero-right-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(251,247,239,.12),rgba(185,142,79,.08))}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);background:var(--cream)}
+.hstat{padding:26px 36px;border-right:1px solid var(--border)}.hstat:last-child{border-right:none}
+.hstat-n{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--text);line-height:1;letter-spacing:-.04em;display:block}
+.hstat-n em{font-style:normal;color:var(--gold)}.hstat-l{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:6px;display:block}
+/* MARQUEE */
+.marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);overflow:hidden;padding:16px 0;position:relative}
+.marquee::before,.marquee::after{content:'';position:absolute;top:0;height:100%;width:80px;z-index:2}
+.marquee::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}.marquee::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
+.m-track{display:flex;width:max-content;animation:ticker 30s linear infinite}
+.m-item{display:inline-flex;align-items:center;gap:14px;padding:0 30px;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.m-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* SECTIONS */
+.section{padding:120px 0}.section-label{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;flex-wrap:wrap;gap:20px}
+.eyebrow{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h2.serif{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,88px);font-weight:700;line-height:.93;letter-spacing:-.04em;color:var(--text);margin:14px 0 0}
+.btn-text{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--border2);padding-bottom:4px;transition:gap .3s var(--ease),color .2s}.btn-text:hover{gap:14px;color:var(--gold)}
+/* WORK FEAT */
+.work-feat{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:20px;overflow:hidden;margin-bottom:16px;transition:box-shadow .4s var(--ease);background:var(--cream)}.work-feat:hover{box-shadow:0 48px 100px rgba(94,65,29,.16)}
+.work-feat-img{overflow:hidden;position:relative;min-height:500px}
+.work-feat-img img{width:100%;height:100%;object-fit:cover;object-position:top;filter:saturate(.75) sepia(.1);transition:transform .8s var(--ease),filter .5s}
+.work-feat:hover .work-feat-img img{transform:scale(1.05);filter:saturate(.9) sepia(.05)}
+.work-feat-body{padding:72px 64px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border)}
+.work-badge{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);padding:6px 14px;border:1px solid var(--border2);border-radius:999px;display:inline-block;margin-bottom:20px;background:rgba(185,142,79,.06)}
+.work-feat-body h3{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,60px);font-weight:700;color:var(--text);line-height:1.05;letter-spacing:-.04em;margin-bottom:18px}
+.work-feat-body p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:36px}
+.work-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-top:28px;border-top:1px solid var(--border);margin-bottom:36px}
+.wm-item span{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:5px}
+.wm-item strong{font-size:14px;font-weight:600;color:var(--text)}
+/* WORK GRID */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.work-card{border-radius:14px;overflow:hidden;background:var(--bg2);border:1px solid var(--border);position:relative;display:block;aspect-ratio:4/3;transition:transform .4s var(--ease),box-shadow .4s}.work-card:hover{transform:translateY(-8px);box-shadow:0 40px 80px rgba(94,65,29,.18)}
+.work-card img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) sepia(.12);transition:transform .6s var(--ease),filter .4s}.work-card:hover img{transform:scale(1.07);filter:saturate(.85) sepia(.06)}
+.work-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,38,31,.88) 0%,rgba(44,38,31,.2) 50%,transparent 70%);opacity:0;transition:opacity .4s}.work-card:hover .work-card-overlay{opacity:1}
+.work-card-info{position:absolute;bottom:0;left:0;right:0;padding:26px 28px;transform:translateY(6px);opacity:0;transition:all .4s var(--ease)}.work-card:hover .work-card-info{opacity:1;transform:translateY(0)}
+.work-card-tag{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,253,248,.55);display:block;margin-bottom:6px}
+.work-card-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fffdf8;letter-spacing:-.03em;line-height:1.1}
+/* SERVICES */
+.svc-list{border-top:1px solid var(--border)}.svc{display:grid;grid-template-columns:72px 1fr 1fr 52px;align-items:center;gap:32px;padding:32px 0;border-bottom:1px solid var(--border);transition:background .25s,padding-left .3s var(--ease);cursor:default}
+.svc:hover{background:rgba(185,142,79,.04);padding-left:16px}
+.svc-num{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--soft)}.svc-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.svc-desc{font-size:14px;color:var(--muted);line-height:1.7}.svc-arr{font-size:22px;color:var(--soft);text-align:right;transition:color .25s,transform .3s var(--ease)}.svc:hover .svc-arr{color:var(--gold);transform:translate(3px,-3px)}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-left{padding:100px min(80px,7%);border-right:1px solid var(--border)}
+.about-right{position:relative;overflow:hidden;min-height:560px;background:var(--bg2)}
+.about-right img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) sepia(.15);transition:transform .8s var(--ease)}.about-grid:hover .about-right img{transform:scale(1.04)}
+.big-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(22px,2.8vw,34px);line-height:1.45;color:var(--text);border-left:2px solid var(--gold);padding-left:26px;margin:32px 0 40px}
+.feat-rows{display:grid;gap:0;border-top:1px solid var(--border)}.feat-row{display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-bottom:1px solid var(--border);transition:padding-left .25s var(--ease)}.feat-row:hover{padding-left:6px}
+.feat-num{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--gold);flex-shrink:0;margin-top:3px}
+.feat-row strong{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}.feat-row p{font-size:13px;color:var(--muted);line-height:1.65}
+/* NUMBERS */
+.num-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);background:var(--cream)}
+.num-box{padding:60px 44px;border-right:1px solid var(--border);transition:background .25s}.num-box:last-child{border-right:none}.num-box:hover{background:var(--bg2)}
+.num-big{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,80px);font-weight:700;color:var(--text);line-height:1;letter-spacing:-.04em;display:block;margin-bottom:10px}
+.num-big em{font-style:normal;color:var(--gold)}.num-label{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+/* TESTI */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border)}
+.testi{padding:52px 44px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .25s}.testi:last-child{border-right:none}.testi:hover{background:var(--cream)}
+.testi-stars{color:var(--gold);letter-spacing:3px;font-size:13px;margin-bottom:20px;display:block}
+.testi-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.6;color:var(--text);margin-bottom:28px}
+.testi-author{display:flex;align-items:center;gap:13px}.testi-av{width:40px;height:40px;background:var(--bg2);border:1px solid var(--border2);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--gold);border-radius:8px;flex-shrink:0}
+.testi-name{font-size:13px;font-weight:700;color:var(--text)}.testi-role{font-size:12px;color:var(--soft);margin-top:2px}
+/* PHOTO BAND */
+.photo-band{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px;height:300px}
+.pb{border-radius:12px;overflow:hidden;position:relative}.pb img{width:100%;height:100%;object-fit:cover;filter:saturate(.6) sepia(.15);transition:filter .5s,transform .6s var(--ease)}.pb:hover img{filter:saturate(.8) sepia(.08);transform:scale(1.04)}
+.pb-label{position:absolute;bottom:14px;left:14px;font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,253,248,.4)}
+/* CTA */
+.cta-section{padding:140px 0;text-align:center;background:var(--text);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-40%;left:-20%;width:120%;height:200%;background:radial-gradient(ellipse at 50% 50%,rgba(185,142,79,.12),transparent 55%)}
+.cta-section .eyebrow{color:var(--gold2)}.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,96px);font-weight:700;color:#fffdf8;line-height:.93;letter-spacing:-.04em;margin:16px 0 20px}
+.cta-section .lead{font-size:17px;color:rgba(255,253,248,.45);line-height:1.8;max-width:480px;margin:0 auto 44px}
+/* FOOTER */
+.footer{background:#2c261f;border-top:1px solid rgba(185,142,79,.15);padding:80px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(185,142,79,.12);margin-bottom:28px}
+.footer-logo-mark{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--gold);letter-spacing:-.08em;line-height:.8}
+.footer-name{display:block;font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fffdf8;margin-top:6px}
+.footer-sub{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,253,248,.3);margin-top:2px}
+.footer-about p{font-size:14px;color:rgba(255,253,248,.38);line-height:1.75;margin-top:18px;max-width:260px}
+.footer-col h5{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(185,142,79,.55);margin-bottom:18px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,253,248,.38);margin-bottom:11px;transition:color .2s}.footer-col a:hover{color:rgba(255,253,248,.8)}
+.footer-socials{display:flex;gap:8px;margin-top:22px}.fsoc{width:36px;height:36px;border:1px solid rgba(185,142,79,.2);display:grid;place-items:center;font-size:11px;font-family:'DM Mono',monospace;font-weight:500;color:rgba(255,253,248,.3);transition:all .2s;border-radius:6px}.fsoc:hover{border-color:rgba(185,142,79,.5);color:var(--gold2)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,253,248,.2);flex-wrap:wrap;gap:10px;letter-spacing:.06em}
+/* RESPONSIVE */
+@media(max-width:1100px){.hero-split{grid-template-columns:1fr}.hero-right{display:none}.hero-left{border-right:none;padding:60px min(6%,60px)}.hero-stats{grid-template-columns:1fr 1fr}.hstat:nth-child(2){border-right:none}.hstat:nth-child(3),.hstat:nth-child(4){border-top:1px solid var(--border)}.work-feat{grid-template-columns:1fr}.work-feat-img{min-height:360px}.work-feat-body{padding:52px 44px;border-left:none;border-top:1px solid var(--border)}.about-grid{grid-template-columns:1fr}.about-right{min-height:400px}.about-left{border-right:none;border-bottom:1px solid var(--border)}.num-row{grid-template-columns:1fr 1fr}.num-box:nth-child(2){border-right:none}.testi-grid{grid-template-columns:1fr}.testi{border-right:none}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.svc{grid-template-columns:60px 1fr 40px;gap:20px}.svc-desc{display:none}.photo-band{grid-template-columns:1fr 1fr;height:auto}.pb:last-child{display:none}.work-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links,.nav-lang,.nav-cta{display:none}.nav-ham{display:block}.hero-h1{font-size:clamp(52px,14vw,80px)}.hero-stats{grid-template-columns:1fr 1fr}h2.serif{font-size:clamp(40px,10vw,64px)}.svc{grid-template-columns:52px 1fr 36px;gap:14px}.num-row{grid-template-columns:1fr 1fr}.photo-band{grid-template-columns:1fr;height:auto}.pb:last-child{display:block}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.work-grid{grid-template-columns:1fr}.hero-bottom-row{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
 <div class="cursor"></div><div class="cursor-ring"></div>
+
 <nav class="nav">
-  <div class="wrap nav-inner">
+  <div class="nav-inner">
     <a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-right"><a href="../index.html" class="nav-lang">EN</a><a href="contact.html" class="nav-cta">Réserver une consultation →</a><button class="nav-ham" aria-label="Menu">☰</button></div>
+    <div class="nav-right">
+      <a href="../index.html" class="nav-lang">EN</a>
+      <a href="contact.html" class="nav-cta">Réserver une consultation →</a>
+      <button class="nav-ham" aria-label="Menu">☰</button>
+    </div>
   </div>
 </nav>
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy reveal">
-      <div class="kicker">Sites Web Premium & Solutions Numériques</div>
-      <h1>Des expériences numériques<br>qui élèvent votre marque</h1>
-      <div class="gold-line"><span></span><span>✦</span></div>
-      <p class="lead">Nous concevons et développons des sites web raffinés, des systèmes et des solutions numériques qui aident les entreprises ambitieuses à se démarquer, inspirer confiance et grandir.</p>
-      <div class="hero-actions"><a class="btn btn-main" href="portfolio.html">Voir nos projets →</a><a class="btn btn-ghost" href="contact.html">Réserver une consultation →</a></div>
-      <div class="hero-feature reveal d1"><div class="label">Maison Malaak</div><h3>Révélez votre<br>éclat naturel.</h3><p class="lead" style="font-size:15px">Expérience web beauté haut de gamme</p></div>
+
+<section class="hero">
+  <div class="hero-split">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal">Studio numérique Montréal · EN / FR</div>
+      <h1 class="hero-h1 reveal d1">
+        Nous créons<br>
+        <span class="italic">des sites</span><br>
+        qui gagnent.
+      </h1>
+      <div class="hero-bottom-row reveal d2">
+        <p class="hero-desc">Sites web bilingues premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn btn-main">Voir nos projets <span class="arr">↗</span></a>
+          <a href="contact.html" class="btn btn-ghost">Réserver un appel</a>
+        </div>
+      </div>
     </div>
-    <div class="hero-visual reveal d1"><div class="vase"></div><div class="laptop"><div class="screen"><img src="../images/hero-real-work-collage.svg" alt="FM Systems real project website previews"></div><div class="base"></div></div></div>
+    <div class="hero-right reveal d1">
+      <img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?q=90&w=1600&auto=format&fit=crop" alt="Espace de travail studio">
+      <div class="hero-right-overlay"></div>
+    </div>
   </div>
-</header>
-<main>
-<section class="featured section" id="portfolio">
-  <div class="wrap work-shell reveal">
-    <div class="section-head"><div class="kicker">Projets phares</div><h2>Des projets qui parlent d’eux-mêmes.</h2></div>
-    <a class="work-row reveal" href="portfolio.html">
-      <div class="work-img"><img src="../images/project-mortacc-showcase.svg" alt="Mortacc website preview"></div>
-      <div class="work-info"><div class="work-num">01 · Plateforme de services corporatifs</div><h3>Mortacc</h3><p>Une plateforme complète pour les services corporatifs, conçue pour simplifier l’accueil client, les paiements et renforcer la confiance.</p><span class="work-link">Voir le projet →</span><span class="arrow-circle">↗</span></div>
-    </a>
-    <a class="work-row reveal d1" href="https://maisonmalaak.com" target="_blank" rel="noopener">
-      <div class="work-img"><img src="../images/project-maison-showcase.svg" alt="Maison Malaak website preview"></div>
-      <div class="work-info"><div class="work-num">02 · Expérience beauté haut de gamme</div><h3>Maison Malaak</h3><p>Un site raffiné pour un institut de beauté et de formation, conçu autour du luxe féminin, de la confiance et d’une expérience client soignée.</p><span class="work-link">Voir le site →</span><span class="arrow-circle">↗</span></div>
-    </a>
-    <a class="work-row reveal d2" href="index.html">
-      <div class="work-img"><img src="../images/project-fm-showcase.svg" alt="FM Systems website preview"></div>
-      <div class="work-info"><div class="work-num">03 · Image de studio numérique</div><h3>FM Systems</h3><p>Notre propre présence de marque, conçue pour refléter un luxe calme, une crédibilité forte et une direction numérique haut de gamme.</p><span class="work-link">Voir le projet →</span><span class="arrow-circle">↗</span></div>
-    </a>
-    <div class="center" style="margin-top:30px"><a class="btn btn-ghost" href="portfolio.html">Voir tous les projets →</a></div>
+  <div class="hero-stats">
+    <div class="hstat reveal"><span class="hstat-n">100<em>+</em></span><span class="hstat-l">Projets livrés</span></div>
+    <div class="hstat reveal d1"><span class="hstat-n">98<em>%</em></span><span class="hstat-l">Satisfaction client</span></div>
+    <div class="hstat reveal d2"><span class="hstat-n">5<em>★</em></span><span class="hstat-l">Note client</span></div>
+    <div class="hstat reveal d3"><span class="hstat-n">EN<em>/FR</em></span><span class="hstat-l">Livraison bilingue</span></div>
   </div>
-</section>
-<section class="wrap trust reveal">
-  <div class="trust-title"><h2>Les grandes marques méritent une présence numérique exceptionnelle.</h2><p class="lead" style="font-size:15px">Nous accompagnons les entreprises avec des sites web et des systèmes numériques puissants, pensés pour soutenir une vraie croissance.</p></div>
-  <div class="trust-item"><div class="trust-icon">◇</div><h4>Qualité premium</h4><p>Design et développement haut de gamme adaptés à votre marque.</p></div>
-  <div class="trust-item"><div class="trust-icon">♢</div><h4>Fondé sur la confiance</h4><p>Sécurisé, fiable et conçu pour inspirer une confiance durable.</p></div>
-  <div class="trust-item"><div class="trust-icon">↗</div><h4>Axé sur les résultats</h4><p>Des sites qui attirent, convertissent et soutiennent la croissance de votre entreprise.</p></div>
-  <div class="trust-item"><div class="trust-icon">☏</div><h4>Support continu</h4><p>Un accompagnement durable pour garder votre présence forte.</p></div>
 </section>
 
-<section class="section approach-section">
+<div class="marquee">
+  <div class="m-track">
+    <span class="m-item"><span class="m-dot"></span>Design Web Premium</span>
+    <span class="m-item"><span class="m-dot"></span>Bilingue EN / FR</span>
+    <span class="m-item"><span class="m-dot"></span>Image de Marque</span>
+    <span class="m-item"><span class="m-dot"></span>Visibilité Google</span>
+    <span class="m-item"><span class="m-dot"></span>Stratégie SEO</span>
+    <span class="m-item"><span class="m-dot"></span>Mobile-First</span>
+    <span class="m-item"><span class="m-dot"></span>Studio Montréal</span>
+    <span class="m-item"><span class="m-dot"></span>Présence Numérique</span>
+    <span class="m-item"><span class="m-dot"></span>Design Web Premium</span>
+    <span class="m-item"><span class="m-dot"></span>Bilingue EN / FR</span>
+    <span class="m-item"><span class="m-dot"></span>Image de Marque</span>
+    <span class="m-item"><span class="m-dot"></span>Visibilité Google</span>
+    <span class="m-item"><span class="m-dot"></span>Stratégie SEO</span>
+    <span class="m-item"><span class="m-dot"></span>Mobile-First</span>
+    <span class="m-item"><span class="m-dot"></span>Studio Montréal</span>
+    <span class="m-item"><span class="m-dot"></span>Présence Numérique</span>
+  </div>
+</div>
+
+<section class="section" style="background:var(--bg2);padding-top:0">
+  <div class="wrap" style="padding-top:90px;padding-bottom:56px">
+    <div class="section-label reveal">
+      <div><div class="eyebrow">Projets phares</div><h2 class="serif">Réalisations bâties<br><em style="font-style:italic;color:var(--gold)">avec intention.</em></h2></div>
+      <a href="portfolio.html" class="btn-text">Voir tous les projets <span>→</span></a>
+    </div>
+  </div>
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">Notre approche</div>
-      <h2>Un processus raffiné, sans bruit inutile.</h2>
-    </div>
-    <div class="approach-grid">
-      <div class="approach-card reveal"><div class="trust-icon">✦</div><h4>Découverte</h4><p>Nous comprenons votre entreprise, votre clientèle, vos objectifs et l’image que votre marque doit transmettre.</p></div>
-      <div class="approach-card reveal d1"><div class="trust-icon">◇</div><h4>Stratégie</h4><p>Nous définissons une direction numérique claire, centrée sur la confiance, la croissance et l’expérience client.</p></div>
-      <div class="approach-card reveal d2"><div class="trust-icon">♢</div><h4>Design</h4><p>Nous créons des pages élégantes, performantes, modernes et faciles à utiliser.</p></div>
-      <div class="approach-card reveal d2"><div class="trust-icon">↗</div><h4>Lancement & support</h4><p>Nous préparons votre site pour le lancement et continuons à l’améliorer avec la croissance de votre entreprise.</p></div>
-    </div>
-    <div class="testimonial-card reveal">
-      <div class="kicker">Témoignage client</div>
-      <blockquote>« FM Systems a créé une présence en ligne raffinée qui a élevé notre marque et l’expérience de nos clientes. »</blockquote>
-      <p>— Maison Malak</p>
+    <a class="work-feat reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener">
+      <div class="work-feat-img"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=90&w=1600&auto=format&fit=crop" alt="Maison Malaak"></div>
+      <div class="work-feat-body">
+        <span class="work-badge">Projet vedette · En ligne</span>
+        <h3>Maison Malaak</h3>
+        <p>Présence numérique élégante pour une marque de beauté et bien-être à Montréal. Un site qui reflète le luxe vécu en personne — raffiné, chaleureux et inspirant confiance dès le premier regard.</p>
+        <div class="work-meta">
+          <div class="wm-item"><span>Catégorie</span><strong>Marque Beauté</strong></div>
+          <div class="wm-item"><span>Services</span><strong>Site + Marque</strong></div>
+          <div class="wm-item"><span>Langue</span><strong>EN / FR</strong></div>
+          <div class="wm-item"><span>Résultat</span><strong>+60% demandes</strong></div>
+        </div>
+        <a href="https://maisonmalaak.com" class="btn btn-main" target="_blank">Voir le site en ligne <span class="arr">↗</span></a>
+      </div>
+    </a>
+    <div class="work-grid" style="margin-top:14px">
+      <a class="work-card reveal" href="portfolio.html"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Mortacc"><div class="work-card-overlay"></div><div class="work-card-info"><span class="work-card-tag">Plateforme d'affaires</span><div class="work-card-name">Mortacc</div></div></a>
+      <a class="work-card reveal d1" href="portfolio.html"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Stratégie numérique"><div class="work-card-overlay"></div><div class="work-card-info"><span class="work-card-tag">Stratégie numérique</span><div class="work-card-name">Présence Numérique</div></div></a>
+      <a class="work-card reveal d2" href="portfolio.html"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop" alt="Image de marque"><div class="work-card-overlay"></div><div class="work-card-info"><span class="work-card-tag">Image de marque</span><div class="work-card-name">Direction Visuelle</div></div></a>
     </div>
   </div>
 </section>
-<section class="wrap cta reveal"><div><div class="kicker" style="margin-bottom:8px">Prête à élever votre marque?</div><h2>Créons quelque chose d’exceptionnel.</h2></div><a href="contact.html" class="btn btn-main">Réserver une consultation →</a></section>
-</main>
-<footer class="footer"><div class="wrap"><div class="footer-main"><div><a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text" style="color:#fffdf8">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a><p style="margin-top:18px">Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">À propos</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Systèmes web</a><a href="services.html">Refonte numérique</a><a href="services.html">Visibilité Google</a><a href="services.html">Maintenance</a></div><div class="footer-col"><h5>Contact</h5><a href="mailto:fatmemortada88@gmail.com">Nous écrire</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div></div></footer>
-<script src="../js/script.js"></script>
 
+<section class="section">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <div><div class="eyebrow">Ce que nous faisons</div><h2 class="serif">Nos Services</h2></div>
+      <a href="services.html" class="btn-text">Tous les services <span>→</span></a>
+    </div>
+    <div class="svc-list">
+      <div class="svc reveal"><span class="svc-num">01</span><span class="svc-name">Systèmes Web</span><span class="svc-desc">Sites sur-mesure qui donnent à votre entreprise une image premium dès le premier clic.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">02</span><span class="svc-name">Refonte Numérique</span><span class="svc-desc">Transformer un site dépassé en une expérience moderne axée sur la conversion.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">03</span><span class="svc-name">Visibilité Google</span><span class="svc-desc">Fiche Google, présence sur les cartes et structure SEO pour être trouvé en premier.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">04</span><span class="svc-name">Image de Marque</span><span class="svc-desc">Logo, palette, typographie et charte graphique qui positionnent votre entreprise avec confiance.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">05</span><span class="svc-name">SEO de Base</span><span class="svc-desc">Structure de page, mots-clés, balises meta et conseils de contenu pour améliorer votre classement.</span><span class="svc-arr">↗</span></div>
+      <div class="svc reveal"><span class="svc-num">06</span><span class="svc-name">Maintenance</span><span class="svc-desc">Mises à jour, support et améliorations continues pour garder votre site performant.</span><span class="svc-arr">↗</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0">
+  <div class="about-grid">
+    <div class="about-left reveal from-left">
+      <div class="eyebrow">Le Studio</div>
+      <h2 class="serif" style="margin:14px 0 0">Un design qui<br><em style="font-style:italic;color:var(--gold)">inspire confiance.</em></h2>
+      <blockquote class="big-quote">« Votre site devrait ressembler à la meilleure version de votre entreprise — avant même qu'un client appelle. »</blockquote>
+      <div class="feat-rows">
+        <div class="feat-row"><span class="feat-num">01</span><div><strong>Bilingue EN / FR</strong><p>Conçu pour Montréal, le Québec et le marché canadien dès le départ.</p></div></div>
+        <div class="feat-row"><span class="feat-num">02</span><div><strong>Mobile-first, toujours</strong><p>Soigné et parfait sur chaque écran et chaque appareil.</p></div></div>
+        <div class="feat-row"><span class="feat-num">03</span><div><strong>Structure stratégique</strong><p>Chaque section et chaque mot a un but : convertir les visiteurs en clients.</p></div></div>
+        <div class="feat-row"><span class="feat-num">04</span><div><strong>Esthétique premium</strong><p>Un design qui inspire confiance avant même que vous disiez un mot.</p></div></div>
+      </div>
+      <a href="about.html" class="btn btn-main" style="margin-top:44px">À propos du studio <span class="arr">↗</span></a>
+    </div>
+    <div class="about-right reveal from-right">
+      <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=90&w=1600&auto=format&fit=crop" alt="Espace de travail">
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 0;background:var(--bg2)">
+  <div class="wrap">
+    <div class="photo-band reveal">
+      <div class="pb"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Développement"><span class="pb-label">Développement</span></div>
+      <div class="pb"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1200&auto=format&fit=crop" alt="Stratégie"><span class="pb-label">Stratégie</span></div>
+      <div class="pb"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop" alt="Design"><span class="pb-label">Design</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="num-row">
+  <div class="num-box reveal"><span class="num-big">100<em>+</em></span><span class="num-label">Projets livrés</span></div>
+  <div class="num-box reveal d1"><span class="num-big">98<em>%</em></span><span class="num-label">Satisfaction client</span></div>
+  <div class="num-box reveal d2"><span class="num-big">2<em>sem</em></span><span class="num-label">Délai moyen</span></div>
+  <div class="num-box reveal d3"><span class="num-big">EN<em>/FR</em></span><span class="num-label">Livraison bilingue</span></div>
+</div>
+
+<section class="section">
+  <div class="wrap"><div style="margin-bottom:60px" class="reveal"><div class="eyebrow">Ce que disent nos clients</div><h2 class="serif">La confiance, méritée.</h2></div></div>
+  <div class="testi-grid" style="max-width:min(1240px,88%);margin:0 auto">
+    <div class="testi reveal"><span class="testi-stars">★★★★★</span><p class="testi-text">« Le site reflète enfin le luxe que nos clientes vivent en personne. Exactement ce dont nous avions besoin. »</p><div class="testi-author"><div class="testi-av">MM</div><div><div class="testi-name">Maison Malaak</div><div class="testi-role">Beauté &amp; Bien-être, Montréal</div></div></div></div>
+    <div class="testi reveal d1"><span class="testi-stars">★★★★★</span><p class="testi-text">« Une présence soignée donne à l'entreprise un air établi dès le premier clic. Les résultats parlent d'eux-mêmes. »</p><div class="testi-author"><div class="testi-av">M</div><div><div class="testi-name">Client Affaires</div><div class="testi-role">Services professionnels</div></div></div></div>
+    <div class="testi reveal d2"><span class="testi-stars">★★★★★</span><p class="testi-text">« Messagerie claire, structure bilingue — les visiteurs comprennent immédiatement ce que nous offrons. »</p><div class="testi-author"><div class="testi-av">DS</div><div><div class="testi-name">Partenaire numérique</div><div class="testi-role">Stratégie numérique</div></div></div></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap reveal">
+    <div class="eyebrow">Prochaine étape</div>
+    <h2>Prête à élever<br>votre présence?</h2>
+    <p class="lead">Créons ensemble quelque chose dont vous serez fière de partager avec chaque client.</p>
+    <a href="contact.html" class="btn" style="background:var(--gold);color:#fff;font-size:15px;padding:17px 36px;margin:0 auto;box-shadow:0 18px 48px rgba(185,142,79,.25)">Réserver une consultation <span class="arr">↗</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="nav-logo" style="margin-bottom:0"><div class="footer-logo-mark">FM</div><div><span class="footer-name">FM Systems</span><span class="footer-sub">Digital Studio</span></div></div>
+        <p>Sites web premium, image de marque et présence numérique pour les entreprises ambitieuses au Canada.</p>
+        <div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div>
+      </div>
+      <div class="footer-col"><h5>Pages</h5><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Services</h5><a href="services.html">Systèmes web</a><a href="services.html">Refonte numérique</a><a href="services.html">Visibilité Google</a><a href="services.html">Image de marque</a><a href="services.html">Maintenance</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="mailto:fatmemortada88@gmail.com">Nous écrire</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="../index.html">English</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FM Systems. Tous droits réservés.</span><span>Montréal, Québec, Canada</span></div>
+  </div>
+</footer>
+<script src="../js/script.js"></script>
 </body>
 </html>

@@ -5,119 +5,97 @@
 <title>Services — FM Systems</title>
 <meta name="description" content="Premium web design, branding, SEO, and Google Visibility by FM Systems — Montreal.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-
-
 </head>
 <body>
-<div class="cursor"></div><div class="cursor-ring"></div>
-<nav class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a>
-    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <div class="nav-right"><a href="fr/index.html" class="nav-lang">FR</a><a href="contact.html" class="nav-cta">Book a Consultation →</a><button class="nav-ham">☰</button></div>
-  </div>
-</nav>
+<div class="cur" id="cur"></div><div class="cur-r" id="curR"></div>
 
+<nav class="nav"><div class="wrap nav-i">
+  <a href="index.html" class="logo">FM<em>·</em>Systems<span class="logo-tag">Digital Studio</span></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-r"><a href="fr/services.html" class="nav-lang">FR</a><a href="contact.html" class="nav-cta">Book a Call →</a><button class="nav-ham">☰</button></div>
+</div></nav>
+
+<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-label">Services</div>
-  <div class="wrap page-hero-inner">
-    <div class="tag reveal">Services</div>
-    <h1 class="f-display reveal d1">Everything for a<br><em style="color:var(--accent2)">premium</em> presence.</h1>
-    <p class="lead reveal d2" style="margin-top:20px">A focused suite of digital services built to make your business look established, trusted, and credible online — in both English and French.</p>
+  <div class="page-hero-bg-word">Services</div>
+  <div class="wrap">
+    <div class="page-hero-kicker reveal">Services</div>
+    <h1 class="reveal d1">Everything for a<br><em>premium</em> presence.</h1>
+    <p class="sub reveal d2">A focused suite of digital services built to make your business look established, trusted, and credible online — in both languages.</p>
   </div>
 </section>
 
+<!-- SERVICE ROWS -->
 <section class="section">
   <div class="wrap">
-    <div class="svc-wrap">
-      <div class="svc-item reveal"><span class="svc-n">01</span><span class="svc-arrow">↗</span><div class="svc-icon">✦</div><div class="svc-title">Website Systems</div><p class="svc-desc">Custom, hand-crafted websites built to look premium from the first click. Performance-focused, mobile-first, and built with your clients in mind.</p></div>
-      <div class="svc-item reveal d1"><span class="svc-n">02</span><span class="svc-arrow">↗</span><div class="svc-icon">◇</div><div class="svc-title">Digital Redesign</div><p class="svc-desc">Transform an outdated website into a modern, conversion-focused experience. Same brand — entirely elevated presence.</p></div>
-      <div class="svc-item reveal d2"><span class="svc-n">03</span><span class="svc-arrow">↗</span><div class="svc-icon">⌖</div><div class="svc-title">Google Visibility</div><p class="svc-desc">Google Business setup, maps presence, and search-friendly structure so local clients find and trust you first.</p></div>
-      <div class="svc-item reveal"><span class="svc-n">04</span><span class="svc-arrow">↗</span><div class="svc-icon">◆</div><div class="svc-title">Brand Identity</div><p class="svc-desc">Elegant visual direction — logo, color palette, typography, and brand guidelines that position your business with confidence.</p></div>
-      <div class="svc-item reveal d1"><span class="svc-n">05</span><span class="svc-arrow">↗</span><div class="svc-icon">↗</div><div class="svc-title">SEO Basics</div><p class="svc-desc">Page structure, keywords, meta tags, and content direction that help Google understand your business and rank it higher.</p></div>
-      <div class="svc-item reveal d2"><span class="svc-n">06</span><span class="svc-arrow">↗</span><div class="svc-icon">✓</div><div class="svc-title">Maintenance</div><p class="svc-desc">Ongoing updates, content changes, technical support, and improvements to keep your site performing long after launch.</p></div>
+    <div class="svc-rows">
+      <div class="svc-row reveal"><span class="sr-n">01</span><span class="sr-name">Website Systems</span><span class="sr-desc">Custom sites built to look premium from the very first click. Performance-focused, mobile-first, built for your clients.</span><span class="sr-arr">↗</span></div>
+      <div class="svc-row reveal"><span class="sr-n">02</span><span class="sr-name">Digital Redesign</span><span class="sr-desc">Transform an outdated website into a modern, conversion-focused experience. Same brand — entirely elevated.</span><span class="sr-arr">↗</span></div>
+      <div class="svc-row reveal"><span class="sr-n">03</span><span class="sr-name">Google Visibility</span><span class="sr-desc">Google Business setup, maps presence, and search-friendly structure so local clients find and trust you first.</span><span class="sr-arr">↗</span></div>
+      <div class="svc-row reveal"><span class="sr-n">04</span><span class="sr-name">Brand Identity</span><span class="sr-desc">Logo, palette, typography, and brand guidelines that position your business with confidence.</span><span class="sr-arr">↗</span></div>
+      <div class="svc-row reveal"><span class="sr-n">05</span><span class="sr-name">SEO Basics</span><span class="sr-desc">Page structure, keywords, meta tags, and content direction that help Google rank your business higher.</span><span class="sr-arr">↗</span></div>
+      <div class="svc-row reveal"><span class="sr-n">06</span><span class="sr-name">Maintenance</span><span class="sr-desc">Ongoing updates, support, and improvements to keep your site sharp long after launch.</span><span class="sr-arr">↗</span></div>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:var(--bg2)">
+<!-- PROCESS -->
+<section class="section" style="padding-top:0;border-top:1px solid var(--line);background:var(--bg2)">
+  <div class="wrap" style="padding-top:100px">
+    <div class="s-label reveal">
+      <div><span class="eyebrow">Process</span><h2 class="serif">A clear, simple<br><em>process.</em></h2></div>
+    </div>
+    <div class="proc-rows">
+      <div class="proc-row reveal"><span class="pr-n">01</span><div><div class="pr-title">Discovery</div><p class="pr-desc">We learn about your business, goals, audience, and what you want your digital presence to communicate.</p></div></div>
+      <div class="proc-row reveal"><span class="pr-n">02</span><div><div class="pr-title">Design</div><p class="pr-desc">A tailored direction built around your brand — clean, premium, and intentional. Every element earns its place.</p></div></div>
+      <div class="proc-row reveal"><span class="pr-n">03</span><div><div class="pr-title">Build</div><p class="pr-desc">We develop the site with performance, mobile-first layout, and bilingual support built in from the very start.</p></div></div>
+      <div class="proc-row reveal"><span class="pr-n">04</span><div><div class="pr-title">Launch</div><p class="pr-desc">Your site goes live, polished and ready. We stay available for support and ongoing improvements.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" style="border-top:1px solid var(--line)">
   <div class="wrap">
-    <div class="sh center reveal">
-      <div class="tag" style="justify-content:center">Process</div>
-      <h2 class="f-display">A clear, simple<br><em style="color:var(--accent2);font-style:italic">process.</em></h2>
-      <p class="lead" style="margin-top:20px">Four steps from first conversation to a live, polished website.</p>
+    <div class="s-label reveal">
+      <div><span class="eyebrow">Packages</span><h2 class="serif">Simple, transparent<br><em>starting points.</em></h2></div>
     </div>
-    <div class="process-steps">
-      <div class="proc-item reveal"><div class="proc-accent"></div><div class="proc-n">01</div><h3>Discovery</h3><p>We learn about your business, goals, audience, and what you want your digital presence to communicate.</p></div>
-      <div class="proc-item reveal d1"><div class="proc-accent"></div><div class="proc-n">02</div><h3>Design</h3><p>A tailored direction built around your brand — clean, premium, and intentional. Every element earns its place.</p></div>
-      <div class="proc-item reveal d2"><div class="proc-accent"></div><div class="proc-n">03</div><h3>Build</h3><p>We develop the site with performance, mobile-first layout, and bilingual support built in from the very start.</p></div>
-      <div class="proc-item reveal d3"><div class="proc-accent"></div><div class="proc-n">04</div><h3>Launch</h3><p>Your site goes live, polished and ready. We stay available for support and ongoing improvements.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="sh center reveal">
-      <div class="tag" style="justify-content:center">Packages</div>
-      <h2 class="f-display">Simple, transparent<br>starting points.</h2>
-      <p class="lead" style="margin-top:20px">Every project is custom-scoped. These give you a clear sense of what's possible.</p>
-    </div>
-    <div class="price-cards">
-      <div class="price-card reveal">
-        <span class="price-tier">Starter</span>
-        <div class="price-name">Presence</div>
-        <p class="price-desc">For businesses that need a clean, professional digital presence, fast.</p>
-        <ul class="price-list"><li>1–3 page website</li><li>Mobile-first responsive design</li><li>Google Business setup</li><li>Basic SEO structure</li><li>Contact form</li></ul>
-        <a href="contact.html" class="btn-ghost" style="width:100%;justify-content:center">Get a Quote</a>
+    <div class="price-table">
+      <div class="price-row reveal">
+        <span class="pt-n">01</span>
+        <div><div class="pt-name">Presence</div><p class="pt-desc">For businesses that need a clean, professional digital presence, fast.</p></div>
+        <div class="pt-items"><span class="pt-item">1–3 page website</span><span class="pt-item">Mobile-first responsive design</span><span class="pt-item">Google Business setup</span><span class="pt-item">Basic SEO structure</span><span class="pt-item">Contact form</span></div>
+        <div class="pt-cta"><a href="contact.html" class="btn btn-bare">Get a Quote</a></div>
       </div>
-      <div class="price-card featured reveal d1">
-        <span class="price-tier">Standard</span>
-        <div class="price-name">Premium Site</div>
-        <p class="price-desc">The complete presence package for businesses ready to stand out and convert.</p>
-        <ul class="price-list"><li>5–8 page bilingual website</li><li>Custom design system</li><li>Branding direction</li><li>Google Visibility setup</li><li>Full SEO-optimized structure</li><li>1 month post-launch support</li></ul>
-        <a href="contact.html" class="btn-main" style="width:100%;justify-content:center">Start a Project ↗</a>
+      <div class="price-row featured reveal">
+        <span class="pt-n" style="color:var(--gold)">02</span>
+        <div><div class="pt-name">Premium Site <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--gold);vertical-align:middle;margin-left:8px">POPULAR</span></div><p class="pt-desc">The complete presence package for businesses ready to stand out and convert.</p></div>
+        <div class="pt-items"><span class="pt-item">5–8 page bilingual website</span><span class="pt-item">Custom design system</span><span class="pt-item">Branding direction</span><span class="pt-item">Google Visibility setup</span><span class="pt-item">Full SEO-optimized structure</span><span class="pt-item">1 month post-launch support</span></div>
+        <div class="pt-cta"><a href="contact.html" class="btn btn-fill">Start a Project <span class="arr">↗</span></a></div>
       </div>
-      <div class="price-card reveal d2">
-        <span class="price-tier">Advanced</span>
-        <div class="price-name">Full System</div>
-        <p class="price-desc">For businesses ready for a complete digital overhaul and ongoing partnership.</p>
-        <ul class="price-list"><li>Full website system</li><li>Complete brand identity</li><li>SEO &amp; content strategy</li><li>Google Visibility</li><li>Ongoing maintenance plan</li><li>Priority support</li></ul>
-        <a href="contact.html" class="btn-ghost" style="width:100%;justify-content:center">Get a Quote</a>
+      <div class="price-row reveal">
+        <span class="pt-n">03</span>
+        <div><div class="pt-name">Full System</div><p class="pt-desc">For businesses ready for a complete digital overhaul and ongoing partnership.</p></div>
+        <div class="pt-items"><span class="pt-item">Full website system</span><span class="pt-item">Complete brand identity</span><span class="pt-item">SEO &amp; content strategy</span><span class="pt-item">Google Visibility</span><span class="pt-item">Ongoing maintenance plan</span><span class="pt-item">Priority support</span></div>
+        <div class="pt-cta"><a href="contact.html" class="btn btn-bare">Get a Quote</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
+<!-- CTA -->
+<section class="cta">
   <div class="wrap reveal">
-    <div class="tag" style="justify-content:center">Let's Talk</div>
-    <h2 class="f-display">Not sure where<br>to start?</h2>
-    <p class="lead" style="margin-top:20px">Send a message and we'll figure out exactly what your business needs. No pressure, no jargon.</p>
-    <a href="contact.html" class="btn-main" style="font-size:16px;padding:17px 34px;margin-top:44px;display:inline-flex">Start the Conversation <span class="arrow-icon">↗</span></a>
+    <span class="eyebrow">Let's Talk</span>
+    <h2>Not sure where<br>to <em>start?</em></h2>
+    <p class="sub">Send a message. We'll figure out what your business needs. No pressure, no jargon.</p>
+    <a href="contact.html" class="btn btn-fill" style="font-size:14px;padding:16px 32px;margin:0 auto">Start the Conversation <span class="arr">↗</span></a>
   </div>
 </section>
 
-
-<section class="section real-work-section">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <div class="kicker">Real project visuals</div>
-      <h2>Work that makes the studio feel real.</h2>
-      <p>Instead of generic stock photos, FM Systems now highlights polished website previews from real brand directions: Mortacc, Maison Malaak, and FM Systems itself.</p>
-    </div>
-    <div class="real-work-grid">
-      <img class="reveal" src="images/project-mortacc-showcase.svg" alt="Mortacc website showcase">
-      <img class="reveal d1" src="images/project-maison-showcase.svg" alt="Maison Malaak website showcase">
-      <img class="reveal d2" src="images/project-fm-showcase.svg" alt="FM Systems website showcase">
-    </div>
-  </div>
-</section>
-
-<footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-about"><a href="index.html" class="nav-logo"><div class="nav-logo-mark">FM</div><div><span class="nav-logo-text">FM Systems</span><span class="nav-logo-sub">Digital Studio</span></div></a><p>Premium websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">Maintenance</a></div><div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div></div></footer>
-<script src="js/script.js"></script>
+<footer class="footer"><div class="wrap"><div class="footer-top"><div><span class="footer-logo">FM<em>·</em>Systems</span><p class="footer-tagline">Premium websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="f-col"><h5>Pages</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div><div class="f-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">Maintenance</a></div><div class="f-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div></div></footer>
+<script src="js/main.js"></script>
 </body></html>

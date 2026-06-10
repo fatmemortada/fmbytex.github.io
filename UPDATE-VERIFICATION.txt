@@ -1,0 +1,2 @@
+fr/index.html: leftovers=[], conflict_markers=False
+fr/portfolio.html: leftovers=[], conflict_markers=False

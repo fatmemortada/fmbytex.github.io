@@ -4,6 +4,8 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — FM Systems</title>
 <meta name="description" content="Start a project with FM Systems — premium bilingual websites and digital presence, Montreal.">
+<link rel="alternate" hreflang="en" href="https://fmbytex.com/contact.html">
+<link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
@@ -51,7 +53,7 @@
     <div class="contact-right reveal rr">
       <span class="eyebrow" style="margin-bottom:8px">Project Inquiry</span>
       <h2 class="serif" style="font-size:clamp(36px,4vw,60px);margin-bottom:36px">Tell us about<br><em>your project.</em></h2>
-      <form action="mailto:fatmemortada88@gmail.com" method="post" enctype="text/plain">
+      <form id="en-contact-form" novalidate>
         <div class="form-row">
           <div class="field"><label for="fn">Your Name</label><input id="fn" name="name" type="text" placeholder="Jane Smith" required></div>
           <div class="field"><label for="fe">Email Address</label><input id="fe" name="email" type="email" placeholder="jane@company.com" required></div>
@@ -76,4 +78,28 @@
 
 <footer class="footer"><div class="wrap"><div class="footer-top"><div><span class="footer-logo">FM<em>·</em>Systems</span><p class="footer-tagline">Premium websites, branding, and digital presence for ambitious businesses across Canada.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex">in</a><a class="fsoc" href="https://instagram.com/fatmemortada">ig</a><a class="fsoc" href="https://wa.me/14383736655">wa</a></div></div><div class="f-col"><h5>Pages</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div><div class="f-col"><h5>Services</h5><a href="services.html">Website Systems</a><a href="services.html">Digital Redesign</a><a href="services.html">Google Visibility</a><a href="services.html">Branding</a><a href="services.html">Maintenance</a></div><div class="f-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div></div></footer>
 <script src="js/main.js"></script>
+<script>
+// EN contact form — mailto fallback with validation
+document.getElementById('en-contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('fn').value.trim();
+  const email = document.getElementById('fe').value.trim();
+  const business = document.getElementById('fb').value.trim();
+  const service = document.getElementById('fs').value;
+  const message = document.getElementById('fm').value.trim();
+
+  if (!name) { alert('Please enter your name.'); document.getElementById('fn').focus(); return; }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); document.getElementById('fe').focus(); return; }
+
+  const subject = encodeURIComponent('Project Inquiry — FM Systems' + (service ? ' (' + service + ')' : ''));
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    (business ? 'Business: ' + business + '\n' : '') +
+    (service ? 'Service: ' + service + '\n' : '') +
+    '\nMessage:\n' + message
+  );
+  window.location.href = 'mailto:fatmemortada88@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
 </body></html>

@@ -618,7 +618,7 @@ h3.serif{
 .skip-link:focus{top:16px}
 
 /* ── SVG IMAGE FIX ────────────────────────── */
-img[src$=".svg"]{filter:none!important}
+img[src$=".svg"]{filter:none!important;object-fit:contain!important}
 
 /* ── FOCUS ───────────────────────────────── */
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}

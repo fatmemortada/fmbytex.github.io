@@ -49,6 +49,8 @@ const links = document.querySelector('.nav-links');
 if(ham && links){
   ham.addEventListener('click', () => {
     const open = links.classList.toggle('open');
+    ham.setAttribute('aria-expanded', open);
+    ham.textContent = open ? '✕' : '☰';
     if(open){ Object.assign(links.style,{display:'flex',flexDirection:'column',position:'fixed',top:'64px',left:'0',right:'0',background:'rgba(251,247,239,.97)',padding:'20px 5%',borderBottom:'1px solid rgba(44,38,31,.1)',backdropFilter:'blur(20px)',zIndex:'700',gap:'0'}); }
     else { links.removeAttribute('style'); }
   });

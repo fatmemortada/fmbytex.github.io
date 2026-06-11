@@ -23,82 +23,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-<style>
-/* ── PROJECT SHOWCASE ─────────────────────── */
-.proj-showcase{
-  display:grid;grid-template-columns:1fr 1fr;
-  border-bottom:1px solid var(--line);
-  text-decoration:none;color:inherit;
-  transition:background .35s;
-}
-.proj-showcase:hover{background:var(--cream)}
-.proj-showcase:nth-child(even){direction:rtl}
-.proj-showcase:nth-child(even) .proj-body{direction:ltr}
-.proj-img{
-  position:relative;overflow:hidden;
-  min-height:460px;background:var(--bg2);
-  display:flex;align-items:center;justify-content:center;
-}
-.proj-img img{
-  width:92%;height:auto;max-height:88%;
-  object-fit:contain;filter:none!important;
-  transition:transform .7s var(--ease);
-}
-.proj-showcase:hover .proj-img img{transform:scale(1.04)}
-.proj-body{
-  padding:80px 64px;display:flex;flex-direction:column;
-  justify-content:center;
-}
-.proj-num{
-  font-family:'DM Mono',monospace;font-size:10px;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
-  margin-bottom:20px;display:block;
-}
-.proj-body h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(38px,4.5vw,68px);font-weight:600;
-  line-height:.95;letter-spacing:-.04em;color:var(--text);
-  margin-bottom:20px;
-}
-.proj-body h2 em{font-style:italic;font-weight:300;color:var(--gold)}
-.proj-desc{
-  font-size:15px;line-height:1.8;color:var(--muted);
-  max-width:440px;margin-bottom:28px;
-}
-.proj-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
-.proj-tag{
-  font-family:'DM Mono',monospace;font-size:8.5px;font-weight:500;
-  letter-spacing:.14em;text-transform:uppercase;
-  color:var(--soft);padding:5px 12px;
-  border:1px solid var(--line);background:var(--bg);
-}
-.proj-link{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'DM Mono',monospace;font-size:10px;font-weight:500;
-  letter-spacing:.12em;text-transform:uppercase;
-  color:var(--gold);border-bottom:1px solid var(--gold);
-  padding-bottom:4px;transition:gap .25s var(--ease);
-}
-.proj-link:hover{gap:14px}
-/* Visited badge */
-.proj-badge-live{
-  display:inline-block;font-family:'DM Mono',monospace;font-size:8px;
-  font-weight:500;letter-spacing:.14em;text-transform:uppercase;
-  color:#3a8;padding:3px 9px;border:1px solid rgba(50,170,130,.3);
-  background:rgba(50,170,130,.06);margin-left:10px;vertical-align:middle;
-}
-@media(max-width:900px){
-  .proj-showcase{grid-template-columns:1fr}
-  .proj-showcase:nth-child(even){direction:ltr}
-  .proj-img{min-height:300px}
-  .proj-img img{width:96%;max-height:92%}
-  .proj-body{padding:48px 32px}
-}
-</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
 <div class="cur" id="cur"></div><div class="cur-r" id="curR"></div>
+<div class="work-hover-img" id="hoverImg"><img id="hoverImgSrc" src="" alt=""></div>
 
 <nav class="nav"><div class="wrap nav-i">
   <a href="index.html" class="logo">FM<em>·</em>Systems<span class="logo-tag">Digital Studio</span></a>
@@ -110,103 +39,99 @@
   <div class="page-hero-bg-word">Work</div>
   <div class="wrap">
     <div class="page-hero-kicker reveal">Portfolio</div>
-    <h1 class="reveal d1">Real projects.<br><em>Real businesses.</em></h1>
-    <p class="sub reveal d2">Every project here is live, built by FM Systems, and serving real clients. Click any link to visit the site.</p>
+    <h1 class="reveal d1">Selected projects.<br><em>Real work. Real results.</em></h1>
+    <p class="sub reveal d2">Every project here is live and publicly accessible. Click any link to visit the site.</p>
   </div>
 </section>
 
+<!-- WORK ROWS -->
+<section class="section">
+  <div class="wrap">
+    <div class="work-rows">
+      <a class="work-row reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop"><span class="wr-num">01</span><span class="wr-name">Maison Malaak</span><span class="wr-cat">Beauty Brand · EN/FR · Montréal</span><span class="wr-arr">↗</span></a>
+      <a class="work-row reveal" href="portfolio.html" data-img="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop"><span class="wr-num">02</span><span class="wr-name">Omnitache</span><span class="wr-cat">Construction Consulting · Québec</span><span class="wr-arr">↗</span></a>
+      <a class="work-row reveal" href="https://www.mortacc.com" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&auto=format&fit=crop"><span class="wr-num">03</span><span class="wr-name">Mortacc</span><span class="wr-cat">Accounting SaaS · Canadian Firms</span><span class="wr-arr">↗</span></a>
+      <a class="work-row reveal" href="https://www.mortea.ca" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"><span class="wr-num">04</span><span class="wr-name">Mortéa</span><span class="wr-cat">Luxury Beauty Platform · Global</span><span class="wr-arr">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
 <!-- 01 MAISON MALAAK -->
-<a class="proj-showcase" href="https://maisonmalaak.com" target="_blank" rel="noopener noreferrer">
-  <div class="proj-img reveal rl">
-    <img src="images/maison-malaak-preview.svg" alt="Maison Malaak website preview" loading="eager">
+<section style="border-top:1px solid var(--line);padding:0;background:var(--bg2)">
+  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
+    <div class="s-label reveal"><div><span class="eyebrow">Case Study 01</span><h2 class="serif">Maison Malaak</h2></div><a href="https://maisonmalaak.com" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
   </div>
-  <div class="proj-body reveal rr">
-    <span class="proj-num">01 · Live Site</span>
-    <h2>Maison<br><em>Malaak</em></h2>
-    <p class="proj-desc">A luxury beauty and wellness brand in Montréal. We built a bilingual site that matches the elegance clients experience in person.</p>
-    <div class="proj-tags">
-      <span class="proj-tag">Beauty &amp; Wellness</span>
-      <span class="proj-tag">EN / FR</span>
-      <span class="proj-tag">Brand + Website</span>
-      <span class="proj-tag">+60% inquiries</span>
+  <a class="port-feat reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
+    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=90&w=1600&auto=format&fit=crop" alt="Maison Malaak" loading="lazy"></div>
+    <div class="port-feat-body">
+      <span class="port-badge">Beauty &amp; Wellness</span>
+      <h3>A luxury brand that finally looks like one online.</h3>
+      <p>Maison Malaak offers a high-end beauty and wellness experience in Montréal — but their digital presence didn't match. We built a bilingual site that captures the warmth and refinement clients feel the moment they walk in.</p>
+      <div class="port-meta">
+        <div class="pm-item"><span>Category</span><strong>Beauty Brand</strong></div>
+        <div class="pm-item"><span>Services</span><strong>Website + Brand</strong></div>
+        <div class="pm-item"><span>Language</span><strong>EN / FR</strong></div>
+        <div class="pm-item"><span>Result</span><strong>+60% inquiries</strong></div>
+      </div>
+      <a href="https://maisonmalaak.com" class="btn btn-fill" target="_blank">Visit maisonmalaak.com <span class="arr">↗</span></a>
     </div>
-    <span class="proj-link">Visit maisonmalaak.com →</span>
-  </div>
-</a>
+  </a>
+  <div style="padding-bottom:80px"></div>
+</section>
 
-<!-- 02 OMNITACHE -->
-<div class="proj-showcase">
-  <div class="proj-img reveal rl" style="background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px">
-    <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,80px);font-weight:600;color:var(--text);letter-spacing:-.04em">Omnitache</span>
-    <span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)">Construction Consulting · Québec</span>
-    <span style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-top:8px">Coming Soon</span>
+<!-- 02 MORTACC -->
+<section style="border-top:1px solid var(--line);padding:0">
+  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
+    <div class="s-label reveal"><div><span class="eyebrow">Case Study 02</span><h2 class="serif">Mortacc</h2></div><a href="https://www.mortacc.com" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
   </div>
-  <div class="proj-body reveal rr">
-    <span class="proj-num">02 · In Development</span>
-    <h2>Omni<br><em>tache</em></h2>
-    <p class="proj-desc">Construction consulting firm serving Québec. A professional digital presence built to reflect their expertise in the industry.</p>
-    <div class="proj-tags">
-      <span class="proj-tag">Construction</span>
-      <span class="proj-tag">Québec</span>
-      <span class="proj-tag">Consulting</span>
-      <span class="proj-tag">Coming Soon</span>
+  <a class="port-feat reveal" href="https://www.mortacc.com" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
+    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=90&w=1600&auto=format&fit=crop" alt="Mortacc" loading="lazy"></div>
+    <div class="port-feat-body">
+      <span class="port-badge">Accounting SaaS</span>
+      <h3>Practice management software built for Canadian accountants.</h3>
+      <p>Mortacc helps Canadian accounting firms onboard clients, collect documents, incorporate companies, and manage their entire practice — all in one secure platform. We built the marketing site to convert firm owners from the first visit.</p>
+      <div class="port-meta">
+        <div class="pm-item"><span>Category</span><strong>B2B SaaS</strong></div>
+        <div class="pm-item"><span>Services</span><strong>Website + Copy</strong></div>
+        <div class="pm-item"><span>Market</span><strong>Canada</strong></div>
+        <div class="pm-item"><span>Focus</span><strong>Conversion</strong></div>
+      </div>
+      <a href="https://www.mortacc.com" class="btn btn-fill" target="_blank">Visit mortacc.com <span class="arr">↗</span></a>
     </div>
-    <span class="proj-link" style="opacity:.5">Launching soon</span>
-  </div>
-</div>
+  </a>
+  <div style="padding-bottom:80px"></div>
+</section>
 
-<!-- 03 MORTACC -->
-<a class="proj-showcase" href="https://www.mortacc.com" target="_blank" rel="noopener noreferrer" style="background:var(--bg2)">
-  <div class="proj-img reveal rl" style="background:transparent">
-    <img src="images/project-mortacc-showcase.svg" alt="Mortacc website preview" loading="lazy">
+<!-- 03 MORTÉA -->
+<section style="border-top:1px solid var(--line);padding:0;background:var(--bg2)">
+  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
+    <div class="s-label reveal"><div><span class="eyebrow">Case Study 03</span><h2 class="serif">Mortéa</h2></div><a href="https://www.mortea.ca" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
   </div>
-  <div class="proj-body reveal rr">
-    <span class="proj-num">03 · Live Site</span>
-    <h2>Mort<br><em>acc</em></h2>
-    <p class="proj-desc">Practice management SaaS for Canadian accounting firms. We built the marketing site to convert firm owners from the first visit.</p>
-    <div class="proj-tags">
-      <span class="proj-tag">B2B SaaS</span>
-      <span class="proj-tag">Canada</span>
-      <span class="proj-tag">Website + Copy</span>
-      <span class="proj-tag">Conversion Focus</span>
+  <a class="port-feat reveal" href="https://www.mortea.ca" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
+    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=90&w=1600&auto=format&fit=crop" alt="Mortéa" loading="lazy"></div>
+    <div class="port-feat-body">
+      <span class="port-badge">Luxury Beauty Platform</span>
+      <h3>The global discovery platform for luxury beauty.</h3>
+      <p>Mortéa connects clients with curated beauty professionals and aesthetic clinics worldwide — salons, med spas, injectors, lash artists, and more. A bilingual platform built for both clients discovering luxury services and professionals growing their practice.</p>
+      <div class="port-meta">
+        <div class="pm-item"><span>Category</span><strong>Beauty Platform</strong></div>
+        <div class="pm-item"><span>Services</span><strong>Full Platform</strong></div>
+        <div class="pm-item"><span>Language</span><strong>EN / FR</strong></div>
+        <div class="pm-item"><span>Reach</span><strong>Global</strong></div>
+      </div>
+      <a href="https://www.mortea.ca" class="btn btn-fill" target="_blank">Visit mortea.ca <span class="arr">↗</span></a>
     </div>
-    <span class="proj-link">Visit mortacc.com →</span>
-  </div>
-</a>
-
-<!-- 04 MORTÉA -->
-<a class="proj-showcase" href="https://www.mortea.ca" target="_blank" rel="noopener noreferrer">
-  <div class="proj-img reveal rl">
-    <img src="images/project-fm-showcase.svg" alt="Mortéa website preview" loading="lazy">
-  </div>
-  <div class="proj-body reveal rr">
-    <span class="proj-num">04 · Live Site</span>
-    <h2>Mort<br><em>éa</em></h2>
-    <p class="proj-desc">Global luxury beauty discovery platform connecting clients with curated professionals and aesthetic clinics worldwide.</p>
-    <div class="proj-tags">
-      <span class="proj-tag">Beauty Platform</span>
-      <span class="proj-tag">EN / FR</span>
-      <span class="proj-tag">Full Platform</span>
-      <span class="proj-tag">Global Reach</span>
-    </div>
-    <span class="proj-link">Visit mortea.ca →</span>
-  </div>
-</a>
-
-<!-- NUMBERS -->
-<div class="num-grid">
-  <div class="num-cell reveal"><span class="num-big">4<em>+</em></span><span class="num-lbl">Projects delivered</span></div>
-  <div class="num-cell reveal d1"><span class="num-big">3<em>x</em></span><span class="num-lbl">Industries served</span></div>
-  <div class="num-cell reveal d2"><span class="num-big">2<em>wk</em></span><span class="num-lbl">Avg. turnaround</span></div>
-  <div class="num-cell reveal d3"><span class="num-big">EN<em>/FR</em></span><span class="num-lbl">Bilingual delivery</span></div>
-</div>
+  </a>
+  <div style="padding-bottom:80px"></div>
+</section>
 
 <!-- CTA -->
 <section class="cta">
   <div class="wrap reveal">
     <span class="eyebrow">Your Project</span>
-    <h2>Ready to be<br><em>project 05?</em></h2>
-    <p class="sub">Let's build something you're genuinely proud to show your clients.</p>
+    <h2>Yours could be<br><em>project 04.</em></h2>
+    <p class="sub">Selected work is live. Let’s build yours next.</p>
     <a href="contact.html" class="btn btn-fill" style="font-size:14px;padding:16px 32px;margin:0 auto">Start a Project <span class="arr">↗</span></a>
   </div>
 </section>

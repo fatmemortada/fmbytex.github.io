@@ -1,141 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — FM Systems</title>
-<meta name="description" content="Real work by FM Systems: Maison Malaak, Omnitache, Mortacc, Mortéa — live premium websites built in Montreal.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — FMBytex | Premium Websites & Digital Platforms</title>
+<meta name="description" content="Case studies of real projects by FMBytex: Mortacc, Mortea, EliteRide, Maison Malak, MIBHMTL, Omnitache. Premium websites and platforms built in Montreal.">
 <link rel="canonical" href="https://fmbytex.com/portfolio.html">
 <link rel="alternate" hreflang="en" href="https://fmbytex.com/portfolio.html">
 <link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/portfolio.html">
 <link rel="alternate" hreflang="x-default" href="https://fmbytex.com/portfolio.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fmbytex.com/portfolio.html">
-<meta property="og:site_name" content="FM Systems">
-<meta property="og:title" content="Portfolio — FM Systems">
-<meta property="og:description" content="Real work by FM Systems: Maison Malaak, Omnitache, Mortacc, Mortéa — live premium websites built in Montreal.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=90&w=1200&auto=format&fit=crop">
+<meta property="og:site_name" content="FMBytex">
+<meta property="og:title" content="Our Work — FMBytex">
+<meta property="og:description" content="Real projects, real results. See the premium websites and platforms we've built for businesses across Canada.">
 <meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Portfolio — FM Systems">
-<meta name="twitter:description" content="Real work by FM Systems: Maison Malaak, Omnitache, Mortacc, Mortéa — live premium websites built in Montreal.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=90&w=1200&auto=format&fit=crop">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Our Work — FMBytex">
+<meta name="twitter:description" content="Real projects, real results. Premium websites and platforms built in Montreal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<style>
+/* Project-specific accent colors */
+.case-study-section{padding:0;border-bottom:1px solid var(--border)}
+.case-study-section:nth-child(even){background:var(--bg2)}
+.case-study-inner{
+  width:min(1280px,90%);margin:0 auto;
+  padding:100px 0;
+}
+.case-study-grid{
+  display:grid;grid-template-columns:1fr 1.2fr;
+  gap:64px;align-items:center;
+}
+.case-study-visual{
+  aspect-ratio:4/3;border-radius:var(--radius-lg);
+  background:var(--gradient-subtle);
+  border:1px solid var(--border);
+  display:grid;place-items:center;
+  font-size:clamp(60px,8vw,100px);font-weight:900;
+  color:var(--accent);opacity:0.2;
+  position:relative;overflow:hidden;
+}
+.case-study-meta-top{
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.case-study-num{
+  font-size:12px;font-weight:800;letter-spacing:0.12em;
+  color:var(--accent);opacity:0.6;
+}
+.case-study-industry{
+  font-size:11px;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;padding:6px 14px;
+  border-radius:100px;background:rgba(59,130,246,0.08);
+  border:1px solid rgba(59,130,246,0.18);
+  color:var(--accent);
+}
+.case-study-content h2{
+  font-size:clamp(36px,4vw,56px);margin-bottom:16px;
+}
+.case-study-content .problem-label{
+  font-size:10px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--muted2);
+  margin-bottom:6px;margin-top:20px;
+}
+.case-study-content .problem-text{
+  font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:8px;
+}
+.case-study-content .solution-label{
+  font-size:10px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:#22c55e;
+  margin-bottom:6px;margin-top:20px;
+}
+.case-study-content .solution-text{
+  font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px;
+}
+.case-features{
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;
+}
+.case-feature{
+  font-size:12px;font-weight:600;padding:6px 14px;
+  border-radius:100px;background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);color:var(--muted);
+}
+.case-study-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:14px;font-weight:600;color:var(--accent);
+}
+@media(max-width:900px){
+  .case-study-grid{grid-template-columns:1fr;gap:40px}
+  .case-study-inner{padding:64px 0}
+}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
-<div class="cur" id="cur"></div><div class="cur-r" id="curR"></div>
-<div class="work-hover-img" id="hoverImg"><img id="hoverImgSrc" src="" alt=""></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-<nav class="nav"><div class="wrap nav-i">
-  <a href="index.html" class="logo">FM<em>·</em>Systems<span class="logo-tag">Digital Studio</span></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul>
-  <div class="nav-r"><a href="fr/portfolio.html" class="nav-lang">FR</a><a href="contact.html" class="nav-cta">Book a Call →</a><button class="nav-ham" aria-label="Open menu" aria-expanded="false">☰</button></div>
-</div></nav>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-icon">FM</span>
+      FMBytex
+      <span class="nav-brand-sub">Digital Studio</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="fr/portfolio.html" class="nav-lang">FR</a>
+      <a href="contact.html" class="nav-cta">Start a Project</a>
+      <button class="nav-ham" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
 
+<!-- PAGE HERO -->
 <section class="page-hero" id="main-content">
-  <div class="page-hero-bg-word">Work</div>
-  <div class="wrap">
-    <div class="page-hero-kicker reveal">Portfolio</div>
-    <h1 class="reveal d1">Selected projects.<br><em>Real work. Real results.</em></h1>
-    <p class="sub reveal d2">Every project here is live and publicly accessible. Click any link to visit the site.</p>
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-label">Work</div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="eyebrow reveal">Portfolio</div>
+    <h1 class="reveal d1">Real projects.<br><em>Real results.</em></h1>
+    <p class="lead reveal d2">Every project here was built for a real business with real goals. Click through to see the details behind each one.</p>
   </div>
 </section>
 
-<!-- WORK ROWS -->
-<section class="section">
-  <div class="wrap">
-    <div class="work-rows">
-      <a class="work-row reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop"><span class="wr-num">01</span><span class="wr-name">Maison Malaak</span><span class="wr-cat">Beauty Brand · EN/FR · Montréal</span><span class="wr-arr">↗</span></a>
-      <a class="work-row reveal" href="portfolio.html" data-img="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop"><span class="wr-num">02</span><span class="wr-name">Omnitache</span><span class="wr-cat">Construction Consulting · Québec</span><span class="wr-arr">↗</span></a>
-      <a class="work-row reveal" href="https://www.mortacc.com" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&auto=format&fit=crop"><span class="wr-num">03</span><span class="wr-name">Mortacc</span><span class="wr-cat">Accounting SaaS · Canadian Firms</span><span class="wr-arr">↗</span></a>
-      <a class="work-row reveal" href="https://www.mortea.ca" target="_blank" rel="noopener noreferrer" data-img="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"><span class="wr-num">04</span><span class="wr-name">Mortéa</span><span class="wr-cat">Luxury Beauty Platform · Global</span><span class="wr-arr">↗</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<!-- 01 MAISON MALAAK -->
-<section style="border-top:1px solid var(--line);padding:0;background:var(--bg2)">
-  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
-    <div class="s-label reveal"><div><span class="eyebrow">Case Study 01</span><h2 class="serif">Maison Malaak</h2></div><a href="https://maisonmalaak.com" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
-  </div>
-  <a class="port-feat reveal" href="https://maisonmalaak.com" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
-    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=90&w=1600&auto=format&fit=crop" alt="Maison Malaak" loading="lazy"></div>
-    <div class="port-feat-body">
-      <span class="port-badge">Beauty &amp; Wellness</span>
-      <h3>A luxury brand that finally looks like one online.</h3>
-      <p>Maison Malaak offers a high-end beauty and wellness experience in Montréal — but their digital presence didn't match. We built a bilingual site that captures the warmth and refinement clients feel the moment they walk in.</p>
-      <div class="port-meta">
-        <div class="pm-item"><span>Category</span><strong>Beauty Brand</strong></div>
-        <div class="pm-item"><span>Services</span><strong>Website + Brand</strong></div>
-        <div class="pm-item"><span>Language</span><strong>EN / FR</strong></div>
-        <div class="pm-item"><span>Result</span><strong>+60% inquiries</strong></div>
+<!-- CASE STUDY 01: Mortacc -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">MC</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">01 / 06</span>
+          <span class="case-study-industry">Corporate Services Platform</span>
+        </div>
+        <h2>Mortacc Solutions</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">Canadian accounting firms were managing client onboarding, document collection, and incorporations through scattered tools and manual processes. They needed one unified, professional platform.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">We designed and built a complete practice management platform — client portal, document management, incorporation workflows, and a conversion-focused marketing site — all in one system.</p>
+        <div class="case-features">
+          <span class="case-feature">Client Dashboard</span>
+          <span class="case-feature">Document Management</span>
+          <span class="case-feature">Incorporation Workflows</span>
+          <span class="case-feature">Secure Auth</span>
+          <span class="case-feature">Marketing Site</span>
+        </div>
+        <a href="https://www.mortacc.com" target="_blank" rel="noopener" class="case-study-cta">Visit mortacc.com <span class="arrow">→</span></a>
       </div>
-      <a href="https://maisonmalaak.com" class="btn btn-fill" target="_blank">Visit maisonmalaak.com <span class="arr">↗</span></a>
     </div>
-  </a>
-  <div style="padding-bottom:80px"></div>
+  </div>
 </section>
 
-<!-- 02 MORTACC -->
-<section style="border-top:1px solid var(--line);padding:0">
-  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
-    <div class="s-label reveal"><div><span class="eyebrow">Case Study 02</span><h2 class="serif">Mortacc</h2></div><a href="https://www.mortacc.com" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
-  </div>
-  <a class="port-feat reveal" href="https://www.mortacc.com" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
-    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=90&w=1600&auto=format&fit=crop" alt="Mortacc" loading="lazy"></div>
-    <div class="port-feat-body">
-      <span class="port-badge">Accounting SaaS</span>
-      <h3>Practice management software built for Canadian accountants.</h3>
-      <p>Mortacc helps Canadian accounting firms onboard clients, collect documents, incorporate companies, and manage their entire practice — all in one secure platform. We built the marketing site to convert firm owners from the first visit.</p>
-      <div class="port-meta">
-        <div class="pm-item"><span>Category</span><strong>B2B SaaS</strong></div>
-        <div class="pm-item"><span>Services</span><strong>Website + Copy</strong></div>
-        <div class="pm-item"><span>Market</span><strong>Canada</strong></div>
-        <div class="pm-item"><span>Focus</span><strong>Conversion</strong></div>
+<!-- CASE STUDY 02: Mortea -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">MT</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">02 / 06</span>
+          <span class="case-study-industry">Beauty Discovery Platform</span>
+        </div>
+        <h2>Mortea</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">Clients searching for luxury beauty services had no centralized, curated platform. Professionals lacked a digital home to showcase their work and attract premium clients globally.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">A bilingual global discovery platform connecting clients with curated beauty professionals — salons, med spas, injectors, lash artists. Professional profiles, booking integration, and elegant UX.</p>
+        <div class="case-features">
+          <span class="case-feature">Professional Profiles</span>
+          <span class="case-feature">Discovery & Search</span>
+          <span class="case-feature">Booking Integration</span>
+          <span class="case-feature">Bilingual EN/FR</span>
+          <span class="case-feature">Global Platform</span>
+        </div>
+        <a href="https://www.mortea.ca" target="_blank" rel="noopener" class="case-study-cta">Visit mortea.ca <span class="arrow">→</span></a>
       </div>
-      <a href="https://www.mortacc.com" class="btn btn-fill" target="_blank">Visit mortacc.com <span class="arr">↗</span></a>
     </div>
-  </a>
-  <div style="padding-bottom:80px"></div>
+  </div>
 </section>
 
-<!-- 03 MORTÉA -->
-<section style="border-top:1px solid var(--line);padding:0;background:var(--bg2)">
-  <div style="width:min(1320px,90%);margin:0 auto;padding:80px 0 56px">
-    <div class="s-label reveal"><div><span class="eyebrow">Case Study 03</span><h2 class="serif">Mortéa</h2></div><a href="https://www.mortea.ca" target="_blank" class="see-all">Visit live site <span>→</span></a></div>
-  </div>
-  <a class="port-feat reveal" href="https://www.mortea.ca" target="_blank" rel="noopener noreferrer" style="width:min(1320px,90%);margin:0 auto">
-    <div class="port-feat-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=90&w=1600&auto=format&fit=crop" alt="Mortéa" loading="lazy"></div>
-    <div class="port-feat-body">
-      <span class="port-badge">Luxury Beauty Platform</span>
-      <h3>The global discovery platform for luxury beauty.</h3>
-      <p>Mortéa connects clients with curated beauty professionals and aesthetic clinics worldwide — salons, med spas, injectors, lash artists, and more. A bilingual platform built for both clients discovering luxury services and professionals growing their practice.</p>
-      <div class="port-meta">
-        <div class="pm-item"><span>Category</span><strong>Beauty Platform</strong></div>
-        <div class="pm-item"><span>Services</span><strong>Full Platform</strong></div>
-        <div class="pm-item"><span>Language</span><strong>EN / FR</strong></div>
-        <div class="pm-item"><span>Reach</span><strong>Global</strong></div>
+<!-- CASE STUDY 03: EliteRide -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">ER</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">03 / 06</span>
+          <span class="case-study-industry">Luxury Chauffeur Platform</span>
+        </div>
+        <h2>EliteRide</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">A luxury chauffeur service in Montréal needed a premium online presence that matched their high-end service. They needed a booking system that felt as premium as the ride itself.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">A sleek booking platform with fleet showcase, real-time availability, and a seamless reservation experience. Premium design that communicates luxury from the first click.</p>
+        <div class="case-features">
+          <span class="case-feature">Online Booking</span>
+          <span class="case-feature">Fleet Showcase</span>
+          <span class="case-feature">Reservation System</span>
+          <span class="case-feature">Luxury UX</span>
+          <span class="case-feature">Mobile-First</span>
+        </div>
+        <a href="contact.html" class="case-study-cta">View Case Study <span class="arrow">→</span></a>
       </div>
-      <a href="https://www.mortea.ca" class="btn btn-fill" target="_blank">Visit mortea.ca <span class="arr">↗</span></a>
     </div>
-  </a>
-  <div style="padding-bottom:80px"></div>
+  </div>
+</section>
+
+<!-- CASE STUDY 04: Maison Malak -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">MM</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">04 / 06</span>
+          <span class="case-study-industry">Beauty & Wellness</span>
+        </div>
+        <h2>Maison Malak</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">Maison Malak delivers a high-end beauty and head spa experience in Montréal, but their online presence didn't reflect the luxury their clients experience in person. Their digital brand was holding them back.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">A complete bilingual brand and website redesign capturing the warmth, elegance, and refinement of the in-person experience. The result: +60% inquiries and a digital presence that finally matches the brand.</p>
+        <div class="case-features">
+          <span class="case-feature">Brand Identity</span>
+          <span class="case-feature">Bilingual EN/FR</span>
+          <span class="case-feature">Luxury Design</span>
+          <span class="case-feature">Booking System</span>
+          <span class="case-feature">+60% Inquiries</span>
+        </div>
+        <a href="https://maisonmalaak.com" target="_blank" rel="noopener" class="case-study-cta">Visit maisonmalaak.com <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 05: MIBHMTL -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">MI</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">05 / 06</span>
+          <span class="case-study-industry">Community Organization</span>
+        </div>
+        <h2>MIBHMTL</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">A Montréal community organization needed a digital home to share events, resources, and connect with members. Their existing presence was fragmented and didn't represent their community impact.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">A clean, accessible, bilingual website with event management, resource library, and community engagement features. Professional design that builds credibility with sponsors and members alike.</p>
+        <div class="case-features">
+          <span class="case-feature">Event Management</span>
+          <span class="case-feature">Resource Library</span>
+          <span class="case-feature">Bilingual EN/FR</span>
+          <span class="case-feature">Community Portal</span>
+          <span class="case-feature">Accessible Design</span>
+        </div>
+        <a href="contact.html" class="case-study-cta">View Case Study <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY 06: Omnitache -->
+<section class="case-study-section">
+  <div class="case-study-inner">
+    <div class="case-study-grid reveal">
+      <div class="case-study-visual">OM</div>
+      <div class="case-study-content">
+        <div class="case-study-meta-top">
+          <span class="case-study-num">06 / 06</span>
+          <span class="case-study-industry">Construction Consulting</span>
+        </div>
+        <h2>Omnitache</h2>
+        <div class="problem-label">The Problem</div>
+        <p class="problem-text">A construction consulting firm in Québec needed to establish a credible online presence to attract larger contracts and communicate their expertise to potential clients.</p>
+        <div class="solution-label">Our Solution</div>
+        <p class="solution-text">A professional, clean website showcasing services, past projects, and industry expertise. Built to convey trust and competence — exactly what construction clients need to see before signing a contract.</p>
+        <div class="case-features">
+          <span class="case-feature">Service Pages</span>
+          <span class="case-feature">Project Gallery</span>
+          <span class="case-feature">Bilingual FR/EN</span>
+          <span class="case-feature">Contact System</span>
+          <span class="case-feature">Professional UX</span>
+        </div>
+        <a href="contact.html" class="case-study-cta">View Case Study <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta-section">
   <div class="wrap reveal">
-    <span class="eyebrow">Your Project</span>
-    <h2>Yours could be<br><em>project 04.</em></h2>
-    <p class="sub">Selected work is live. Let’s build yours next.</p>
-    <a href="contact.html" class="btn btn-fill" style="font-size:14px;padding:16px 32px;margin:0 auto">Start a Project <span class="arr">↗</span></a>
+    <span class="eyebrow" style="justify-content:center">Your Project</span>
+    <h2>Ready to be our<br><em>next case study?</em></h2>
+    <p class="lead">Every project starts with a conversation. Tell us what you want to build — we'll show you how we can make it happen.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg">Start a Project <span class="arrow">↗</span></a>
   </div>
 </section>
 
-<footer class="footer"><div class="wrap"><div class="footer-top"><div><span class="footer-logo">FM<em>·</em>Systems</span><p class="footer-tagline">Premium bilingual websites for Canadian businesses. Maison Malaak · Omnitache · Mortacc · Mortéa.</p><div class="footer-socials"><a class="fsoc" href="https://linkedin.com/company/fmbytex" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">in</a><a class="fsoc" href="https://instagram.com/fatmemortada" aria-label="Instagram" rel="noopener noreferrer" target="_blank">ig</a><a class="fsoc" href="https://wa.me/14383736655" aria-label="WhatsApp">wa</a></div></div><div class="f-col"><h5>Pages</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div><div class="f-col"><h5>Live Work</h5><a href="https://maisonmalaak.com" target="_blank">Maison Malaak ↗</a><a href="portfolio.html">Omnitache</a><a href="https://www.mortacc.com" target="_blank">Mortacc ↗</a><a href="https://www.mortea.ca" target="_blank">Mortéa ↗</a></div><div class="f-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div></div><div class="footer-bottom"><span>© 2026 FM Systems. All rights reserved.</span><span>Montreal, Quebec, Canada</span></div></div></footer>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <span class="footer-brand-name">FM<em>Bytex</em></span>
+        <p>Premium websites, platforms, and digital systems for businesses ready to grow. Montréal-based, serving Canada in English and French.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/company/fmbytex" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://instagram.com/fatmemortada" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          <a href="https://wa.me/14383736655" class="footer-social" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Pages</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Services</h5><a href="services.html">Web Design</a><a href="services.html">Business Platforms</a><a href="services.html">Booking Systems</a><a href="services.html">Branding</a><a href="services.html">SEO & Support</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FMBytex. All rights reserved.</span>
+      <span>Montréal, Québec, Canada</span>
+    </div>
+  </div>
+</footer>
+
 <script src="js/main.js"></script>
-</body></html>
+</body>
+</html>

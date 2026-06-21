@@ -1,0 +1,5 @@
+about.html: remaining_english_flags=[]
+contact.html: remaining_english_flags=[]
+index.html: remaining_english_flags=[]
+portfolio.html: remaining_english_flags=[]
+services.html: remaining_english_flags=[]

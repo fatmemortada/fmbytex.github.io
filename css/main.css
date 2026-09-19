@@ -305,6 +305,14 @@ h3{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
 }
+.hero-float-card.hfc-top{
+  bottom:auto;top:-16px;left:auto;right:-12px;
+  animation:floatB 7s ease-in-out infinite;
+}
+@keyframes floatB{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+}
 .hfc-num{
   font-family:'Cormorant Garamond',Georgia,serif;
   font-size:36px;font-weight:700;color:var(--accent);line-height:1;
@@ -739,24 +747,30 @@ h3{
 /* ── TESTIMONIAL ─────────────────────────── */
 .testimonial{
   padding:100px 0;position:relative;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  background:var(--surface);
+  background:var(--text);color:var(--bg);
+  border-top:1px solid rgba(201,168,106,0.15);
+  border-bottom:1px solid rgba(201,168,106,0.15);
 }
 .testimonial-inner{
   max-width:800px;margin:0 auto;text-align:center;
 }
+.testimonial-quote{color:var(--bg);}
+.testimonial-author{font-size:15px;font-weight:600;color:var(--bg)}
+.testimonial-role{font-size:13px;color:var(--gold2);margin-top:4px}
+
+/* ── SERVICE CARD HOVER ──────────────────── */
+.service-card{transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease);}
+.service-card:hover{transform:translateY(-8px);border-color:var(--accent);
+  box-shadow:0 24px 60px rgba(43,33,24,0.12);}
 .testimonial-stars{
   color:var(--accent);letter-spacing:4px;font-size:16px;margin-bottom:28px;
 }
 .testimonial-quote{
   font-family:'Cormorant Garamond',Georgia,serif;
   font-size:clamp(26px,4vw,44px);font-weight:400;font-style:italic;
-  line-height:1.3;color:var(--text);margin-bottom:32px;
+  line-height:1.3;color:var(--bg);margin-bottom:32px;
   text-wrap:balance;
 }
-.testimonial-author{font-size:15px;font-weight:600;color:var(--text)}
-.testimonial-role{font-size:13px;color:var(--muted);margin-top:4px}
 
 /* ── FAQ ─────────────────────────────────── */
 .faq{

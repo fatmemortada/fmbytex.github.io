@@ -811,6 +811,26 @@ h3{
   text-wrap:balance;
 }
 
+/* ── SERVICES ACCORDION (editorial rows) ─── */
+.services-accordion{border-top:1px solid var(--border);}
+.services-accordion details{border-bottom:1px solid var(--border);}
+.services-accordion summary{
+  list-style:none;display:flex;align-items:baseline;gap:22px;
+  padding:30px 8px;cursor:pointer;
+}
+.services-accordion summary::-webkit-details-marker{display:none;}
+.svc-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:var(--accent);
+  min-width:34px;}
+.svc-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;
+  font-size:clamp(24px,3.2vw,36px);letter-spacing:-0.015em;flex:1;transition:color .3s;}
+.services-accordion details:hover .svc-title{color:var(--accent);}
+.svc-plus{font-size:30px;font-weight:300;color:var(--accent);line-height:1;
+  transition:transform .35s var(--ease);flex-shrink:0;}
+.services-accordion details[open] .svc-plus{transform:rotate(45deg);}
+.svc-body{padding:0 8px 32px 56px;max-width:720px;}
+.svc-body p{color:var(--muted);font-size:16px;margin-bottom:14px;}
+.svc-body .service-card-tags{margin-bottom:14px;}
+
 /* ── CLAY FINAL: avatars, CTA band, logo hover ─ */
 .testimonial-author{display:flex;align-items:center;justify-content:center;gap:12px;}
 .avatar{display:inline-flex;align-items:center;justify-content:center;

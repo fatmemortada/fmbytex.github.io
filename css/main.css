@@ -361,8 +361,7 @@ h3{
   opacity:0;animation:montage 12s ease-in-out infinite;
 }
 .hero-montage img:nth-child(1){animation-delay:0s}
-.hero-montage img:nth-child(2){animation-delay:4s}
-.hero-montage img:nth-child(3){animation-delay:8s}
+.hero-montage img:nth-child(2){animation-delay:6s}
 @keyframes montage{
   0%{opacity:0}6%{opacity:1}33%{opacity:1}39%{opacity:0}100%{opacity:0}
 }

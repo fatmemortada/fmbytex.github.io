@@ -501,6 +501,9 @@ h3{
   display:grid;grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
+.case-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr;}
+.case-card.featured .case-img{height:100%;min-height:320px;}
+@media (max-width:860px){.case-card.featured{grid-template-columns:1fr;}}
 .case-card{
   display:flex;flex-direction:column;
   background:var(--card);border:1px solid var(--border);

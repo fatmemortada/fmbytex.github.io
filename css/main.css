@@ -796,6 +796,16 @@ h3{
   text-wrap:balance;
 }
 
+/* ── CLAY ROUND 2: services, outcomes, dark stats ─ */
+.service-card-icon{display:none;}
+.service-card-num{display:block;font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:44px;font-weight:500;color:var(--accent);line-height:1;margin-bottom:12px;}
+.case-meta-item strong{color:var(--gold-dark);}
+.stats-dark{background:var(--text);border-top:1px solid rgba(201,168,106,0.15);
+  border-bottom:1px solid rgba(201,168,106,0.15);}
+.stats-dark .trust-num,.stats-dark .trust-num .count-up{color:var(--bg);}
+.stats-dark .trust-label{color:var(--gold2);}
+
 /* ── FOUNDER STRIP ───────────────────────── */
 .founder-strip{padding:88px 0;border-top:1px solid var(--border);background:var(--surface);}
 .founder-strip .wrap{display:grid;grid-template-columns:180px 1fr;gap:36px;align-items:center;max-width:860px;}

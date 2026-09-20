@@ -1069,7 +1069,13 @@ h3{
   .lead{font-size:16px}
   .section{padding:90px 0}
   .services-grid{grid-template-columns:1fr}
-  .process-track{grid-template-columns:1fr}
+  .process-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,80vw);
+    gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    background:none;border:none;border-radius:0;
+    padding:4px 4px 16px;scrollbar-width:none;}
+  .process-track::-webkit-scrollbar{display:none;}
+  .process-track .process-step{scroll-snap-align:start;border:1px solid var(--border);
+    border-radius:var(--radius-lg);}
   .why-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}

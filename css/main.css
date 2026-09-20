@@ -108,8 +108,8 @@ h1{
 h1 em{font-weight:400;font-style:italic;color:var(--accent)}
 h2{
   font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:clamp(38px,5vw,60px);
-  font-weight:600;line-height:1.05;letter-spacing:-0.025em;
+  font-size:clamp(44px,5.5vw,72px);
+  font-weight:500;line-height:1.0;letter-spacing:-0.03em;
   color:var(--text);
   text-wrap:balance;
 }
@@ -221,6 +221,7 @@ h3{
 .btn-primary:hover{
   background:var(--accent);color:#fff;
   transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(201,168,106,0.35);
 }
 .btn-ghost{
   border:1px solid var(--border2);
@@ -867,6 +868,10 @@ h3{
 .cta-section h2{color:#F7F1E3;}
 .cta-section .lead{color:#C9BCA6;}
 .cta-section .btn-ghost{border-color:rgba(201,168,106,0.5);color:#EDE3CE;}
+.engage-trio{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  margin:0 0 36px;position:relative;z-index:1;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);}
+.engage-trio i{font-style:normal;opacity:.5;}
 .cta-section h2{margin:12px 0 20px;position:relative;z-index:1}
 .cta-section .lead{margin:0 auto 40px;position:relative;z-index:1}
 .cta-section .btn{position:relative;z-index:1}

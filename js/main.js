@@ -222,7 +222,7 @@ document.querySelectorAll('.carousel-btn').forEach(function (btn) {
     var track = document.getElementById(btn.dataset.target);
     if (!track) return;
     var dir = parseInt(btn.dataset.dir, 10) || 1;
-    var card = track.querySelector('.svc-slide');
+    var card = track.querySelector(':scope > *');
     var step = card ? card.offsetWidth + 20 : 340;
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     track.scrollBy({ left: dir * step, behavior: reduced ? 'auto' : 'smooth' });

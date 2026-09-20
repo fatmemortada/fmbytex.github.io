@@ -216,6 +216,19 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
   }
 })();
 
+// Carousel arrow buttons (always available, including reduced-motion)
+document.querySelectorAll('.carousel-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var track = document.getElementById(btn.dataset.target);
+    if (!track) return;
+    var dir = parseInt(btn.dataset.dir, 10) || 1;
+    var card = track.querySelector('.svc-slide');
+    var step = card ? card.offsetWidth + 20 : 340;
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    track.scrollBy({ left: dir * step, behavior: reduced ? 'auto' : 'smooth' });
+  });
+});
+
 console.log('%c FMBytex %c Premium Digital Agency %c v3 ',
   'background:#3B82F6;color:#fff;padding:4px 8px;font-weight:700;',
   'color:#A1A1AA;',

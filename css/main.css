@@ -811,6 +811,33 @@ h3{
   text-wrap:balance;
 }
 
+/* ── SERVICES CAROUSEL ───────────────────── */
+.carousel-wrap{position:relative;}
+.services-carousel{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,360px);
+  gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:8px 4px 20px;scrollbar-width:none;
+}
+.services-carousel::-webkit-scrollbar{display:none;}
+.svc-slide{
+  scroll-snap-align:start;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:30px 26px;
+  display:flex;flex-direction:column;gap:12px;
+  box-shadow:0 4px 20px rgba(43,33,24,0.04);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);
+}
+.svc-slide:hover{transform:translateY(-6px);border-color:var(--accent);
+  box-shadow:0 20px 50px rgba(43,33,24,0.10);}
+.svc-slide h3{font-size:24px;}
+.svc-slide p{font-size:15px;color:var(--muted);flex:1;}
+.carousel-nav{display:flex;gap:10px;margin-top:6px;}
+.carousel-btn{
+  width:48px;height:48px;border-radius:50%;cursor:pointer;
+  border:1px solid var(--border2);background:var(--card);color:var(--text);
+  font-size:20px;line-height:1;transition:all .3s;
+}
+.carousel-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+
 /* ── SERVICES ACCORDION (editorial rows) ─── */
 .services-accordion{border-top:1px solid var(--border);}
 .services-accordion details{border-bottom:1px solid var(--border);}

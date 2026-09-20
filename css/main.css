@@ -811,6 +811,19 @@ h3{
   text-wrap:balance;
 }
 
+/* ── SERVICES TABS (detail pages) ────────── */
+.svc-tabs{display:flex;gap:10px;overflow-x:auto;padding:4px 4px 20px;
+  margin-bottom:12px;scrollbar-width:none;}
+.svc-tabs::-webkit-scrollbar{display:none;}
+.svc-tab{flex-shrink:0;padding:13px 24px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--border2);background:var(--card);color:var(--text);
+  font-weight:600;font-size:14px;white-space:nowrap;font-family:inherit;
+  transition:all .3s;}
+.svc-tab:hover{border-color:var(--accent);color:var(--accent);}
+.svc-tab.active{background:var(--text);color:var(--bg);border-color:var(--text);}
+.services-detailed.tabbed .service-detailed-card{display:none;}
+.services-detailed.tabbed .service-detailed-card.active{display:block;animation:tFade .5s ease;}
+
 /* ── WHY CAROUSEL (same swipe pattern) ───── */
 .why-grid.why-carousel{
   display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,330px);

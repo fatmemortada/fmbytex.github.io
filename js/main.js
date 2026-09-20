@@ -216,6 +216,34 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
   }
 })();
 
+// Service detail pages: tabbed panels (no-JS fallback shows all)
+(function serviceTabs() {
+  var det = document.querySelector('.services-detailed');
+  if (!det) return;
+  var cards = det.querySelectorAll('.service-detailed-card');
+  if (cards.length < 2) return;
+  var nav = document.createElement('div');
+  nav.className = 'svc-tabs';
+  nav.setAttribute('role', 'tablist');
+  cards.forEach(function (card, i) {
+    var title = card.querySelector('h3');
+    var btn = document.createElement('button');
+    btn.className = 'svc-tab' + (i === 0 ? ' active' : '');
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('role', 'tab');
+    btn.textContent = title ? title.textContent : ('0' + (i + 1));
+    btn.addEventListener('click', function () {
+      nav.querySelectorAll('.svc-tab').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      cards.forEach(function (c, k) { c.classList.toggle('active', k === i); });
+    });
+    nav.appendChild(btn);
+  });
+  det.classList.add('tabbed');
+  det.parentNode.insertBefore(nav, det);
+  cards[0].classList.add('active');
+})();
+
 // Carousel arrow buttons (always available, including reduced-motion)
 document.querySelectorAll('.carousel-btn').forEach(function (btn) {
   btn.addEventListener('click', function () {

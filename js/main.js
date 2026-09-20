@@ -163,6 +163,59 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
   });
 })();
 
+// ── MOTION PASS: hero parallax, magnetic CTAs, quote rotator ──
+(function motionPass() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var finePointer = window.matchMedia('(pointer: fine)').matches;
+
+  // Hero visual drifts gently on scroll
+  var hv = document.querySelector('.hero-visual');
+  if (hv && finePointer) {
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          var y = Math.min(window.scrollY, window.innerHeight);
+          hv.style.transform = 'translateY(' + (y * 0.08) + 'px)';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // Primary CTAs pull slightly toward the cursor
+  if (finePointer) {
+    document.querySelectorAll('.hero-actions .btn-primary').forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        var r = btn.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width / 2) * 0.15;
+        var y = (e.clientY - r.top - r.height / 2) * 0.25;
+        btn.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      });
+      btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+    });
+  }
+
+  // Testimonials crossfade every 6s, pause on hover
+  var quotes = document.querySelectorAll('.testimonial .testimonial-inner');
+  if (quotes.length > 1) {
+    var i = 0, timer = null;
+    var show = function (n) {
+      quotes.forEach(function (q, k) { q.classList.toggle('on', k === n); });
+    };
+    var start = function () {
+      timer = setInterval(function () { i = (i + 1) % quotes.length; show(i); }, 6000);
+    };
+    show(0); start();
+    var sec = document.querySelector('.testimonial');
+    if (sec) {
+      sec.addEventListener('mouseenter', function () { clearInterval(timer); });
+      sec.addEventListener('mouseleave', start);
+    }
+  }
+})();
+
 console.log('%c FMBytex %c Premium Digital Agency %c v3 ',
   'background:#3B82F6;color:#fff;padding:4px 8px;font-weight:700;',
   'color:#A1A1AA;',

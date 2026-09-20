@@ -811,7 +811,19 @@ h3{
   text-wrap:balance;
 }
 
-/* ── CLAY ROUND 2: services, outcomes, dark stats ─ */
+/* ── CLAY FINAL: avatars, CTA band, logo hover ─ */
+.testimonial-author{display:flex;align-items:center;justify-content:center;gap:12px;}
+.avatar{display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.cta-band{padding:72px 0;text-align:center;background:var(--surface);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.cta-band .wrap{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;}
+.cta-band p{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(24px,3vw,34px);margin:0;}
+.cta-band p em{color:var(--accent);font-style:italic;}
+.trusted-item{transition:color .3s;}
+.trusted-item:hover{color:var(--accent);}
 .service-card-icon{display:none;}
 .service-card-num{display:block;font-family:'Cormorant Garamond',Georgia,serif;
   font-size:44px;font-weight:500;color:var(--accent);line-height:1;margin-bottom:12px;}

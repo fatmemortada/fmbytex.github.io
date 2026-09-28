@@ -164,6 +164,8 @@ h3{
   color:var(--text);
 }
 .nav-brand em{font-style:italic;color:var(--accent);font-weight:400}
+/* Homepage hero is dark: keep brand readable until nav turns solid cream */
+body:has(.hero) .nav:not(.solid) .nav-brand{color:#F5EFE3;}
 .nav-brand-sub{
   font-family:'Inter',sans-serif;
   display:block;font-size:9px;font-weight:600;

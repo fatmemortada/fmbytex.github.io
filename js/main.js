@@ -15,6 +15,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+// Only enable hidden-until-reveal once the observer is live (content stays
+// visible if scripts are blocked, fail, or cached separately from the CSS)
+requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('anim')));
 
 // ── NAV SCROLL ─────────────────────────────
 const nav = document.querySelector('.nav');

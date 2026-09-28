@@ -356,8 +356,10 @@ h3{
 .trusted-strip::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
 .trusted-track{
   display:flex;width:max-content;
-  animation:marquee 36s linear infinite;
+  animation:none;flex-wrap:wrap;justify-content:center;width:100%;
 }
+.trusted-strip{overflow:visible;}
+.trusted-strip::before,.trusted-strip::after{display:none;}
 .trusted-track:hover{animation-play-state:paused}
 .trusted-item{
   display:inline-flex;align-items:center;gap:14px;padding:0 38px;

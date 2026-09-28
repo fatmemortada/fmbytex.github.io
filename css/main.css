@@ -1013,7 +1013,7 @@ html.js .testimonial .testimonial-inner.on{display:block;animation:tFade .8s eas
 }
 
 /* ── SCROLL REVEAL ───────────────────────── */
-html.js .reveal{
+html.js body.anim .reveal{
   opacity:0;transform:translateY(24px);
   transition:opacity 0.8s var(--ease),transform 0.8s var(--ease);
 }

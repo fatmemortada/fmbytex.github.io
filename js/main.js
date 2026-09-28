@@ -15,6 +15,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+// Enable hidden-until-reveal only once the observer is live, plus a timed
+// safety net: if intersection events never fire on a device, force-show all.
+requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('anim')));
+setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('in')), 2500);
 
 // ── NAV SCROLL ─────────────────────────────
 const nav = document.querySelector('.nav');

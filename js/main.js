@@ -200,24 +200,9 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
     });
   }
 
-  // Testimonials crossfade every 6s, pause on hover
+  // Testimonials stay visible (no auto-rotation — content must never disappear)
   var quotes = document.querySelectorAll('.testimonial .testimonial-inner');
-  if (quotes.length > 1) {
-    var i = 0, timer = null;
-    var show = function (n) {
-      quotes.forEach(function (q, k) { q.classList.toggle('on', k === n); });
-    };
-    var start = function () {
-      timer = setInterval(function () { i = (i + 1) % quotes.length; show(i); }, 6000);
-    };
-    show(0);
-    if (!reducedMotion) { start(); }
-    var sec = document.querySelector('.testimonial');
-    if (sec) {
-      sec.addEventListener('mouseenter', function () { clearInterval(timer); });
-      sec.addEventListener('mouseleave', start);
-    }
-  }
+  quotes.forEach(function (q) { q.classList.add('on'); });
 })();
 
 // Service detail pages: tabbed panels (no-JS fallback shows all)

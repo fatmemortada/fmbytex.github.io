@@ -793,8 +793,9 @@ h3{
 .testimonial-role{font-size:13px;color:var(--gold2);margin-top:4px}
 
 /* ── MOTION PASS: parallax, magnetic buttons, quote rotator ─ */
-.testimonial .testimonial-inner{display:none;}
-.testimonial .testimonial-inner.on{display:block;animation:tFade .8s ease;}
+.testimonial .testimonial-inner:first-child{display:block;}
+html.js .testimonial .testimonial-inner{display:none;}
+html.js .testimonial .testimonial-inner.on{display:block;animation:tFade .8s ease;}
 @keyframes tFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .hero-visual{will-change:transform;}
 .hero-actions .btn-primary{transition:transform .25s ease,box-shadow .25s ease;}
@@ -1012,7 +1013,7 @@ h3{
 }
 
 /* ── SCROLL REVEAL ───────────────────────── */
-.reveal{
+html.js .reveal{
   opacity:0;transform:translateY(24px);
   transition:opacity 0.8s var(--ease),transform 0.8s var(--ease);
 }

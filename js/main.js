@@ -2,6 +2,7 @@
    FMBytex — Main JavaScript
    Scroll reveal, nav, cursor, mobile menu
    ═══════════════════════════════════════════ */
+document.documentElement.classList.add('js');
 
 // ── SCROLL REVEAL ──────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
@@ -28,7 +29,7 @@ const cursorDot = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
 
-if (cursorDot || cursorRing) {
+if ((cursorDot || cursorRing) && window.matchMedia('(pointer: fine)').matches) {
   document.addEventListener('mousemove', (e) => {
     mx = e.clientX;
     my = e.clientY;
@@ -39,7 +40,7 @@ if (cursorDot || cursorRing) {
   });
 
   (function animateRing() {
-    if (cursorRing) {
+    if (!document.hidden && cursorRing) {
       rx += (mx - rx) * 0.12;
       ry += (my - ry) * 0.12;
       cursorRing.style.left = rx + 'px';
@@ -81,6 +82,7 @@ if (ham && navLinks) {
   ham.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     ham.setAttribute('aria-expanded', isOpen);
+    ham.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     ham.textContent = isOpen ? '✕' : '☰';
     if (!isOpen) {
       navLinks.classList.remove('open');
@@ -92,6 +94,7 @@ if (ham && navLinks) {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       ham.setAttribute('aria-expanded', 'false');
+      ham.setAttribute('aria-label', 'Open menu');
       ham.textContent = '☰';
     });
   });
@@ -165,12 +168,12 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
 
 // ── MOTION PASS: hero parallax, magnetic CTAs, quote rotator ──
 (function motionPass() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(pointer: fine)').matches;
 
   // Hero visual drifts gently on scroll
   var hv = document.querySelector('.hero-visual');
-  if (hv && finePointer) {
+  if (hv && finePointer && !reducedMotion) {
     var ticking = false;
     window.addEventListener('scroll', function () {
       if (!ticking) {
@@ -185,7 +188,7 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
   }
 
   // Primary CTAs pull slightly toward the cursor
-  if (finePointer) {
+  if (finePointer && !reducedMotion) {
     document.querySelectorAll('.hero-actions .btn-primary').forEach(function (btn) {
       btn.addEventListener('mousemove', function (e) {
         var r = btn.getBoundingClientRect();
@@ -207,7 +210,8 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
     var start = function () {
       timer = setInterval(function () { i = (i + 1) % quotes.length; show(i); }, 6000);
     };
-    show(0); start();
+    show(0);
+    if (!reducedMotion) { start(); }
     var sec = document.querySelector('.testimonial');
     if (sec) {
       sec.addEventListener('mouseenter', function () { clearInterval(timer); });
@@ -232,10 +236,19 @@ document.querySelectorAll('.trust-bar, .trust-item').forEach(el => counterObserv
     btn.setAttribute('type', 'button');
     btn.setAttribute('role', 'tab');
     btn.textContent = title ? title.textContent : ('0' + (i + 1));
-    btn.addEventListener('click', function () {
-      nav.querySelectorAll('.svc-tab').forEach(function (b) { b.classList.remove('active'); });
+    btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    var activate = function () {
+      nav.querySelectorAll('.svc-tab').forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
       cards.forEach(function (c, k) { c.classList.toggle('active', k === i); });
+    };
+    btn.addEventListener('click', activate);
+    btn.addEventListener('keydown', function (e) {
+      var tabs = Array.prototype.slice.call(nav.querySelectorAll('.svc-tab'));
+      var j = tabs.indexOf(btn);
+      if (e.key === 'ArrowRight') { var n = tabs[(j + 1) % tabs.length]; n.focus(); n.click(); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { var p = tabs[(j - 1 + tabs.length) % tabs.length]; p.focus(); p.click(); e.preventDefault(); }
     });
     nav.appendChild(btn);
   });

@@ -1,0 +1,125 @@
+/* ═══════════════════════════════════════════
+   FMBytex — privacy consent banner + footer link
+   Self-contained (loads on every page, including the homepage).
+   Uses the approved palette: Porcelain Ivory, Electric Periwinkle,
+   Midnight Ink, Soft Lavender.
+   ═══════════════════════════════════════════ */
+
+.ga-consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ga-consent-card {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 560px;
+  background: #F6F5F1;
+  color: #23263A;
+  border: 1px solid rgba(35, 38, 58, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(35, 38, 58, 0.16);
+  padding: 22px 24px;
+  font-family: 'Archivo', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.ga-consent-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #23263A;
+}
+
+.ga-consent-text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(35, 38, 58, 0.85);
+}
+
+.ga-consent-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ga-consent-accept,
+.ga-consent-refuse {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 11px 22px;
+  cursor: pointer;
+}
+
+.ga-consent-accept {
+  background: #6865D8;
+  color: #FFFFFF;
+  border: 1px solid #6865D8;
+}
+.ga-consent-accept:hover { background: #5B58D2; border-color: #5B58D2; }
+
+.ga-consent-refuse {
+  background: transparent;
+  color: #5B58D2;
+  border: 1px solid rgba(35, 38, 58, 0.25);
+}
+.ga-consent-refuse:hover { border-color: #5B58D2; }
+
+/* scoped selectors outrank body.home / body.s :focus-visible,
+   which would otherwise flatten the pill/rounded radii while focused */
+.ga-consent .ga-consent-card:focus-visible {
+  outline: 2px solid #6865D8;
+  outline-offset: 2px;
+  border-radius: 18px;
+}
+.ga-consent .ga-consent-accept:focus-visible,
+.ga-consent .ga-consent-refuse:focus-visible {
+  outline: 2px solid #6865D8;
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+/* footer control — discreet, revokes/reopens the choice */
+.ga-privacy-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 12px;
+  color: rgba(35, 38, 58, 0.72);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.ga-privacy-link:hover { color: #5B58D2; }
+.ga-privacy-link:focus-visible { outline: 2px solid #6865D8; outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  .ga-consent-card { padding: 18px 18px; border-radius: 14px; }
+  .ga-consent-text { font-size: 13px; }
+  .ga-consent-actions { gap: 8px; }
+  .ga-consent-accept,
+  .ga-consent-refuse { padding: 10px 16px; }
+  .ga-consent .ga-consent-card:focus-visible { border-radius: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ga-consent-card,
+  .ga-consent-accept,
+  .ga-consent-refuse,
+  .ga-privacy-link { transition: none !important; }
+}

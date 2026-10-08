@@ -15,6 +15,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// SEO resilience: mark reveals as initialized so each page’s inline
+// fallback can remove its 'js' class if this file is ever blocked.
+document.documentElement.classList.add('js-ready');
+
 // ── NAV SCROLL ─────────────────────────────
 const nav = document.querySelector('.nav');
 if (nav) {

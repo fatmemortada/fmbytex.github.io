@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fmbytex.com/</loc></url>
-  <url><loc>https://fmbytex.com/about.html</loc></url>
-  <url><loc>https://fmbytex.com/services.html</loc></url>
-  <url><loc>https://fmbytex.com/portfolio.html</loc></url>
-  <url><loc>https://fmbytex.com/contact.html</loc></url>
-  <url><loc>https://fmbytex.com/fr/</loc></url>
-  <url><loc>https://fmbytex.com/fr/about.html</loc></url>
-  <url><loc>https://fmbytex.com/fr/services.html</loc></url>
-  <url><loc>https://fmbytex.com/fr/portfolio.html</loc></url>
-  <url><loc>https://fmbytex.com/fr/contact.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fmbytex.com/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/about.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/services.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/portfolio.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/contact.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/fr/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/fr/about.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/fr/services.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/fr/portfolio.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://fmbytex.com/fr/contact.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fmbytex.com/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fmbytex.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fmbytex.com/contact.html"/>
+  </url>
 </urlset>

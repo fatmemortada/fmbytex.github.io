@@ -996,7 +996,7 @@ body:has(.hero) .nav:not(.solid) .nav-brand{color:#F5EFE3;}
   border-color:var(--accent);color:var(--accent);
   background:rgba(201,168,106,0.10);
 }
-.footer-col h5{
+.footer-col .footer-title{
   font-family:'Inter',sans-serif;
   font-size:10px;font-weight:600;letter-spacing:0.16em;
   text-transform:uppercase;color:rgba(248,243,234,0.30);

@@ -139,22 +139,25 @@
         <span class="eyebrow">Demande de projet</span>
         <h2>Parlez-nous de <em>votre projet.</em></h2>
 
-        <form id="fr-contact-form" novalidate>
+        <form id="fr-contact-form" action="https://formspree.io/f/mbgdopeg" method="POST" novalidate>
+          <input type="text" name="_gotcha" class="s-hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+          <input type="hidden" name="_subject" value="Demande de projet — FMBytex">
+          <input type="hidden" name="lang" value="fr">
           <div class="s-form-row">
             <div class="s-field">
               <label for="fn">Votre nom *</label>
-              <input id="fn" name="nom" type="text" placeholder="Jane Smith" required aria-describedby="err-fn">
+              <input id="fn" name="nom" type="text" placeholder="Jane Smith" required aria-describedby="err-fn" maxlength="120">
               <p class="s-err" id="err-fn">Veuillez entrer votre nom.</p>
             </div>
             <div class="s-field">
               <label for="fe">Adresse courriel *</label>
-              <input id="fe" name="courriel" type="email" placeholder="jane@entreprise.com" required aria-describedby="err-fe">
+              <input id="fe" name="courriel" type="email" placeholder="jane@entreprise.com" required aria-describedby="err-fe" maxlength="254">
               <p class="s-err" id="err-fe">Veuillez entrer une adresse courriel valide.</p>
             </div>
           </div>
           <div class="s-field">
             <label for="fb">Entreprise / Organisation</label>
-            <input id="fb" name="entreprise" type="text" placeholder="Le nom de votre entreprise ou de votre marque">
+            <input id="fb" name="entreprise" type="text" placeholder="Le nom de votre entreprise ou de votre marque" maxlength="120">
           </div>
           <div class="s-form-row">
             <div class="s-field">
@@ -183,15 +186,20 @@
           </div>
           <div class="s-field">
             <label for="fm">Parlez-nous de votre projet *</label>
-            <textarea id="fm" name="message" placeholder="Décrivez votre entreprise, ce que vous voulez construire, vos objectifs, votre échéancier — tout ce qui nous aide à comprendre votre projet..." required aria-describedby="err-fm"></textarea>
+            <textarea id="fm" name="message" placeholder="Décrivez votre entreprise, ce que vous voulez construire, vos objectifs, votre échéancier — tout ce qui nous aide à comprendre votre projet..." required aria-describedby="err-fm" maxlength="4000"></textarea>
             <p class="s-err" id="err-fm">Veuillez nous parler de votre projet.</p>
           </div>
+          <div class="s-form-err" id="ferr" role="alert" hidden></div>
           <div class="s-form-foot">
             <span class="s-form-note">Réponse sous 24 h · FR &amp; EN</span>
             <button type="submit" class="btn btn-primary">Envoyer la demande <span class="arrow">↗</span></button>
           </div>
         </form>
-        <p class="s-mailto-note">L'envoi ouvre votre application de courriel avec votre message prêt à partir — rien n'est stocké sur ce site. Vous préférez écrire directement ? <a href="mailto:fatmemortada88@gmail.com">fatmemortada88@gmail.com</a></p>
+        <div class="s-success" id="s-success" role="status" tabindex="-1" hidden>
+          <p class="s-success-title">Merci ! Votre demande a bien été envoyée.</p>
+          <p>Nous vous répondrons sous 24 h. Vous préférez écrire directement ? <a href="mailto:fatmemortada88@gmail.com">fatmemortada88@gmail.com</a></p>
+        </div>
+        <p class="s-mailto-note">Votre demande est transmise en toute sécurité via <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> à notre boîte de réception et sert uniquement à vous répondre. Vous préférez écrire directement ? <a href="mailto:fatmemortada88@gmail.com">fatmemortada88@gmail.com</a></p>
       </div>
     </div>
   </div>
@@ -252,13 +260,16 @@
 })();
 </script>
 <script>
-// Formulaire de contact — même envoi par courriel qu'auparavant, avec
-// validation en ligne plutôt que des fenêtres contextuelles.
-// Aucun serveur requis : l'application de courriel du visiteur envoie
-// le message à fatmemortada88@gmail.com.
+// Formulaire de contact — envoi AJAX vers Formspree (aucune redirection,
+// aucune application de courriel). La validation est inchangée ; un champ
+// piège (honeypot) et un délai minimal écartent silencieusement les robots.
 (function () {
   var form = document.getElementById('fr-contact-form');
   if (!form) return;
+  var ENDPOINT = 'https://formspree.io/f/mbgdopeg';
+  var LOADED_AT = Date.now();
+  var MIN_FILL_MS = 2500; // les robots envoient juste après le chargement, sans jamais toucher le formulaire
+  var userTouched = false; // les visiteurs réels donnent le focus ou tapent — lecteurs d'écran et clavier compris
 
   var fields = [
     { el: document.getElementById('fn'), err: document.getElementById('err-fn'),
@@ -292,6 +303,27 @@
     });
   });
 
+  form.addEventListener('focusin', function () { userTouched = true; });
+  form.addEventListener('keydown', function () { userTouched = true; });
+
+  var btn = form.querySelector('button[type="submit"]');
+  var sendLabel = btn ? btn.innerHTML : '';
+  var success = document.getElementById('s-success');
+  var ferr = document.getElementById('ferr');
+
+  function showSuccess() {
+    form.hidden = true;
+    success.hidden = false;
+    if (success.focus) success.focus();
+  }
+
+  function showFailure() {
+    ferr.textContent = 'Une erreur est survenue — votre message n\'a pas été envoyé. Veuillez réessayer, ou écrivez-nous directement à fatmemortada88@gmail.com.';
+    ferr.hidden = false;
+    if (btn) { btn.disabled = false; btn.innerHTML = sendLabel; }
+    if (ferr.focus) ferr.focus();
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var firstBad = null;
@@ -302,23 +334,50 @@
     });
     if (firstBad) { firstBad.focus(); return; }
 
-    var nom = document.getElementById('fn').value.trim();
-    var courriel = document.getElementById('fe').value.trim();
-    var entreprise = document.getElementById('fb').value.trim();
-    var service = document.getElementById('fs').value;
-    var budget = document.getElementById('fbudget').value;
-    var message = document.getElementById('fm').value.trim();
+    // Honeypot (seuls les robots remplissent le champ hors écran) + délai
+    // minimal : un envoi aussi rapide sans aucun contact avec le formulaire
+    // vient d'un robot. On affiche le succès sans rien envoyer, pour ne pas
+    // donner aux robots une raison de réessayer.
+    var gotcha = form.querySelector('input[name="_gotcha"]');
+    var tooFast = (Date.now() - LOADED_AT < MIN_FILL_MS) && !userTouched;
+    if ((gotcha && gotcha.value !== '') || tooFast) {
+      showSuccess();
+      return;
+    }
 
-    var subject = encodeURIComponent('Demande de projet — FMBytex' + (service ? ' (' + service + ')' : ''));
-    var body = encodeURIComponent(
-      'Nom : ' + nom + '\n' +
-      'Courriel : ' + courriel + '\n' +
-      (entreprise ? 'Entreprise : ' + entreprise + '\n' : '') +
-      (service ? 'Type de projet : ' + service + '\n' : '') +
-      (budget ? 'Budget : ' + budget + '\n' : '') +
-      '\nMessage :\n' + message
-    );
-    window.location.href = 'mailto:fatmemortada88@gmail.com?subject=' + subject + '&body=' + body;
+    var service = document.getElementById('fs').value;
+    form.querySelector('input[name="_subject"]').value =
+      'Demande de projet — FMBytex' + (service ? ' (' + service + ')' : '');
+
+    ferr.hidden = true;
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Envoi… <span class="arrow">↗</span>'; }
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      return res.json().then(function (data) { return res.ok && data.ok !== false; })
+                      .catch(function () { return res.ok; });
+    }).then(function (sent) {
+      if (sent) {
+        showSuccess();
+        // GA4 : comptabiliser la demande uniquement si le consentement
+        // analytique est actuellement accordé. Aucun nom, courriel ni
+        // message n'est envoyé à Google.
+        try {
+          if (localStorage.getItem('fmbytex-ga-consent') === 'granted' && typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              form_id: 'contact',
+              form_language: 'fr',
+              page_location: window.location.href
+            });
+          }
+        } catch (err) { /* stockage indisponible */ }
+      } else {
+        showFailure();
+      }
+    }).catch(function () { showFailure(); });
   });
 })();
 </script>

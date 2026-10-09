@@ -1022,7 +1022,8 @@ body.s .nav-ham:hover { border-color: var(--h-peri); color: var(--h-peri-deep); 
   color: var(--h-peri-deep);
 }
 .s-field.s-invalid .s-err { display: flex; }
-.s-err::before {
+.s-err::before,
+.s-form-err::before {
   content: '!';
   width: 15px;
   height: 15px;
@@ -1052,6 +1053,40 @@ body.s .nav-ham:hover { border-color: var(--h-peri); color: var(--h-peri-deep); 
 }
 .s-mailto-note a { color: var(--h-peri-deep); text-decoration: underline; }
 .s-mailto-note a:hover { color: var(--h-peri); }
+
+/* Contact form states (AJAX submission to Formspree) */
+.s-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.s-form-err {
+  margin: 2px 0 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--h-peri-deep);
+}
+.s-form-err:not([hidden]) { display: flex; align-items: center; gap: 8px; }
+.s-success {
+  background: var(--h-ivory);
+  border: 1px solid rgba(35, 38, 58, 0.16);
+  border-radius: 6px;
+  padding: 24px 26px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--h-mut);
+}
+.s-success-title { font-weight: 800; color: var(--h-ink); margin: 0 0 4px; }
+.s-success a { color: var(--h-peri-deep); text-decoration: underline; }
+.s-success a:hover { color: var(--h-peri); }
+body.s .btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
 
 /* ── FINAL CTA (lavender inset panel) ───────────────── */
 .s-cta {

@@ -57,6 +57,35 @@
 {"@type":"Question","name":"Do you work in French and English?","acceptedAnswer":{"@type":"Answer","text":"We're based in Montréal and every site can be fully bilingual, including SEO in both languages."}},
 {"@type":"Question","name":"What do you need from me to start?","acceptedAnswer":{"@type":"Answer","text":"Just a 10–15 minute call about your goals. We handle design, copy polish, build, and launch from there."}}]}
 </script>
+<style id="fm-cinema-style">
+body.home .fm-cinema{height:clamp(360px,41vw,570px);width:100%;border-radius:26px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 55% 40%,#262347 0%,#10101d 46%,#07080f 100%);box-shadow:0 30px 70px #25244225;isolation:isolate;font-family:Archivo,Arial,sans-serif}
+body.home .fm-cinema *{box-sizing:border-box}
+body.home .fm-grid{position:absolute;inset:0;background-image:linear-gradient(#a29aff0b 1px,transparent 1px),linear-gradient(90deg,#a29aff0b 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,transparent,#000 55%,transparent);transform:perspective(650px) rotateX(65deg) scale(1.8) translateY(100px)}
+body.home .fm-halo{position:absolute;width:360px;height:360px;border-radius:50%;background:#7970ff;filter:blur(125px);opacity:.22;top:65px;left:24%}
+body.home .fm-kicker{position:absolute;top:26px;left:28px;z-index:9;color:#c7c2ff;font-size:10px;letter-spacing:.2em;font-weight:800}
+body.home .fm-kicker:before{content:"●";color:#a89cff;margin-right:9px}
+body.home .fm-bottom{position:absolute;bottom:25px;left:28px;right:28px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#a6a3bb;font-size:10px;letter-spacing:.08em;z-index:9}
+body.home .fm-replay{background:#ffffff12;border:1px solid #ffffff28;border-radius:30px;color:#fff;padding:10px 15px;font:700 11px Archivo,Arial,sans-serif;cursor:pointer;white-space:nowrap}
+body.home .fm-stage{position:absolute;inset:0;perspective:1050px;perspective-origin:50% 46%;overflow:hidden}
+body.home .fm-build{position:absolute;left:50%;top:49%;width:380px;height:340px;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(13deg) rotateY(-21deg) rotateZ(1deg);filter:drop-shadow(25px 38px 30px #0009);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+body.home .fm-cinema.fm-done .fm-build{transform:translate(-50%,-50%) rotateX(6deg) rotateY(-9deg)}
+body.home .fm-part{position:absolute;transform-style:preserve-3d;opacity:0;will-change:transform,opacity;backface-visibility:hidden;box-shadow:0 14px 34px #0007;border:1px solid #ffffff20;overflow:hidden}
+body.home .fm-base{left:6px;top:3px;width:370px;height:322px;border-radius:16px;background:#e8e5fa;z-index:1}
+body.home .fm-nav{left:20px;top:17px;width:342px;height:47px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 13px;z-index:7}
+body.home .fm-nav strong{font-size:13px;color:#36325e}body.home .fm-nav strong span{color:#7d70e7}body.home .fm-nav small{font-size:8px;color:#67657e}body.home .fm-nav i{width:53px;height:19px;background:#7768dc;border-radius:5px}
+body.home .fm-picture{left:170px;top:76px;width:190px;height:165px;border-radius:10px;z-index:6;background:linear-gradient(135deg,#a89cdd,#5746a0)}
+body.home .fm-picture svg{display:block;width:100%;height:100%}
+body.home .fm-headline{left:21px;top:84px;width:155px;height:120px;background:#fefeff;border-radius:10px;padding:14px 12px;z-index:8}
+body.home .fm-headline small{display:block;font-size:8px;letter-spacing:.12em;color:#7867dc;font-weight:800}
+body.home .fm-headline strong{display:block;font-size:23px;letter-spacing:-.07em;line-height:1.05;margin:12px 0 8px;color:#302d50}
+body.home .fm-headline span{display:block;font-size:8px;color:#7b788a}
+body.home .fm-button{left:22px;top:211px;width:135px;height:33px;background:#7467e4;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;z-index:9}
+body.home .fm-tile{top:256px;width:103px;height:49px;border-radius:9px;background:#fff;padding:10px;z-index:10}
+body.home .fm-tile strong{font-size:10px;color:#302d50;display:block}body.home .fm-tile small{font-size:8px;color:#888399;display:block;margin-top:4px}
+body.home .fm-a{left:20px}body.home .fm-b{left:136px}body.home .fm-c{left:250px}
+@media(max-width:600px){body.home .fm-cinema{height:420px}body.home .fm-build{scale:.75}body.home .fm-kicker{top:18px;left:18px}body.home .fm-bottom{bottom:16px;left:18px;right:18px}body.home .fm-bottom span{font-size:8px}}
+@media(prefers-reduced-motion:reduce){body.home .fm-build{transition:none}}
+</style>
 </head>
 <body class="home">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -99,24 +128,20 @@
       </ul>
     </div>
     <div class="h-hero-visual reveal d2">
-      <div class="h-scene">
-        <span class="h-rings" aria-hidden="true"><i></i><i></i><i></i></span>
-        <div class="h-float">
-          <figure class="h-laptop">
-            <div class="h-laptop-lid">
-              <span class="h-cam" aria-hidden="true"></span>
-              <a class="h-laptop-screen" href="https://maisonmalaak.com" target="_blank" rel="noopener" aria-label="Visit the Maison Malak website (opens in a new tab)">
-                <picture>
-              <source type="image/avif" srcset="images/work-maison-malaak-hero.avif">
-              <source type="image/webp" srcset="images/work-maison-malaak-hero.webp">
-              <img src="images/work-maison-malaak-hero.jpg" alt="Head spa treatment at Maison Malak — client project by FMBytex" width="800" height="500" loading="eager" fetchpriority="high">
-            </picture>
-              </a>
-            </div>
-            <div class="h-laptop-base" aria-hidden="true"><i></i></div>
-          </figure>
-        </div>
-        <a class="h-live-tag" href="https://maisonmalaak.com" target="_blank" rel="noopener"><i aria-hidden="true"></i>Live — Maison Malak</a>
+      <div class="fm-cinema" id="fm-cinema" role="img" aria-label="Cinematic animation of a website assembled from layered panels">
+        <div class="fm-grid"></div><div class="fm-halo"></div>
+        <span class="fm-kicker">FMBytex / DIGITAL CONSTRUCTION</span>
+        <div class="fm-stage"><div class="fm-build">
+          <div class="fm-part fm-base" data-fm-from="-280,180,-500,-24,34,-20" data-fm-delay="0"></div>
+          <div class="fm-part fm-nav" data-fm-from="20,-280,360,60,-40,14" data-fm-delay="450"><strong>atelier<span>.</span></strong><small>Home &nbsp; Collection &nbsp; Story</small><i></i></div>
+          <div class="fm-part fm-picture" data-fm-from="360,-190,480,36,65,45" data-fm-delay="900"><svg viewBox="0 0 190 165" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fm-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9c9f1"/><stop offset="1" stop-color="#7865bd"/></linearGradient><linearGradient id="fm-bottle" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9ef"/><stop offset="1" stop-color="#b7a4db"/></linearGradient></defs><rect width="190" height="165" fill="url(#fm-bg)"/><ellipse cx="92" cy="146" rx="73" ry="13" fill="#34244f" opacity=".35"/><path d="M78 55h43v79q-21 16-43 0z" fill="url(#fm-bottle)"/><rect x="88" y="39" width="23" height="22" rx="3" fill="#e9def5"/><rect x="84" y="32" width="31" height="11" rx="2" fill="#f9f2fd"/><rect x="84" y="85" width="31" height="27" rx="2" fill="#fdfbff"/><text x="99" y="96" text-anchor="middle" font-family="Arial" font-size="7" fill="#645385">ATELIER</text><text x="99" y="104" text-anchor="middle" font-family="Arial" font-size="4" fill="#645385">BOTANICAL</text><path d="M25 140q18-65 47-90" stroke="#59458c" stroke-width="2" fill="none" opacity=".5"/><path d="M45 91q-25-7-23-28 24 7 23 28M55 74q-3-25 19-30 2 22-19 30M34 113q-27-4-29-24 24 3 29 24" fill="#7265a4" opacity=".8"/></svg></div>
+          <div class="fm-part fm-headline" data-fm-from="-380,-130,390,-42,-60,-35" data-fm-delay="1200"><small>THE NEW COLLECTION</small><strong>Objects of<br>quiet beauty.</strong><span>Thoughtful design for everyday rituals.</span></div>
+          <div class="fm-part fm-button" data-fm-from="-200,320,570,65,-50,30" data-fm-delay="1650">Explore collection &nbsp; ↗</div>
+          <div class="fm-part fm-tile fm-a" data-fm-from="-320,310,250,20,-70,-24" data-fm-delay="1850"><strong>01 / Discover</strong><small>Curated essentials</small></div>
+          <div class="fm-part fm-tile fm-b" data-fm-from="20,380,460,-65,32,30" data-fm-delay="2050"><strong>02 / Experience</strong><small>Designed to delight</small></div>
+          <div class="fm-part fm-tile fm-c" data-fm-from="360,240,320,52,65,-30" data-fm-delay="2250"><strong>03 / Connect</strong><small>Made for you</small></div>
+        </div></div>
+        <div class="fm-bottom"><span>3D EXPERIENCE · WEBSITE ASSEMBLY</span><button type="button" class="fm-replay" id="fm-replay" aria-label="Replay website construction">↻ REPLAY BUILD</button></div>
       </div>
     </div>
   </div>
@@ -347,6 +372,9 @@
     }
   });
 })();
+</script>
+<script id="fm-cinema-script">
+(function(){var scene=document.getElementById('fm-cinema');if(!scene)return;var layers=Array.from(scene.querySelectorAll('.fm-part')),build=scene.querySelector('.fm-build'),running=[],timer;function play(){running.forEach(function(a){a.cancel()});running=[];clearTimeout(timer);scene.classList.remove('fm-done');build.style.transform='translate(-50%,-50%) rotateX(24deg) rotateY(-32deg) rotateZ(-7deg) scale(.87)';var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;layers.forEach(function(el){var n=el.dataset.fmFrom.split(',').map(Number),delay=reduce?0:Number(el.dataset.fmDelay);running.push(el.animate([{opacity:0,transform:'translate3d('+n[0]+'px,'+n[1]+'px,'+n[2]+'px) rotateX('+n[3]+'deg) rotateY('+n[4]+'deg) rotateZ('+n[5]+'deg) scale(.55)',filter:'blur(12px) brightness(2)'},{opacity:1,offset:.7,filter:'blur(0) brightness(1.3)'},{opacity:1,transform:'translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0) scale(1)',filter:'blur(0) brightness(1)'}],{duration:reduce?1:1700,delay:delay,fill:'forwards',easing:'cubic-bezier(.17,.7,.18,1)'}))});timer=setTimeout(function(){scene.classList.add('fm-done')},reduce?20:3300)}scene.querySelector('#fm-replay').addEventListener('click',play);play()})();
 </script>
 </body>
 </html>

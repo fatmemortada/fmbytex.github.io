@@ -36,7 +36,7 @@ body.home h1, body.home h2, body.home h3 {
 }
 body.home h1 em, body.home h2 em {
   font-style: normal;
-  color: var(--h-peri);
+  color: var(--h-peri-deep);
 }
 
 /* Focus & skip link */
@@ -333,7 +333,7 @@ body.home .nav-ham:hover { border-color: var(--h-peri); color: var(--h-peri-deep
 }
 .h-hero-meta li::before {
   content: '✳';
-  color: var(--h-peri);
+  color: var(--h-peri-deep);
   font-size: 9px;
 }
 

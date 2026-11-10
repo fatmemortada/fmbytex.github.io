@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css?v=7">
+<link rel="stylesheet" href="css/main.css?v=8">
 <link rel="stylesheet" href="css/site.css?v=3">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="stylesheet" href="css/ga4.css?v=2">
@@ -43,12 +43,12 @@
 
 <section class="s-notfound" id="main-content">
   <div class="wrap">
-    <p class="eyebrow reveal">Error 404</p>
-    <h1 class="reveal d1">Page not <em>found.</em></h1>
-    <p class="lead reveal d2">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <p class="eyebrow reveal" id="nf-eyebrow">Error 404</p>
+    <h1 class="reveal d1" id="nf-title">Page not <em>found.</em></h1>
+    <p class="lead reveal d2" id="nf-lead">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
     <div class="s-notfound-actions reveal d3">
-      <a href="index.html" class="btn btn-primary">Go Home <span class="arrow">↗</span></a>
-      <a href="portfolio.html" class="btn btn-ghost">View Our Work</a>
+      <a href="index.html" class="btn btn-primary" id="nf-home">Go Home <span class="arrow">↗</span></a>
+      <a href="portfolio.html" class="btn btn-ghost" id="nf-work">View Our Work</a>
       <a href="contact.html" class="btn btn-ghost">Contact Us</a>
     </div>
   </div>
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="footer-col"><p class="footer-title">Pages</p><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><p class="footer-title">Services</p><a href="services.html">Web Design</a><a href="services.html">Branding</a><a href="google-ads.html">Advertising</a><a href="seo-services.html">SEO &amp; Growth</a><a href="bilingual-websites.html">Bilingual Websites</a><a href="services.html">Support</a></div>
+      <div class="footer-col"><p class="footer-title">Services</p><a href="services.html#web-design">Web Design</a><a href="services.html#branding">Branding</a><a href="google-ads.html">Advertising</a><a href="seo-services.html">SEO &amp; Growth</a><a href="bilingual-websites.html">Bilingual Websites</a><a href="services.html#support">Support</a></div>
       <div class="footer-col"><p class="footer-title">Connect</p><a href="mailto:fatmemortada88@gmail.com">Email Us</a><a href="https://wa.me/14383736655">WhatsApp</a><a href="https://linkedin.com/company/fmbytex">LinkedIn</a><a href="fr/index.html">Français</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 FMBytex. All rights reserved.</span><span>Montréal, Québec, Canada</span><button type="button" class="ga-privacy-link" id="ga-settings-link">Privacy · Analytics</button></div>
@@ -96,6 +96,19 @@
     }
   });
 })();
+</script>
+<script>
+/* French 404 when the bad URL is under /fr/ */
+if (location.pathname.indexOf('/fr/') === 0) {
+  document.documentElement.lang = 'fr';
+  document.getElementById('nf-eyebrow').textContent = 'Erreur 404';
+  document.getElementById('nf-title').innerHTML = 'Page non <em>trouvée.</em>';
+  document.getElementById('nf-lead').textContent = 'La page que vous cherchez n’existe pas ou a été déplacée. Revenons sur la bonne voie.';
+  document.getElementById('nf-home').firstChild.textContent = 'Accueil ';
+  document.getElementById('nf-home').href = 'fr/index.html';
+  document.getElementById('nf-work').textContent = 'Voir nos projets';
+  document.getElementById('nf-work').href = 'fr/portfolio.html';
+}
 </script>
 </body>
 </html>

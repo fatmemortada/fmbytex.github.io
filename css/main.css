@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
    FMBytex — Premium Digital Studio
-   Design System v5 — Warm Maison Malak Style
+   Design System v5 — Warm Maison Malaak Style
    ═══════════════════════════════════════════ */
 
 /* ── FONTS ────────────────────────────────── */
@@ -20,7 +20,7 @@
   --text:     #2B2118;
   --text2:    #3D3025;
   --muted:    #7A6A58;
-  --muted2:   #9B8A78;
+  --muted2:   #75644F;
   --soft:     #B8A898;
   --accent:   #C9A86A;
   --accent2:  #B8934F;
@@ -720,7 +720,7 @@ body:has(.hero) .nav:not(.solid) .nav-brand{color:#F5EFE3;}
   border-color:rgba(201,168,106,0.55);
   box-shadow:0 0 0 4px rgba(201,168,106,0.07);
 }
-.field input::placeholder,.field textarea::placeholder{color:var(--soft)}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted)}
 .field select{
   appearance:none;cursor:pointer;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239B8A78' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");

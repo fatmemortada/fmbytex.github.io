@@ -26,9 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/work-maison-malaak-hero.avif" type="image/avif" fetchpriority="high">
 <link rel="stylesheet" href="css/main.css?v=8">
-<link rel="stylesheet" href="css/home.css?v=7">
+<link rel="stylesheet" href="css/home.css?v=8">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="stylesheet" href="css/ga4.css?v=2">
 <script src="js/ga4.js" defer></script>
@@ -81,45 +80,21 @@
   </div>
 </nav>
 
-<section class="h-hero" id="main-content">
+<section class="h-hero fm-hero" id="main-content">
   <div class="h-hero-bg" aria-hidden="true"></div>
-  <div class="wrap h-hero-grid">
-    <div class="h-hero-copy">
-      <p class="eyebrow reveal">Creative Digital Agency — Montréal</p>
-      <h1 class="reveal d1">We make brands<br><em>impossible</em> to<br>ignore<span class="h-dot">.</span></h1>
-      <p class="h-hero-desc reveal d2">FMBytex is a Montréal web design studio. We design and build websites, brands, and digital growth systems for businesses ready to be seen — direct with the studio, in English or French.</p>
-      <div class="hero-actions reveal d3">
-        <a href="contact.html" class="btn btn-primary btn-lg">Start a Project <span class="arrow">↗</span></a>
-        <a href="portfolio.html" class="btn btn-ghost btn-lg">See Our Work</a>
-      </div>
-      <ul class="h-hero-meta reveal d4">
-        <li>Based in Montréal</li>
-        <li>Bilingual EN · FR</li>
-        <li>Proposal in 24h</li>
-      </ul>
-    </div>
-    <div class="h-hero-visual reveal d2">
-      <div class="h-scene">
-        <span class="h-rings" aria-hidden="true"><i></i><i></i><i></i></span>
-        <div class="h-float">
-          <figure class="h-laptop">
-            <div class="h-laptop-lid">
-              <span class="h-cam" aria-hidden="true"></span>
-              <a class="h-laptop-screen" href="https://maisonmalaak.com" target="_blank" rel="noopener" aria-label="Visit the Maison Malaak website (opens in a new tab)">
-                <picture>
-              <source type="image/avif" srcset="images/work-maison-malaak-hero.avif">
-              <source type="image/webp" srcset="images/work-maison-malaak-hero.webp">
-              <img src="images/work-maison-malaak-hero.jpg" alt="Head spa treatment at Maison Malaak — client project by FMBytex" width="800" height="500" loading="eager" fetchpriority="high">
-            </picture>
-              </a>
-            </div>
-            <div class="h-laptop-base" aria-hidden="true"><i></i></div>
-          </figure>
-        </div>
-        <a class="h-live-tag" href="https://maisonmalaak.com" target="_blank" rel="noopener"><i aria-hidden="true"></i>Live — Maison Malaak</a>
-      </div>
-    </div>
+  <div class="fm-3d-box" id="fm3dBox">
+    <canvas id="fm3d" aria-label="Interactive 3D website window — drag to rotate"></canvas>
+    <div class="fm-3d-fallback" id="fm3dFallback" aria-hidden="true"><div class="fm-fb-win"></div></div>
+    <div class="fm-drag-hint">Drag to spin · Scroll to turn</div>
   </div>
+  <div id="fm-gl-error" role="alert"></div>
+  <h1 class="reveal">We make brands <em>impossible</em> to ignore.</h1>
+  <p class="fm-sub reveal">FMBytex is a Montréal web design studio. We design and build websites, brands, and digital growth systems for businesses ready to be seen — direct with the studio, in English or French.</p>
+  <div class="fm-hero-ctas reveal">
+    <a href="contact.html" class="btn btn-primary btn-lg">Start a Project <span class="arrow">↗</span></a>
+    <a href="#work" class="btn btn-ghost btn-lg">See the work</a>
+  </div>
+  <p class="fm-hero-meta reveal"><b>Fixed quotes</b> · <b>Proposal in 24h</b> · <b>EN · FR</b></p>
 </section>
 
 <div class="h-marquee" aria-hidden="true">
@@ -128,12 +103,12 @@
     <span>Branding &amp; Identity</span><i>✳</i>
     <span>Digital Advertising</span><i>✳</i>
     <span>SEO &amp; Digital Growth</span><i>✳</i>
-    <span>Trusted by Mortea &amp; Maison Malaak</span><i>✳</i>
+    <span>Trusted by Maison Malaak, Omnitache &amp; Mortacc</span><i>✳</i>
     <span>Website Design &amp; Development</span><i>✳</i>
     <span>Branding &amp; Identity</span><i>✳</i>
     <span>Digital Advertising</span><i>✳</i>
     <span>SEO &amp; Digital Growth</span><i>✳</i>
-    <span>Trusted by Mortea &amp; Maison Malaak</span><i>✳</i>
+    <span>Trusted by Maison Malaak, Omnitache &amp; Mortacc</span><i>✳</i>
   </div>
 </div>
 
@@ -196,6 +171,39 @@
         </a>
       </div>
     </div>
+    <div class="services" role="group" aria-label="Services">
+      <button class="svc" data-service="web" aria-pressed="true">
+        <span class="num">01</span>
+        <h3>Websites</h3>
+        <p>Design &amp; development that loads fast and converts.</p>
+      </button>
+      <button class="svc" data-service="brand" aria-pressed="false">
+        <span class="num">02</span>
+        <h3>Branding</h3>
+        <p>Identity systems people remember at a glance.</p>
+      </button>
+      <button class="svc" data-service="ads" aria-pressed="false">
+        <span class="num">03</span>
+        <h3>Advertising</h3>
+        <p>Digital campaigns aimed at buyers, not browsers.</p>
+      </button>
+      <button class="svc" data-service="seo" aria-pressed="false">
+        <span class="num">04</span>
+        <h3>SEO &amp; Growth</h3>
+        <p>Get found on Google — in both languages.</p>
+      </button>
+    </div>
+    <div class="preview" id="preview" aria-live="polite">
+      <div>
+        <h3 id="pv-title"></h3>
+        <p class="lead" id="pv-lead"></p>
+        <ul id="pv-list"></ul>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="k" id="pv-k1"></div><div class="v" id="pv-v1"></div></div>
+        <div class="fact"><div class="k" id="pv-k2"></div><div class="v" id="pv-v2"></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -204,61 +212,34 @@
     <header class="sec-head reveal">
       <p class="eyebrow">02 — Featured work</p>
       <h2>Real clients. Live websites.</h2>
-      <p class="lead">Two of the businesses we build with. Every project below is live and publicly accessible.</p>
+      <p class="lead">Three of the businesses we build with. Every project below is live and publicly accessible.</p>
     </header>
-    <div class="h-work">
-      <article class="h-project reveal">
-        <div class="h-project-media">
-          <a class="h-browser h-browser-dark" href="https://www.mortea.ca" target="_blank" rel="noopener" aria-label="Visit the Mortea platform (opens in a new tab)">
-            <span class="h-browser-bar" aria-hidden="true">
-              <span class="h-dots"><i></i><i></i><i></i></span>
-              <span class="h-browser-url">mortea.ca</span>
-            </span>
-            <span class="h-browser-shot">
-              <picture>
-              <source type="image/avif" srcset="images/work-mortea.avif">
-              <source type="image/webp" srcset="images/work-mortea.webp">
-              <img src="images/work-mortea.jpg" alt="Mortea platform — client project by FMBytex" width="1200" height="750" loading="lazy">
-            </picture>
-            </span>
-          </a>
-        </div>
-        <div class="h-project-info">
-          <span class="h-project-index" aria-hidden="true">01</span>
-          <div class="h-project-meta"><span>Client · Mortea</span><span>Beauty discovery platform</span></div>
-          <h3>Mortea</h3>
-          <p>A global beauty platform connecting clients with curated professionals — salons, med spas, and clinics. Designed and built by FMBytex, bilingual EN/FR.</p>
-          <div class="h-project-foot">
-            <span class="h-project-scope">Scope — Platform design &amp; development</span>
-            <a class="h-project-link" href="https://www.mortea.ca" target="_blank" rel="noopener">Visit mortea.ca <span aria-hidden="true">↗</span></a>
-          </div>
+    <div class="work">
+      <article class="client reveal">
+        <img src="images/work-malaak-gold.jpg" alt="Gold-toned beauty close-up from Maison Malaak — brows, lashes and glossy lips" loading="lazy" />
+        <div class="client-body">
+          <div class="tag">Client · Head spa &amp; beauty — Montréal</div>
+          <h3>Maison Malaak</h3>
+          <p>Bilingual brand identity and website for a Montréal luxury head spa — a digital presence that matches the experience clients receive in person.</p>
+          <a href="https://maisonmalaak.com" target="_blank" rel="noopener">maisonmalaak.com ↗</a>
         </div>
       </article>
-      <article class="h-project h-project-flip reveal">
-        <div class="h-project-media">
-          <a class="h-browser" href="https://maisonmalaak.com" target="_blank" rel="noopener" aria-label="Visit the Maison Malaak website (opens in a new tab)">
-            <span class="h-browser-bar" aria-hidden="true">
-              <span class="h-dots"><i></i><i></i><i></i></span>
-              <span class="h-browser-url">maisonmalaak.com</span>
-            </span>
-            <span class="h-browser-shot">
-              <picture>
-              <source type="image/avif" srcset="images/work-maison-malaak-spa.avif">
-              <source type="image/webp" srcset="images/work-maison-malaak-spa.webp">
-              <img src="images/work-maison-malaak-spa.jpg" alt="Maison Malaak spa — client project by FMBytex" width="1200" height="750" loading="lazy">
-            </picture>
-            </span>
-          </a>
+      <article class="client reveal">
+        <img src="images/work-omnitache.jpg" alt="Construction site — hero photo from the Omnitache website" loading="lazy" />
+        <div class="client-body">
+          <div class="tag">Client · Construction advisory &amp; bid support</div>
+          <h3>Omnitache</h3>
+          <p>Website for a construction advisory firm that helps professionals win bids, organize operations, and manage residential and commercial projects.</p>
+          <a href="https://www.omnitache.com" target="_blank" rel="noopener">omnitache.com ↗</a>
         </div>
-        <div class="h-project-info">
-          <span class="h-project-index" aria-hidden="true">02</span>
-          <div class="h-project-meta"><span>Client · Maison Malaak</span><span>Head spa &amp; beauty — Montréal</span></div>
-          <h3>Maison Malaak</h3>
-          <p>Bilingual brand identity and website for a Montréal luxury head spa — a digital presence that matches the experience clients receive in person. Owned and operated by Maison Malaak.</p>
-          <div class="h-project-foot">
-            <span class="h-project-scope">Scope — Brand identity &amp; website</span>
-            <a class="h-project-link" href="https://maisonmalaak.com" target="_blank" rel="noopener">Visit maisonmalaak.com <span aria-hidden="true">↗</span></a>
-          </div>
+      </article>
+      <article class="client reveal">
+        <img src="images/work-mortacc.jpg" alt="Mortacc homepage — entity management platform for Canadian firms" loading="lazy" />
+        <div class="client-body">
+          <div class="tag">Product · B2B platform by FMBytex</div>
+          <h3>Mortacc</h3>
+          <p>Our own B2B product: a bilingual, AI-powered entity management platform for Canadian accounting and law firms — incorporations, minute books, cap tables, and compliance deadlines.</p>
+          <a href="https://mortacc.com" target="_blank" rel="noopener">mortacc.com ↗</a>
         </div>
       </article>
     </div>
@@ -325,6 +306,7 @@
   </div>
 </footer>
 
+<script src="js/fmbytex-3d.js?v=1" defer></script>
 <script src="js/main.js?v=4"></script>
 <script>
 // Homepage-only enhancements: scroll lock + a11y labels for the mobile menu
